@@ -107,14 +107,14 @@ void ModelProcess::DestroyDesc()
 Result ModelProcess::CreateInput(void *input1, size_t input1size,
 void* input2, size_t input2size)
 {
-    // 遍历InputDataset
+    // traverse InputDataset
     size_t index;
 
-    // 找到动态分辨率输入的那个
+    // Find the dynamic resolution input
     aclError ret = aclmdlGetInputIndexByName(modelDesc_, ACL_DYNAMIC_TENSOR_NAME, &index);
     size_t input3Size = aclmdlGetInputSizeByIndex(modelDesc_, index);
 
-    // 开始构建
+    // Begin to build
     void* input3 = nullptr;
     aclError aclRet = aclrtMalloc(&input3, input3Size, ACL_MEM_MALLOC_HUGE_FIRST);
     if (aclRet != ACL_ERROR_NONE) {
@@ -156,7 +156,7 @@ void* input2, size_t input2size)
         return FAILED;
     }
 
-    // 构建databuffer
+    // build databuffer
     aclDataBuffer* inputData3 = aclCreateDataBuffer(input3, input3Size);
     if (inputData3 == nullptr) {
         ERROR_LOG("can't create data inputData3, create input failed");

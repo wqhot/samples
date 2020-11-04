@@ -44,12 +44,12 @@ Result DvppJpegD::InitDecodeOutputDesc(ImageData& inputImage)
         return FAILED;
     }
 
-    /*预测接口要求aclrtMallocHost分配的内存,AI1上运行当前应用中会需要
-	多次拷贝图片内存,暂不用.
+    /*The predictive interface requires memory allocated by aclrtMallocHost, which is needed to run the current application on AI1
+Copy image memory multiple times, not used.
     acldvppJpegPredictDecSize(inputImage.data.get(), inputImage.size,
     PIXEL_FORMAT_YUV_SEMIPLANAR_420, &decodeOutBufferSize);*/
     
-	/*分配一块足够大的内存*/
+	/* Allocate a large enough block of memory */
     uint32_t decodeOutBufferSize = 
 	    YUV420SP_SIZE(decodeOutWidthStride, decodeOutHeightStride) * 4;
 

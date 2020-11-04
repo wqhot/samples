@@ -98,10 +98,12 @@ bool WriteToFile(const char *fileName, const void *dataDev, uint32_t dataSize)
     return ret;
 }
 
-//3.创建回调函数
+//3. Create callback functions
 void callback(acldvppStreamDesc *input, acldvppPicDesc *output, void *userdata)
 {
-    //获取VDEC解码的输出内存，调用自定义函数WriteToFile将输出内存中的数据写入文件后，再调用acldvppFree接口释放输出内存
+    /*Get the output memory decoded by VDEC, call the custom function WriteToFile to write 
+	the data in the output memory to the file, and then call the acldvppFree interface to release
+	 the output memory*/
     void *vdecOutBufferDev = acldvppGetPicDescData(output);
     uint32_t size = acldvppGetPicDescSize(output);
     static int count = 1;
@@ -110,7 +112,7 @@ void callback(acldvppStreamDesc *input, acldvppPicDesc *output, void *userdata)
         ERROR_LOG("write file failed.");
     }
     aclError ret = acldvppFree(reinterpret_cast<void *>(vdecOutBufferDev));
-    // 释放acldvppPicDesc类型的数据，表示解码后输出图片描述数据
+    // Release acldvppPicDesc type data, representing output picture description data after decoding
     ret = acldvppDestroyPicDesc(output);
 	
     //......
@@ -119,39 +121,41 @@ void callback(acldvppStreamDesc *input, acldvppPicDesc *output, void *userdata)
 
 int main()
 {	
-	/* 1. ACL初始化 */	
+	/* 1. ACL initialization */	
     const char *aclConfigPath = "../acl.json";
     aclError ret = aclInit(aclConfigPath);
 	
-	/* 2. 运行管理资源申请,包括Device、Context、Stream */	
+	/* 2. Run the management resource application, including Device, Context, Stream */	
     ret = aclrtSetDevice(deviceId_);
     ret = aclrtCreateContext(&context_, deviceId_);
     ret = aclrtCreateStream(&stream_);
 		
-	/* 3. Vdec 资源初始化 */	
+	/* 3. VDEC resource initialization */	
 	// create threadId
     pthread_create(&threadId_, nullptr, ThreadFunc, nullptr);
     (void)aclrtSubscribeReport(static_cast<uint64_t>(threadId_), stream_);
 	
-	//4.创建视频码流处理通道时的通道描述信息，设置视频处理通道描述信息的属性，其中callback回调函数需要用户提前创建。
-	//vdecChannelDesc_是aclvdecChannelDesc类型
+	/*4.Set the properties of the channel description information when creating the video code stream
+	 processing channel, in which the callback callback function needs to be created in advance by the
+	  user.*/
+	//vdecChannelDesc_ is aclvdecChannelDesc
 	vdecChannelDesc_ = aclvdecCreateChannelDesc();
 	
 	// channelId: 0-15
 	ret = aclvdecSetChannelDescChannelId(vdecChannelDesc_, 10);
 	ret = aclvdecSetChannelDescThreadId(vdecChannelDesc_, threadId_);
-	/* 设置回调函数 callback*/
+	/* Sets the callback function*/
 	ret = aclvdecSetChannelDescCallback(vdecChannelDesc_, callback);
 	
-	//示例中使用的是H265_MAIN_LEVEL视频编码协议
+	//The H265_MAIN_LEVEL video encoding protocol is used in the example
 	ret = aclvdecSetChannelDescEnType(vdecChannelDesc_, static_cast<acldvppStreamFormat>(enType_));
-	//示例中使用的是PIXEL_FORMAT_YVU_SEMIPLANAR_420
+	//PIXEL_FORMAT_YVU_SEMIPLANAR_420 is used in the example
 	ret = aclvdecSetChannelDescOutPicFormat(vdecChannelDesc_, static_cast<acldvppPixelFormat>(format_));
 
-	/* 5.创建视频码流处理的通道 */
+	/* 5.Create video stream processing channel */
 	ret = aclvdecCreateChannel(vdecChannelDesc_);
 	
-	/* 视频解码处理 */
+	/* Video decoding processing */
     int rest_len = 10;
     void *inBufferDev = nullptr;
     uint32_t inBufferSize = 0;
@@ -161,25 +165,27 @@ int main()
     ReadFileToDeviceMem(filePath.c_str(), inBufferDev, inBufferSize);
 	
 	
- 	// 创建输入视频码流描述信息，设置码流信息的属性
+ 	// Create input video stream description information, set the properties of the stream information
 	streamInputDesc_ = acldvppCreateStreamDesc(); 
     while (rest_len > 0) {
 		
-		//inBufferDev_表示Device存放输入视频数据的内存，inBufferSize_表示内存大小  
+		//inBufferDev_ means the memory for input video data by Device, and inBufferSize_ means the memory size 
 		ret = acldvppSetStreamDescData(streamInputDesc_, inBufferDev);
 		ret = acldvppSetStreamDescSize(streamInputDesc_, inBufferSize);
 
-		//申请Device内存picOutBufferDev_，用于存放VDEC解码后的输出数据
+		//Device memory picOutBufferDev_ is used to store output data decoded by VDEC
 		ret = acldvppMalloc(&picOutBufferDev_, DataSize);
 
-		//创建输出图片描述信息，设置图片描述信息的属性
-		//picOutputDesc_是acldvppPicDesc类型
+		//Create output image description information, set the image description information properties
+		//PicOutputDesc_ is acldvppPicDesc
 		picOutputDesc_ = acldvppCreatePicDesc();
 		ret = acldvppSetPicDescData(picOutputDesc_, picOutBufferDev_);
 		ret = acldvppSetPicDescSize(picOutputDesc_, DataSize);
 		ret = acldvppSetPicDescFormat(picOutputDesc_, static_cast<acldvppPixelFormat>(format_));
 
-		// 执行视频码流解码，解码每帧数据后，系统自动调用callback回调函数将解码后的数据写入文件，再及时释放相关资源
+		/* Perform video stream decoding. After decoding each frame of data, the system automatically 
+		calls callback callback function to write the decoded data to the file, and then timely release
+		 relevant resources*/
 		ret = aclvdecSendFrame(vdecChannelDesc_, streamInputDesc_, picOutputDesc_, nullptr, nullptr);
 		//......
 		

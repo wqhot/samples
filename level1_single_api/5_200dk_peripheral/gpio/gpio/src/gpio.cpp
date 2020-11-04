@@ -20,7 +20,7 @@
 
 #include "gpio.h"
 
-//ascend310 引脚: GPIO0 GPIO1
+//ascend310 pin: GPIO0 GPIO1
 
 #define ASCEND310_GPIO_0_DIR          "/sys/class/gpio/gpio504/direction"
 #define ASCEND310_GPIO_1_DIR          "/sys/class/gpio/gpio444/direction"

@@ -5,10 +5,11 @@ import platform as plat
 import sys
 import io
 
-class ModelLanguage(): # 语音模型类
+class ModelLanguage(): # Speech model class
 	def __init__(self, modelpath):
 		self.modelpath = modelpath
-		system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
+		system_type = plat.system() 
+		# Because the file path representation of different systems is not the same, it needs to be determined
 		
 		self.slash = ''
 		if(system_type == 'Windows'):
@@ -19,7 +20,7 @@ class ModelLanguage(): # 语音模型类
 			print('*[Message] Unknown System\n')
 			self.slash = '/'
 		
-		if(self.slash != self.modelpath[-1]): # 在目录路径末尾增加斜杠
+		if(self.slash != self.modelpath[-1]): # Add a slash at the end of the directory path
 			self.modelpath = self.modelpath + self.slash
 		
 		pass
@@ -34,52 +35,52 @@ class ModelLanguage(): # 语音模型类
 	
 	def SpeechToText(self, list_syllable):
 		'''
-		语音识别专用的处理函数
+		A special function for speech recognition
 
-		实现从语音拼音符号到最终文本的转换
+		Realize the conversion from phonetic symbols to final text
 
-		使用恐慌模式处理一次解码失败的情况
+		Use panic mode to handle a decoding failure
 		'''
 		length = len(list_syllable)
-		if(length == 0): # 传入的参数没有包含任何拼音时
+		if(length == 0): # The parameters passed in do not contain any pinyin
 			return ''
 		
-		lst_syllable_remain = [] # 存储剩余的拼音序列
+		lst_syllable_remain = [] # Stores the remaining pinyin sequences
 		str_result = ''
 
-		# 存储临时输入拼音序列
+		# Store temporary input pinyin sequence
 		tmp_list_syllable = list_syllable
 
 		while(len(tmp_list_syllable) > 0):
-			# 进行拼音转汉字解码，存储临时结果
+			# Carry out pinyin to Chinese characters decoding, storage of temporary results
 			tmp_lst_result = self.decode(tmp_list_syllable, 0.0)
 			
-			if(len(tmp_lst_result) > 0): # 有结果，不用恐慌
+			if(len(tmp_lst_result) > 0): # There are results, no need to panic
 				str_result = str_result + tmp_lst_result[0][0]
 				
-			while(len(tmp_lst_result) == 0): # 没结果，开始恐慌
-				# 插入最后一个拼音
+			while(len(tmp_lst_result) == 0): # No results, began to panic
+				# Insert the last pinyin
 				lst_syllable_remain.insert(0, tmp_list_syllable[-1])
-				# 删除最后一个拼音
+				# Delete the last pinyin
 				tmp_list_syllable = tmp_list_syllable[:-1]
-				# 再次进行拼音转汉字解码
+				# Again pinyin to Chinese characters decoding
 				tmp_lst_result = self.decode(tmp_list_syllable, 0.0)
 				
 				if(len(tmp_lst_result) > 0):
-					# 将得到的结果加入进来
+					# Add in the results
 					str_result = str_result + tmp_lst_result[0][0]
 				
-			# 将剩余的结果补回来
+			# Make up the rest of the results
 			tmp_list_syllable = lst_syllable_remain
-			lst_syllable_remain = [] # 清空
+			lst_syllable_remain = [] # empty
 
 		
 		return str_result
 	
 	def decode(self,list_syllable, yuzhi = 0.0001):
 		'''
-		实现拼音向文本的转换
-		基于马尔可夫链
+		Realize the conversion from pinyin to text
+		Based on markov chains
 		'''
 		#assert self.dic_pinyin == null or self.model1 == null or self.model2 == null
 		list_words = []
@@ -88,33 +89,34 @@ class ModelLanguage(): # 语音模型类
 		#print('======')
 		#print('decode function: list_syllable\n',list_syllable)
 		#print(num_pinyin)
-		# 开始语音解码
+		# Start speech decoding
 		for i in range(num_pinyin):
 			#print(i)
 			ls = ''
-			if(list_syllable[i] in self.dict_pinyin): # 如果这个拼音在汉语拼音字典里的话
-				# 获取拼音下属的字的列表，ls包含了该拼音对应的所有的字
+			if(list_syllable[i] in self.dict_pinyin):
+#If this pinyin were in the Hanyu pinyin dictionary
+# gets a list of characters under pinyin. Ls contains all the characters corresponding to this pinyin
 				ls = self.dict_pinyin[list_syllable[i]]
 			else:
 				break
 			
 			
 			if(i == 0):
-				# 第一个字做初始处理
+				# The first word does the initial processing
 				num_ls = len(ls)
 				for j in range(num_ls):
 					tuple_word = ['',0.0]
-					# 设置马尔科夫模型初始状态值
-					# 设置初始概率，置为1.0
+					# Set the initial state value of the Markov model
+					# Set the initial probability to 1.0
 					tuple_word = [ls[j], 1.0]
 					#print(tuple_word)
-					# 添加到可能的句子列表
+					# Add to the list of possible sentences
 					list_words.append(tuple_word)
 				
 				#print(list_words)
 				continue
 			else:
-				# 开始处理紧跟在第一个字后面的字
+				# Start processing the word immediately after the first word
 				list_words_2 = []
 				num_ls_word = len(list_words)
 				#print('ls_wd: ',list_words)
@@ -123,17 +125,18 @@ class ModelLanguage(): # 语音模型类
 					num_ls = len(ls)
 					for k in range(0, num_ls):
 						tuple_word = ['',0.0]
-						tuple_word = list(list_words[j]) # 把现有的每一条短语取出来
+						tuple_word = list(list_words[j]) # Take out every phrase in existence
 						#print('tw1: ',tuple_word)
-						tuple_word[0] = tuple_word[0] + ls[k] # 尝试按照下一个音可能对应的全部的字进行组合
+						tuple_word[0] = tuple_word[0] + ls[k] # Try to combine all the words that might correspond to the next sound
 						#print('ls[k]  ',ls[k])
 						
-						tmp_words = tuple_word[0][-2:] # 取出用于计算的最后两个字
+						tmp_words = tuple_word[0][-2:] # Take out the last two words for calculation
 						#print('tmp_words: ',tmp_words,tmp_words in self.model2)
-						if(tmp_words in self.model2): # 判断它们是不是再状态转移表里
+						if(tmp_words in self.model2): # Determine if they're in the restate transition table
 							#print(tmp_words,tmp_words in self.model2)
 							tuple_word[1] = tuple_word[1] * float(self.model2[tmp_words]) / float(self.model1[tmp_words[-2]])
-							# 核心！在当前概率上乘转移概率，公式化简后为第n-1和n个字出现的次数除以第n-1个字出现的次数
+							#Core! The current probability is multiplied by the transition probability, which is formulated to
+							#be the number of occurrences of the n-1st and n-th word divided by the number of occurrences of the n-1st word
 							#print(self.model2[tmp_words],self.model1[tmp_words[-2]])
 						else:
 							tuple_word[1] = 0.0
@@ -141,7 +144,7 @@ class ModelLanguage(): # 语音模型类
 						#print('tw2: ',tuple_word)
 						#print(tuple_word[1] >= pow(yuzhi, i))
 						if(tuple_word[1] >= pow(yuzhi, i)):
-							# 大于阈值之后保留，否则丢弃
+							# After greater than the threshold, it is retained, otherwise discarded
 							list_words_2.append(tuple_word)
 						
 				list_words = list_words_2
@@ -158,17 +161,17 @@ class ModelLanguage(): # 语音模型类
 		
 	def GetSymbolDict(self, dictfilename):
 		'''
-		读取拼音汉字的字典文件
-		返回读取后的字典
+		Read the dictionary file of pinyin Chinese characters
+		Returns the read dictionary
 		'''
 		with io.open(dictfilename, 'r', encoding='utf-8') as f:
-			#txt_obj = open(dictfilename, 'r',encoding='UTF-8') # 打开文件并读入
+			#txt_obj = open(dictfilename, 'r',encoding='UTF-8') # Open the file and read in
 			txt_text = f.read()
 			f.close()
-			txt_lines = txt_text.split('\n') # 文本分割
-			dic_symbol = {} # 初始化符号字典
+			txt_lines = txt_text.split('\n') # Text segmentation
+			dic_symbol = {} # Initializes the symbol dictionary
 			for i in txt_lines:
-				list_symbol=[] # 初始化符号列表
+				list_symbol=[] # Initializes the symbol list
 				if(i!=''):
 					txt_l=i.split('\t')
 					pinyin = txt_l[0]
@@ -180,15 +183,15 @@ class ModelLanguage(): # 语音模型类
 		
 	def GetLanguageModel(self, modelLanFilename):
 		'''
-		读取语言模型的文件
-		返回读取后的模型
+		Read the file for the language model
+		Returns the read model
 		'''
 		with io.open(modelLanFilename, 'r', encoding='utf-8') as f:
 			txt_text = f.read()
 			f.close()
-			txt_lines = txt_text.split('\n') # 文本分割
+			txt_lines = txt_text.split('\n') # Text segmentation
 
-			dic_model = {} # 初始化符号字典
+			dic_model = {} # Initializes the symbol dictionary
 			for i in txt_lines:
 				if(i!=''):
 					txt_l=i.split('\t')

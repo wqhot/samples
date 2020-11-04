@@ -1,11 +1,11 @@
 # coding=utf-8
-""" 构建CTC解码函数 """
+""" construct the CTC decoding function """
 
 import numpy as np 
 
-#以下函数为贪婪算法的python实现
+#The following functions are Python implementations of the greedy algorithm
 def remove_blank(labels, blank=0):
-    """ 移除Blank """
+    """ Remove the Blank """
     new_labels = []
 
     # combine duplicate
@@ -21,7 +21,7 @@ def remove_blank(labels, blank=0):
     return new_labels
 
 def insert_blank(labels, blank=0):
-    """ 插入blank """
+    """ insert blank """
     new_labels = [blank]
     for l in labels:
         new_labels += [l, blank]
@@ -29,7 +29,7 @@ def insert_blank(labels, blank=0):
     return new_labels
 
 def greedy_decode(y, blank=0):
-    """ greedy解码 """
+    """ Greedy decoding """
     raw_rs = np.argmax(y, axis=1)
     rs = remove_blank(raw_rs, blank)
     

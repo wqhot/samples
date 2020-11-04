@@ -17,32 +17,32 @@ from get_symbol_list import GetSymbolList
 from language_model_func import ModelLanguage
 
 x=np.linspace(0, 400 - 1, 400, dtype = np.int64)
-w = 0.54 - 0.46 * np.cos(2 * np.pi * (x) / (400 - 1) ) # 汉明窗
+w = 0.54 - 0.46 * np.cos(2 * np.pi * (x) / (400 - 1) ) # Hamming window
 AUDIO_FEATURE_LENGTH = 200
 outpath = "/mnt/shared/project/NLP/out/"
 def pcm2wav(pcm_path):
-    # 打开并去读pcm音频
+    # Turn on and read the PCM audio
     pcmfile = open(pcm_path, 'rb')
     pcmdata = pcmfile.read()
     pcmfile.close()
 
-    # 设置wav 音频参数
+    # Set waV audio parameters
     channels = 2
     bits = 16
     sample_rate = 16000
 
-    # 定义wav音频的生成路径和名称
+    # Defines the generation path and name of WAV audio
     wave_path_front = pcm_path[:-4]
     wave_path = wave_path_front + '.wav'
 
-    # 创建wav音频文件
+    # Create a WAV audio file
     wavfile = wave.open(wave_path, 'wb')
 
     wavfile.setnchannels(channels)
     wavfile.setsampwidth(bits // 8)
     wavfile.setframerate(sample_rate)
 
-    # 写入wav音频数据
+    # Write WAV audio data
     wavfile.writeframes(pcmdata)
 
     wavfile.close()
@@ -68,23 +68,23 @@ def GetFrequencyFeature3(wavsignal, fs):
             '[Error] ASRT currently only supports wav audio files with a sampling rate of 16000 Hz, but this audio is ' + str(
                 fs) + ' Hz. ')
 
-    # wav波形 加时间窗以及时移10ms
-    time_window = 25  # 单位ms
-    window_length = fs / 1000 * time_window  # 计算窗长度的公式，目前全部为400固定值
+    # Wav waveform plus time window and time shift 10ms
+    time_window = 25  # Unit of ms
+    window_length = fs / 1000 * time_window  # The formulas for calculating window length are all fixed values of 400 at present
     #print window_length
     wav_arr = np.array(wavsignal)
     # wav_length = len(wavsignal[0])
     wav_length = wav_arr.shape[1]
-    range0_end = int(float(len(wavsignal[0])) / fs * 1000 - time_window) // 10  # 计算循环终止的位置，也就是最终生成的窗数 978
-    data_input = np.zeros((range0_end, 200), dtype=np.float)  # 用于存放最终的频率特征数据
+    range0_end = int(float(len(wavsignal[0])) / fs * 1000 - time_window) // 10  # Calculate where the loop ends, which is the final number of Windows 978
+    data_input = np.zeros((range0_end, 200), dtype=np.float)  # Used to store the final frequency characteristic data
     data_line = np.zeros((1, 400), dtype=np.float)
     for i in range(0, range0_end):
         p_start = i * 160
         p_end = p_start + 400
         data_line = wav_arr[0, p_start:p_end]
-        data_line = data_line * w  # 加窗
+        data_line = data_line * w  # Add window
         data_line = np.abs(fft(data_line)) / wav_length
-        data_input[i] = data_line[0:200]  # 设置为400除以2的值（即200）是取一半数据，因为是对称的
+        data_input[i] = data_line[0:200]  # The value set to 400 divided by 2 (i.e. 200) is half of the data because it is symmetric
 
     # print(data_input.shape)
     data_input = np.log(data_input + 1)
@@ -112,22 +112,22 @@ def RecognizeSpeech(wavsignal, fs):
 
 def RecognizeSpeech_FromFile(filename):
     '''
-    最终做语音识别用的函数，识别指定文件名的语音
+    The final function to do speech recognition, recognition of the specified filename speech
     '''
 
-    wavsignal,fs1 = read_wav_data(filename)  # 识别语音的特征 fs1=16000 len(wavsignal[0])=157000
+    wavsignal,fs1 = read_wav_data(filename)  # Recognize speech features fs1=16000 len(wavsignal[0])=157000
     r, in_len = RecognizeSpeech(wavsignal, fs1)
     return r, in_len
 def GetDataSet(speech_voice_path):
-    """ 读取pcm格式音频数据 """
+    """ Read audio data in PCM format """
 
-    # 将pcm数据转换为wav
+    # Convert PCM data to WAV
     #wave_path = L.pcm2wav(speech_voice_path) 
 
-    # 读取wav音频特征
+    # Read waV audio features
     features, in_len = RecognizeSpeech_FromFile(speech_voice_path)     
 
-    # 将wav音频特征转换为模型输入向量
+    # Convert WAV audio features into model input vectors
     out_file_name = speech_voice_path.split('.')[0]
     out_filename = out_file_name+'.bin'
     writer = open(out_filename,"wb")
@@ -135,9 +135,9 @@ def GetDataSet(speech_voice_path):
     return in_len
 
 def GetDataSet2(speech_voice_path):
-    """ 直接读取wav格式音频数据 """
+    """ Directly read audio data in WAV format """
 
-    features, in_len = RecognizeSpeech_FromFile(speech_voice_path) #1,1600,200,1  in_len=122 全0矩阵
+    features, in_len = RecognizeSpeech_FromFile(speech_voice_path) #1,1600,200,1  in_len=122 All zero matrices
     features1=np.reshape(features,[1,1600,200,1])
 
     features1=np.transpose(features1,(0,3,1,2)).copy()
@@ -149,13 +149,13 @@ def GetDataSet2(speech_voice_path):
 
 def SpeechPostProcess(resultList, in_len): 
 
-    # 将三维矩阵转为二维
+    # Convert a three-dimensional matrix to a two-dimensional one
     dets = np.reshape(resultList, (200,1424))
 
-    # 将识别结果转为拼音序列
+    # Converts the identification result to a pinyin sequence
     rr, ret1 = greedy_decode(dets)
 
-    # 去除拼音序列中的blank
+    # Remove the blank from the pinyin sequence
     for i in range(len(ret1)):
         if i % 2 == 0:
             try:
@@ -169,7 +169,7 @@ def SpeechPostProcess(resultList, in_len):
     for i in ret1:
         r_str.append(list_symbol_dic[i])
 
-    #print "拼音序列识别结果：" + str(r_str)
+    #print "Pinyin sequence identification results：" + str(r_str)
     string_pinyin = str(r_str)
 
     ml = ModelLanguage('language_model')
@@ -182,7 +182,7 @@ def SpeechPostProcess(resultList, in_len):
 
     print(r)
 
-    # 保存语音识别的结果
+    # Save the results of speech recognition
     with open('results/asr_results.txt','a+b') as f:
         data = string_pinyin[1:-1] + '-' + r + '\n'
         #print(data)
@@ -194,8 +194,8 @@ def SpeechPostProcess(resultList, in_len):
 
 if __name__ == "__main__":
 
-    current_path = os.path.abspath(__file__)    # 获取当前文件的父目录
-    voicefiles = os.listdir(r'../data/') # 获取wav
+    current_path = os.path.abspath(__file__)    # Gets the parent directory of the current file
+    voicefiles = os.listdir(r'../data/') # get wav
     for voice_name in voicefiles:
         if not voice_name.endswith("wav"):
             continue
@@ -205,12 +205,12 @@ if __name__ == "__main__":
         print(outpath)
         outputname = os.path.join(os.path.abspath(os.path.dirname(current_path) + os.path.sep + "../out/"),"output2_0.bin")
         resultList = np.fromfile(outputname,np.float32)
-        # 判断模型推理结果是否成功
+        # Determine if the model inference is successful
     	#if resultList is None:
             #print("Inference failed")
         resultList=np.reshape(resultList,(200,1424))
-        # 对结果进行后处理
+        # Post-process the results
 
         txt, pinyin = SpeechPostProcess(resultList,in_len)
-        print('拼音： ' + str(pinyin))
-        print('文本： ' + str(txt))
+        print('pinyin： ' + str(pinyin))
+        print('txt： ' + str(txt))

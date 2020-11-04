@@ -166,11 +166,11 @@ void DestroyResource()
 
 int main()
 {
-    //1.ACL初始化
+    //1.ACL initialization
     const char *aclConfigPath = "../src/acl.json";
     aclInit(aclConfigPath);
     INFO_LOG("acl init success");
-    //2.运行管理资源申请,包括Device、Context、Stream，stream_是aclrtStream类型
+    //2. Run management resource applications, including Device, Context, Stream, stream_ is aclrtStream type
     aclrtSetDevice(deviceId_);
     INFO_LOG("open device %d success", deviceId_);
     // create context (set current)
@@ -185,14 +185,15 @@ int main()
 
     INFO_LOG("start to process picture:%s", testPic.picName.c_str());
     // dvpp process
-    //3.将图片读入内存，inDevBuffer_表示存放输入图片的内存, inDevBufferSize表示内存大小，输入内存要提前申请
+    /*3.Read the picture into memory. InDevBuffer_ indicates the memory for storing the input picture, 
+	inDevBufferSize indicates the memory size, please apply for the input memory in advance*/
     uint32_t devPicBufferSize;
     void *picDevBuffer = GetDeviceBufferOfPicture(testPic, devPicBufferSize);
     if (picDevBuffer == nullptr) {
         ERROR_LOG("get pic device buffer failed,index is 0");
         return FAILED;
     }
-    //4.创建图片数据处理的通道
+    //4.Create image data processing channel
     dvppChannelDesc_ = acldvppCreateChannelDesc();
     acldvppCreateChannel(dvppChannelDesc_);
     INFO_LOG("dvpp init resource success");

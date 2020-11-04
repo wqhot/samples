@@ -37,7 +37,7 @@ uint32_t inputHeight;
 PicDesc inPicDesc;
 PicDesc outPicDesc;
 
-/* 运行管理资源申请,包括Device、Context、Stream*/
+/* Run managed resource applications, including Device, Context, and Stream*/
 Result Initparam(int argc, char *argv[])
 {
     if(argc!=7)	{
@@ -143,12 +143,12 @@ void DestroyResource()
 
 int main(int argc, char *argv[])
 {
-    /* 1.ACL初始化 */
+    /* 1.ACL initialization */
     const char *aclConfigPath = "./acl.json";
     aclInit(aclConfigPath);
     INFO_LOG("acl init success");
 
-    /* 2.运行管理资源申请,包括Device、Context、Stream */
+    /* 2.Run the management resource application, including Device, Context, Stream */
     aclrtSetDevice(deviceId_);
     INFO_LOG("open device %d success", deviceId_);
     aclrtCreateContext(&context_, deviceId_);
@@ -156,15 +156,15 @@ int main(int argc, char *argv[])
     aclrtCreateStream(&stream_);
     INFO_LOG("create stream success");
 
-    /* 3.初始化参数：原图宽高，crop宽高。初始化文件夹：输出结果文件夹*/
+    /* 3.Initialization parameters: width and height of the original image, crop width and height. Initialize folder: Output folder*/
     Initparam(argc, argv);
     const int modelInputWidth = outPicDesc.width; // cur model shape is 224 * 224
     const int modelInputHeight = outPicDesc.height;
 
-	/* 4. 创建图片数据处理通道时的通道描述信息，dvppChannelDesc_是acldvppChannelDesc类型*/
+	/* 4. Channel description information when creating image data processing channels, dvppChannelDesc_ is acldvppChannelDesc type*/
     dvppChannelDesc_ = acldvppCreateChannelDesc();
 
-    /* 5. 创建图片数据处理的通道。*/
+    /* 5. Create the image data processing channel.*/
     acldvppCreateChannel(dvppChannelDesc_);
 
     // GetPicDevBuffer4JpegD

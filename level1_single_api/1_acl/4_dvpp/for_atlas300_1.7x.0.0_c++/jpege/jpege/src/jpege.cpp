@@ -196,11 +196,11 @@ void DestroyEncodeResource()
 
 int main()
 {
-    //1.ACL初始化
+    //1.ACL initialization
     const char *aclConfigPath = "../src/acl.json";
     aclInit(aclConfigPath);
     INFO_LOG("acl init success");
-    //2.运行管理资源申请,包括Device、Context、Stream，stream_是aclrtStream类型
+    //2.Run management resource applications, including Device, Context, Stream, stream_ is aclrtStream type
     aclrtSetDevice(deviceId_);
     INFO_LOG("open device %d success", deviceId_);
     // create context (set current)
@@ -217,26 +217,27 @@ int main()
 
     INFO_LOG("start to process picture:%s", testPic.picName.c_str());
     INFO_LOG("Call JpegE");
-    //4.创建图片数据处理的通道
+    //4.Create image data processing channel
     dvppChannelDesc_ = acldvppCreateChannelDesc();
     acldvppCreateChannel(dvppChannelDesc_);
     INFO_LOG("dvpp init resource success");
 
     uint32_t jpegInBufferSize;
     jpegInBufferSize = ComputeEncodeInputSize(testPic.width, testPic.height);
-    //5.申请内存
-    //5.1 输入内存
-    //申请Host内存inputHostBuff，存放YUV格式的图片数据
-    //申请Device内存inputDevBuff
-    //将通过aclrtMemcpy接口将Host的图片数据传输到Device，数据传输完成后，需及时调用aclrtFreeHost接口释放Host内存
+    //5.Request memory
+    //5.1 Input memory
+    //Apply Host memory inputHostBuff to store YUV image data
+    //Application for Device memory inputDevBuff
+    /*The image data of Host will be transferred to Device through aclrtMemcpy interface. After the
+	 data transmission, the Host memory shall be released by calling the aclrtFreeHost interface in a timely manner*/
     char* picDevBuffer = GetPicDevBuffer4JpegE(testPic, jpegInBufferSize);
     if (nullptr == picDevBuffer) {
         ERROR_LOG("get picDevBuffer failed, index is %d", 0);
         return FAILED;
     }
     SetInput4JpegE(*picDevBuffer, jpegInBufferSize, testPic.width, testPic.height);
-    //6. 创建编码输入图片的描述信息，并设置各属性值
-    //encodeInputDesc_是acldvppPicDesc类型
+    //6. Create the description information of the coded input image and set the value of each property
+    //encodeInputDesc_ is acldvppPicDesc
     uint32_t widthAlignment = 16;
     uint32_t heightAlignment = 2;
     uint32_t encodeInWidthStride = AlignmentHelper(inputWidth_, widthAlignment);
@@ -259,19 +260,21 @@ int main()
     acldvppSetPicDescHeightStride(encodeInputDesc_, encodeInHeightStride);
     acldvppSetPicDescSize(encodeInputDesc_, inDevBufferSizeE_);
 
-    //5.2 输出内存，申请Device内存encodeOutBufferDev_,存放编码后的输出数据
+    //5.2 Output memory. Device memory encodeOutBufferDev_ is applied to store the encoded output data
     uint32_t outBufferSize = jpegInBufferSize + jpegInBufferSize; // malloc enough size
     aclError aclRet = acldvppMalloc(&encodeOutBufferDev_, outBufferSize);
     if (aclRet != ACL_ERROR_NONE) {
         ERROR_LOG("malloc encodeOutBufferDev_ failed, aclRet is %d", aclRet);
         return FAILED;
     }
-    //7. 创建图片编码放配置数据，设置编码质量
-    //编码质量范围[0, 100]，其中level 0编码质量与level 100差不多，而在[1, 100]内数值越小输出图片质量越差。
+    //7. Create image encoding and put configuration data, and set encoding quality
+    /*The encoding quality range is [0, 100], where the encoding quality at Level 0 is about the same
+	 as that at Level 100, and the lower the value in [1, 100], the worse the output image quality will be.*/
     jpegeConfig_ = acldvppCreateJpegeConfig();
     acldvppSetJpegeConfigLevel(jpegeConfig_, encodeLevel);
 
-    //8. 执行异步编码，再调用aclrtSynchronizeStream接口阻塞Host运行，直到指定Stream中的所有任务都完成
+    /*8. Perform asynchronous coding, and then call the aclrtSynchronizeStream interface to block the 
+	Host run until all tasks in the specified Stream have completed*/
     aclRet = acldvppJpegEncodeAsync(dvppChannelDesc_, encodeInputDesc_, encodeOutBufferDev_,
         &outBufferSize, jpegeConfig_, stream_);
     if (aclRet != ACL_ERROR_NONE) {
@@ -285,7 +288,9 @@ int main()
         return FAILED;
     }
 
-    //9.申请Host内存hostPtr，将编码后的输出图片回传到Host，再将Host内存中的数据写入文件,写完文件后，需及时调用aclrtFreeHost接口释放Host内存
+    /*9.Apply for Host memory hostPtr, send the encoded output image back to Host, and then write the 
+	data in Host memory to the file. After writing the file, it is necessary to timely call the aclrtFreeHost 
+	interface to release the Host memory*/
     encodeOutFileName = encodeOutFileName + ".jpg";
     Result ret = SaveDvppOutputData(encodeOutFileName.c_str(), encodeOutBufferDev_, outBufferSize);
     if (ret != SUCCESS) {

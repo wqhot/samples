@@ -40,21 +40,22 @@ const char* kModelPath = "../model/faster_rcnn.om";
 }
 
 int main(int argc, char *argv[]) {
-    //检查应用程序执行时的输入,程序执行要求输入图片目录参数
+    //Check the input during application execution, which requires the input of picture directory parameters
     if((argc < 2) || (argv[1] == nullptr)) {
         ERROR_LOG("Please input: ./main <image_dir>");
         return FAILED;
     }
-    //实例化目标检测对象,参数为分类模型路径,模型输入要求的宽和高
+    /*The target detection object is instantiated, the parameter is the classification model path, and the 
+	width and height of the model input are required*/
     ObjectDetect detect(kModelPath, kModelWidth, kModelHeight);
-    //初始化分类推理的acl资源, 模型和内存
+    //Initializes the ACL resources, models, and memory for categorizing inferences
     Result ret = detect.Init();
     if (ret != SUCCESS) {
         ERROR_LOG("ObjectDetect Init resource failed");
         return FAILED;
     }
 
-    //获取图片目录下所有的图片文件名
+    //Gets the file names of all images in the image directory
     string inputImageDir = string(argv[1]);
     vector<string> fileVec;
     Utils::GetAllFiles(inputImageDir, fileVec);
@@ -63,7 +64,7 @@ int main(int argc, char *argv[]) {
         return FAILED;
     }
 
-    //逐张图片推理
+    //Reasoning picture by picture
     ImageData image;
     for (string imageFile : fileVec) {
         static auto it = resizeWidthHeight.begin();
@@ -74,7 +75,7 @@ int main(int argc, char *argv[]) {
             return FAILED;
         }
 
-        //预处理图片:读取图片,讲图片缩放到模型输入要求的尺寸
+        //Preprocessing image: read the image and scale the image to the required size of the model input
         ImageData resizedImage;
         Result ret = detect.Preprocess(resizedImage, image, it->first, it->second);
         if (ret != SUCCESS) {
@@ -82,14 +83,14 @@ int main(int argc, char *argv[]) {
                       imageFile.c_str());                
             continue;
         }
-        //将预处理的图片送入模型推理,并获取推理结果
+        //The preprocessed images are fed into model reasoning and the reasoning results are obtained
         aclmdlDataset* inferenceOutput = nullptr;
         ret = detect.Inference(inferenceOutput, resizedImage);
         if ((ret != SUCCESS) || (inferenceOutput == nullptr)) {
             ERROR_LOG("Inference model inference output data failed");
             return FAILED;
         }
-        //解析推理输出,并将推理得到的物体类别和位置标记到图片上
+        //Analyze the inference output and mark the inference object type and position on the picture
         ret = detect.Postprocess(image, inferenceOutput, imageFile);
         if (ret != SUCCESS) {
             ERROR_LOG("Process model inference output data failed");

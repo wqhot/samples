@@ -110,10 +110,11 @@ bool WriteToFile(FILE *outFileFp_, const void *dataDev, uint32_t dataSize)
     return ret;
 }
 
-//3.创建回调函数
+//3.Create callback functions
 void callback(acldvppPicDesc *input, acldvppStreamDesc *output, void *userdata)
 {
-    //获取VENC编码的输出内存，调用自定义函数WriteToFile将输出内存中的数据写入文件
+    //Get the output memory encoded by VENC, and call  WriteToFile to write the data in the output 
+	  memory to the file
     void *vdecOutBufferDev = acldvppGetStreamDescData(output);
     uint32_t size = acldvppGetStreamDescSize(output);
  
@@ -127,27 +128,29 @@ void callback(acldvppPicDesc *input, acldvppStreamDesc *output, void *userdata)
 bool setupVencDesc(int inputWidth, int inputHeight)
 {
     aclError ret;
-    //4.创建视频码流处理通道时的通道描述信息，设置视频处理通道描述信息的属性，其中callback回调函数需要用户提前创建。
-    //vencChannelDesc_是aclvencChannelDesc类型
+    /*4.Set the properties of the channel description information when creating the video code
+	 stream processing channel, in which the callback callback function needs to be created in 
+	 advance by the user.*/
+    //vencChannelDesc_ is aclvencChannelDesc type
     vencChannelDesc_ = aclvencCreateChannelDesc();
 
     ret = aclvencSetChannelDescThreadId(vencChannelDesc_, threadId_);
-    /* 设置回调函数 callback*/
+    /* Sets the callback function*/
     ret = aclvencSetChannelDescCallback(vencChannelDesc_, callback);
 
-    //示例中使用的是H265_MAIN_LEVEL视频编码协议
+    //The H265_MAIN_LEVEL video encoding protocol is used in the example
     ret = aclvencSetChannelDescEnType(vencChannelDesc_, static_cast<acldvppStreamFormat>(enType_));
-    //示例中使用的是PIXEL_FORMAT_YVU_SEMIPLANAR_420
+    //PIXEL_FORMAT_YVU_SEMIPLANAR_420 is used in the example
     ret = aclvencSetChannelDescPicFormat(vencChannelDesc_, format_);
     ret = aclvencSetChannelDescPicWidth(vencChannelDesc_, inputWidth);
     ret = aclvencSetChannelDescPicHeight(vencChannelDesc_, inputHeight);
     ret = aclvencSetChannelDescKeyFrameInterval(vencChannelDesc_, 1);
 
-    /* 5.创建视频码流处理的通道 */
+    /* 5.Create video stream processing channel */
     ret = aclvencCreateChannel(vencChannelDesc_);
 
-    //6. 创建编码输入图片的描述信息，并设置各属性值
-    //encodeInputDesc_是acldvppPicDesc类型
+    //6. Create the description information of the coded input image and set the value of each property
+    //encodeInputDesc_ is acldvppPicDesc
     uint32_t widthAlignment = 16;
     uint32_t heightAlignment = 2;
     uint32_t encodeInHeightStride = AlignmentHelper(inputHeight, heightAlignment);
@@ -169,7 +172,8 @@ bool setupVencDesc(int inputWidth, int inputHeight)
     acldvppSetPicDescWidthStride(encodeInputDesc_, encodeInWidthStride);
     acldvppSetPicDescHeightStride(encodeInputDesc_, encodeInHeightStride);
 	
-	//创建aclvencFrameConfig类型的数据，创建VENC编码时的单帧编码配置参数。
+	/*Create aclvencFrameConfig type of data, create the single frame encoding configuration parameter
+	 when VENC encoding.*/
     vencFrameConfig_ = aclvencCreateFrameConfig();
     aclvencSetFrameConfigForceIFrame(vencFrameConfig_, 0);
 
@@ -181,13 +185,13 @@ int main(int argc, char *argv[]) {
     bool bSetChannelId = true;
     int channelId = 0;  //camera port
 
-    //检查应用程序执行时的输入,程序执行要求输入camera channel
+    //Check the input during application execution, which requires camera channel input
     if((argc < 2) || (argv[1] == nullptr)){
         ERROR_LOG("Please input: ./main ChannelID");
         bSetChannelId =false;
     }
 
-    //获取camera channel id
+    //Get the Camera Channel ID
     if(bSetChannelId)
     {
         string channelName = string(argv[1]);
@@ -207,16 +211,16 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    /* 1. ACL初始化 */
+    /* 1. ACL initialization */
     char aclConfigPath[32] = {'\0'};
     aclError ret = aclInit(aclConfigPath);
 
-    /* 2. 运行管理资源申请,包括Device、Context、Stream */
+    /* 2. Run the management resource application, including Device, Context, Stream */
     ret = aclrtSetDevice(deviceId_);
     ret = aclrtCreateContext(&context_, deviceId_);
     ret = aclrtCreateStream(&stream_);
 
-    /* 3. Vdec 资源初始化 */
+    /* 3. VDEC resource initialization */
     // create threadId
     pthread_create(&threadId_, nullptr, ThreadFunc, nullptr);
     (void)aclrtSubscribeReport(static_cast<uint64_t>(threadId_), stream_);
@@ -243,7 +247,7 @@ int main(int argc, char *argv[]) {
 
 	
     int restLen = 100;
-    //逐张图片编码
+    //Picture by picture
     ImageData image;
 	
     while(restLen)
@@ -257,7 +261,8 @@ int main(int argc, char *argv[]) {
         INFO_LOG("Camera image width %d, Camera image height %d ", image.alignWidth, image.alignHeight);
         acldvppSetPicDescData(encodeInputDesc_, reinterpret_cast<void *>(image.data.get()));
         acldvppSetPicDescSize(encodeInputDesc_, image.size);
-        // 执行视频码流编码，编码每帧数据后，系统自动调用callback回调函数将编码后的数据写入文件，再及时释放相关资源
+        /* The system automatically calls callback callback function to write the encoded data to the file 
+		    after executing the video stream encoding, and then releases the related resources in time*/
         ret = aclvencSendFrame(vencChannelDesc_, encodeInputDesc_, nullptr, vencFrameConfig_, nullptr);
         restLen = restLen - 1;
     }
