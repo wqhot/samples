@@ -67,24 +67,19 @@ samples
 │   │   └── Colorization  
 │   │       ├── Picture  
 │   │       └── Video  
-│   ├── n_performance  
-│   │   ├── 1_multi_process_thread  
-│   │   │   └── readme.md  
-│   │   ├── 2_multi_card  
-│   │   │   └── readme.md  
-│   │   ├── 3_capability  
-│   │   │   └── readme.md  
-│   │   ├── 4_profiling  
-│   │   │   └── readme.md  
-│   │   └── readme.md  
-│   ├── readme_en.md  
-│   └── readme.md  
+│   └── n_performance  
+│       ├── 1_multi_process_thread  
+│       │   └── readme.md  
+│       ├── 2_multi_card  
+│       │   └── readme.md  
+│       ├── 3_capability  
+│       │   └── readme.md  
+│       └── 4_profiling  
+│           └── readme.md  
 ├── level3_multi_model  
 │   ├── 1_tutorial  
 │   │   └── readme.md  
-│   ├── 2_official  
-│   │   └── readme.md  
-│   ├── readme_en.md  
-│   └── readme.md  
+│   └── 2_official  
+│       └── readme.md  
 ├── LICENSE  
-└── NOTICE
+└── NOTICE  
