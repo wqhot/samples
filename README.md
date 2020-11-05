@@ -1,7 +1,6 @@
 # 昇腾样例仓
 
 #### 目录结构与说明
-
 samples  
 ├── common  
 │   ├── Opencv_Install  
@@ -40,11 +39,12 @@ samples
 │       └── uart  
 ├── level2_simple_inference  
 │   ├── 1_classification  
-│   │   └── GOOGLENET_ImageNet  
-│   │       ├── Dynamicbatch  
-│   │       ├── Multibatch  
-│   │       ├── Picture  
-│   │       └── Video  
+│   │   ├── GOOGLENET_ImageNet  
+│   │   │   ├── Dynamicbatch  
+│   │   │   ├── Multibatch  
+│   │   │   ├── Picture  
+│   │   │   └── Video  
+│   │   └── resnet18_ImageNet  
 │   ├── 2_object_detection  
 │   │   ├── Face_Detection  
 │   │   ├── VGG_SSD_Coco_Deteciton  
@@ -82,4 +82,4 @@ samples
 │   └── 2_official  
 │       └── readme.md  
 ├── LICENSE  
-└── NOTICE  
+└── NOTICE 
