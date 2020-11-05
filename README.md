@@ -40,10 +40,10 @@ samples
 ├── level2_simple_inference  
 │   ├── 1_classification  
 │   │   ├── GOOGLENET_ImageNet  
-│   │   │   ├── Dynamicbatch  
-│   │   │   ├── Multibatch  
-│   │   │   ├── Picture  
-│   │   │   └── Video  
+│   │   │   ├── Dynamicbatch  
+│   │   │   ├── Multibatch  
+│   │   │   ├── Picture  
+│   │   │   └── Video  
 │   │   └── resnet18_ImageNet  
 │   ├── 2_object_detection  
 │   │   ├── Face_Detection  
