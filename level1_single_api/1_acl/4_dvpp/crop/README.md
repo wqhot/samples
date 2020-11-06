@@ -28,7 +28,7 @@
 
    **./Mindstudio.sh**
 
-3. 在Mindstudio右上角点击 **File->Open...** ,打开crop样例。
+3. 在Mindstudio右上角点击 **File->Open...** ,选择crop样例并打开。
    
    ![](https://images.gitee.com/uploads/images/2020/1106/153346_26b0580f_5395865.png "crop-open.png")
    
