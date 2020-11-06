@@ -49,7 +49,7 @@
 
    **Target Host Ip** 选择为已经配置好的运行环境ip地址。一般USB方式连接的200DK为192.168.1.2，ai1s云端推理环境为公网ip地址。   
 
-   **Command Arguments** 填写为**../data/wood_rabbit_1024_1068_nv12.yuv 1024 1068 ./output/output.yuv 350 280 200 200**。
+   **Command Arguments** 填写为：**../data/wood_rabbit_1024_1068_nv12.yuv 1024 1068 ./output/output.yuv 350 280 200 200**。
 
    参数填写完成后，点击右下角的**Apply**，再点击**OK**。
 ​    
