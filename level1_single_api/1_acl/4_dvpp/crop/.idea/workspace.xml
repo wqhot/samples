@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="723baa16-ef12-4b85-959f-4da95ebea911" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/crop/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crop/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crop/data/wood_rabbit_1024_1068_nv12.yuv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crop/sample_crop╗∙▒╛╘¡└φ.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crop/src/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crop/src/acl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crop/src/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crop/src/main.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_sys-resources/icon-caution.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_sys-resources/icon-danger.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_sys-resources/icon-note.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_sys-resources/icon-notice.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_sys-resources/icon-tip.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_sys-resources/icon-warning.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/../out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/main.h" />
+        <option value="$PROJECT_DIR$/src/CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="273" />
+    <option name="y" value="139" />
+    <option name="width" value="1239" />
+    <option name="height" value="675" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="crop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crop" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="OperatorsViewPane" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Ascend App Configuration Type" factoryName="Ascend App" hostip="192.168.1.2" commandArguments="">
+      <method v="2" />
+    </configuration>
+    <configuration name="crop" type="Ascend App Configuration Type" factoryName="Ascend App" hostip="192.168.1.2" commandArguments=" ../data/wood_rabbit_1024_1068_nv12.yuv 1024 1068 ./output/output.yuv 350 280 200 200" ProfilingParams="{&quot;--ai_core_profiling_mode&quot;:&quot;sample-based&quot;,&quot;ProfilingStatus&quot;:&quot;off&quot;,&quot;--ai_core_metrics&quot;:&quot;aicorePipeline&quot;,&quot;hasError&quot;:&quot;off&quot;,&quot;--profiling_options&quot;:&quot;task_trace&quot;,&quot;ai_core_sample_based&quot;:&quot;off&quot;,&quot;--aicore_sampling_interval&quot;:&quot;10&quot;,&quot;ai_core_task_based&quot;:&quot;off&quot;}">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="723baa16-ef12-4b85-959f-4da95ebea911" name="Default Changelist" comment="" />
+      <created>1604547591859</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604547591859</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1651" height="901" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42395693" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Tail" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Log" order="9" />
+      <window_info anchor="bottom" id="Output" order="10" weight="0.49528936" />
+      <window_info anchor="bottom" id="Pylint" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="14" weight="0.4589502" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1860">
+          <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>

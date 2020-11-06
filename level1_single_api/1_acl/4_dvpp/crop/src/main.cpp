@@ -28,8 +28,8 @@ using namespace std;
 Result Initparam(int argc, char *argv[])
 {
     DIR *dir;
-    if ((dir = opendir("./result")) == NULL)
-        system("mkdir ./result");
+    if ((dir = opendir("./output")) == NULL)
+        system("mkdir ./output");
     if(argc!=9)	{
         ERROR_LOG("./crop infile w h outfile w h");
         return FAILED;
@@ -57,12 +57,17 @@ uint32_t AlignmentHelper(uint32_t origSize, uint32_t alignment)
 
 uint32_t SaveDvppOutputData(const char *fileName, const void *devPtr, uint32_t dataSize)
 {
-    void* hostPtr = nullptr;
-    aclrtMallocHost(&hostPtr, dataSize);
-    aclrtMemcpy(hostPtr, dataSize, devPtr, dataSize, ACL_MEMCPY_DEVICE_TO_HOST);
-    FILE *outFileFp = fopen(fileName, "wb+");
-    fwrite(hostPtr, sizeof(char), dataSize, outFileFp);
-    (void)aclrtFreeHost(hostPtr);
+    FILE * outFileFp = fopen(fileName, "wb+");
+    if (runMode == ACL_HOST) {
+        void * hostPtr = nullptr;
+        aclrtMallocHost(&hostPtr, dataSize);
+        aclrtMemcpy(hostPtr, dataSize, devPtr, dataSize, ACL_MEMCPY_DEVICE_TO_HOST);
+        fwrite(hostPtr, sizeof(char), dataSize, outFileFp);
+        (void)aclrtFreeHost(hostPtr);
+    }
+    else{
+        fwrite(devPtr, sizeof(char), dataSize, outFileFp);
+    }
     fflush(outFileFp);
     fclose(outFileFp);
     return SUCCESS;
@@ -143,6 +148,7 @@ int main(int argc, char *argv[])
     aclrtSetDevice(deviceId_);
     aclrtCreateContext(&context_, deviceId_);
     aclrtCreateStream(&stream_);
+    aclrtGetRunMode(&runMode);
 
     /* 3.Initialization parameters: width and height of the original image, crop width and height. Initialize folder: Output folder*/
     Initparam(argc, argv);

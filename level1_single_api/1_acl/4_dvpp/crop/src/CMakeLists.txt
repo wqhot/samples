@@ -45,10 +45,10 @@ link_directories(
     ${LIB_PATH}
 )
 
-add_executable(crop
+add_executable(main
         main.cpp)
 
-target_link_libraries(crop
+target_link_libraries(main
         ascendcl acl_dvpp stdc++)
 
-install(TARGETS crop DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+install(TARGETS main DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})

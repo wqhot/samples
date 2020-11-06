@@ -55,6 +55,7 @@ acldvppChannelDesc *dvppChannelDesc_;
 uint32_t inBufferSize;
 uint32_t inputWidth;
 uint32_t inputHeight;
+aclrtRunMode runMode;
 
 PicDesc inPicDesc;
 CropPicDesc outPicDesc;
