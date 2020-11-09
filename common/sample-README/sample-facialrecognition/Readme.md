@@ -28,8 +28,10 @@
 
         在命令行中：$HOME/AscendProjects目录下执行以下命令下载代码。
 
-        **git clone https://gitee.com/Atlas200DK/sample-facialrecognition.git --branch 1.3x.0.0**
-
+        **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
+        
+        **mv samples/common/sample-README/sample-facialrecognition ./**
+        
 2.  <a name="zh-cn_topic_0203223340_li99811487013"></a>获取此应用中所需要的原始网络模型。
 
     参考[表1](#zh-cn_topic_0203223340_table97791025517)获取此应用中所用到的原始网络模型及其对应的权重文件，并将其存放到Mind Studio所在Ubuntu服务器的任意目录，这两个文件必须存放到同一个目录下。例如：$HOME/models/facialrecognition。

@@ -30,8 +30,10 @@
 
         在命令行中：$HOME/AscendProjects目录下执行以下命令下载代码。
 
-        **git clone https://gitee.com/Atlas200DK/sample-headposeestimation-python.git**
-
+        **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
+        
+        **mv samples/common/sample-README/sample-headposeestimation-python ./**
+        
 2.  <a name="zh-cn_topic_0228757086_li12291771229"></a>获取此应用中所需要的网络模型。
 
     参考[表 头部姿势识别\(python\)使用模型](#zh-cn_topic_0228757086_table1119094515272)获取此应用中所用到的原始网络模型及其对应的权重文件，并将其存放到Mind Studio所在Ubuntu服务器的任意目录，例如：$HOME/ascend/models/headposeestimation-python。

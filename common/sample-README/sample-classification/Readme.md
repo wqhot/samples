@@ -28,7 +28,9 @@
 
         在命令行中：$HOME/AscendProjects目录下执行以下命令下载代码。
 
-        **git clone https://gitee.com/Atlas200DK/sample-classification.git --branch 1.3x.0.0**
+        **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
+        
+        **mv samples/common/sample-README/sample-classification ./**
 
 2.  <a name="zh-cn_topic_0203223265_li29641938112018"></a>获取此应用中所需要的原始网络模型。
 

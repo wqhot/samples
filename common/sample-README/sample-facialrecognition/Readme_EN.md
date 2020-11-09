@@ -28,8 +28,10 @@ Before running the sample, obtain the source code package and configure the envi
 
         Run the following command in the  **$HOME/AscendProjects**  directory to download code:
 
-        **git clone https://gitee.com/Atlas200DK/sample-facialrecognition.git --branch 1.3x.0.0**
-
+        **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
+        
+        **mv samples/common/sample-README/sample-facialrecognition ./**
+        
 2.  <a name="en-us_topic_0203223340_li99811487013"></a>Obtain the source network model required by the application.
 
     Obtain the source network model and its weight file used in the application by referring to  [Table 1](#en-us_topic_0203223340_table97791025517)  and save them to the same directory on Ubuntu Server where Mind Studio is located, for example,  **$HOME/models/facialrecognition**.

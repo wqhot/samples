@@ -30,8 +30,10 @@ Before running this application, obtain the source code package and configure th
 
         Run the following command in the  **$HOME/AscendProjects**  directory to download code:
 
-        **git clone https://gitee.com/Atlas200DK/sample-segmentation-python.git**
-
+        **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
+        
+        **mv samples/common/sample-README/sample-segmentation-python ./**
+        
 2.  Obtain the network model required by the application.
 
     Refer to  [Table 1](#en-us_topic_0228757085_table1119094515272)  to obtain the source network model used in this application and the corresponding weight file. Save them to any directory of the Ubuntu server with  Mind Studio  installed, for example,  **$HOME/ascend/models/sample-segmentation-python**.

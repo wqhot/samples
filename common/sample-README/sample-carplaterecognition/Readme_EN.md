@@ -28,7 +28,9 @@ Before running the sample, obtain the source code package and configure the envi
 
         Run the following command in the  **$HOME/AscendProjects**  directory to download code:
 
-        **git clone https://gitee.com/Atlas200DK/sample-carplaterecognition.git --branch 1.3x.0.0**
+        **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
+        
+        **mv samples/common/sample-README/sample-carplaterecognition ./**
 
 2.  <a name="en-us_topic_0218873008_li8221184418455"></a>Obtain the source network model required by the application.
 
