@@ -8,11 +8,11 @@
 
 ### 样例介绍
 
-功能：调用dvpp的cropandpaste接口，实现将图片指定位置指定大小部分图片抠出来，粘贴到输出图片指定位置的功能。
+功能：调用dvpp的jpegd接口，实现图片解码的功能。
 
-样例输入：原始YUV图片。
+样例输入：待解码的jpeg图片。
 
-样例输出：抠图粘贴后后的YUV图片。
+样例输出：解码后的YUV图片。
 
 ### 工程准备
 
@@ -28,9 +28,9 @@
 
    **./Mindstudio.sh**
 
-3. 在Mindstudio右上角点击 **File->Open...** ,选择cropandpaste样例并打开。
+3. 在Mindstudio右上角点击 **File->Open...** ,选择jpegd样例并打开。
    
-   ![](https://images.gitee.com/uploads/images/2020/1109/113157_910dab6b_5395865.png "cropandpaste.png")
+   ![](https://images.gitee.com/uploads/images/2020/1109/173205_97c6b0c7_5395865.png "jpegd.png")
    
 
 ### 样例编译
@@ -49,13 +49,10 @@
 
    **Target Host Ip** 选择为已经配置好的运行环境ip地址。一般USB方式连接的200DK为192.168.1.2，ai1s云端推理环境为公网ip地址。   
 
-   **Command Arguments** 填写为：**../data/wood_rabbit_1024_1068_nv12.yuv 1024 1068 ./output/output.yuv 224 224**。
-
    参数填写完成后，点击右下角的**Apply**，再点击**OK**。
 ​    
     ![](https://images.gitee.com/uploads/images/2020/1106/160652_6146f6a4_5395865.gif "icon-note.gif") **说明：**  
     > - 如果**Target Host Ip**没有取值，请点击后面的加号图标，自行配置运行环境。   
-    > - **Command Arguments**参数值../data/input.jpg w h output.yuv w h（w、h分别为照片宽度和高度），输入图片可自行上传，裁剪位置也可以自行修改。
 
 2. 在Mindstudio右上角点击 **Run->Run 'cropandpaste'** ,运行样例。
 
