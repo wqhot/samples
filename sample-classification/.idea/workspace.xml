@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7e1b003-cd7b-4cf1-94a0-ab5d50816bc3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-carplaterecognition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-carplaterecognition/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-carplaterecognition/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-carplaterecognition/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-carplaterecognition/Readme_EN.md" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-carplaterecognition/Readme_EN.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Readme_EN.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme_EN.md" afterDir="false" />
     </list>
@@ -14,7 +16,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="405">
+                <caret line="27" column="246" selection-start-line="27" selection-start-column="246" selection-end-line="27" selection-end-column="246" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Readme_EN.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="105">
+                <caret line="10" column="73" lean-forward="true" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -39,8 +66,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -52,6 +77,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -85,6 +112,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1855" height="931" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10327869" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -97,10 +125,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Log" order="7" />
-      <window_info anchor="bottom" id="Output" order="8" sideWeight="0.49836066" visible="true" weight="0.21281742" />
+      <window_info anchor="bottom" id="Output" order="8" sideWeight="0.4978142" visible="true" weight="0.20677146" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50163937" side_tool="true" visible="true" weight="0.21281742" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5021858" side_tool="true" visible="true" weight="0.20677146" />
       <window_info anchor="bottom" id="SOQL Query" order="12" />
       <window_info anchor="bottom" id="Log Analyzer" order="13" />
       <window_info anchor="bottom" id="Anonymous Apex" order="14" />
@@ -110,21 +138,21 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Readme_EN.md">
+    <entry file="file://$PROJECT_DIR$/Readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="210">
-            <caret line="17" column="70" lean-forward="true" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+          <first_editor relative-caret-position="405">
+            <caret line="27" column="246" selection-start-line="27" selection-start-column="246" selection-end-line="27" selection-end-column="246" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Readme.md">
+    <entry file="file://$PROJECT_DIR$/Readme_EN.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="405">
-            <caret line="27" column="155" lean-forward="true" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="155" />
+          <first_editor relative-caret-position="105">
+            <caret line="10" column="73" lean-forward="true" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
           </first_editor>
           <second_editor />
         </state>

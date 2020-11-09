@@ -21,13 +21,13 @@ Before deploying this sample, ensure that:
 
 You can use either of the following methods:
 
-1.  Quick deployment: visit  [https://gitee.com/ascend/samples/tree/1.32.0.0/common/faster-deploy](https://gitee.com/Atlas200DK/faster-deploy).
+1.  Quick deployment: visit  [https://gitee.com/ascend/samples/tree/1.32.0.0/common/faster-deploy](https://gitee.com/ascend/samples/tree/1.32.0.0/common/faster-deploy).
 
     >![](public_sys-resources/icon-note.gif) **NOTE:**   
     >-   The quick deployment script can be used to quickly deploy multiple cases. Select  **sample-segmentation-python**.  
     >-   The quick deployment script automatically completes code download, model conversion, and environment variable configuration. To learn about the detailed deployment process, go to  [2. Common deployment](#en-us_topic_0228752400_li3208251440).  
 
-2.  <a name="en-us_topic_0228752400_li3208251440"></a>Common deployment: visit  [https://gitee.com/ascend/samples/tree/1.32.0.0/common/sample-README/sample-segmentation-python](https://gitee.com/Atlas200DK/sample-README/tree/master/sample-segmentation-python).
+2.  <a name="en-us_topic_0228752400_li3208251440"></a>Common deployment: visit  [https://gitee.com/ascend/samples/tree/1.32.0.0/common/sample-README/sample-segmentation-python](https://gitee.com/ascend/samples/tree/1.32.0.0/common/sample-README/sample-segmentation-python).
 
     >![](public_sys-resources/icon-note.gif) **NOTE:**   
     >
