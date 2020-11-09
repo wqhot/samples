@@ -19,13 +19,13 @@
 
 可以选择如下快速部署或者常规方法部署，二选一即可：
 
-1.  快速部署，请参考：  [https://gitee.com/Atlas200DK/faster-deploy](https://gitee.com/Atlas200DK/faster-deploy)  。
+1.  快速部署，请参考：  [https://gitee.com/ascend/samples/tree/1.32.0.0/common/faster-deploy](https://gitee.com/Atlas200DK/faster-deploy)  。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >-   该快速部署脚本可以快速部署多个案例，请选择facialrecognition案例部署即可。  
     >-   该快速部署脚本自动完成了代码下载、模型转换、环境变量配置等流程，如果需要了解详细的部署过程请选择常规部署方式。请转：[2. 常规部署](#zh-cn_topic_0228461922_li10170621131715)。  
 
-2.  <a name="zh-cn_topic_0228461922_li10170621131715"></a>常规部署，请参考：  [https://gitee.com/Atlas200DK/sample-README/tree/master/sample-facialrecognition](https://gitee.com/Atlas200DK/sample-README/tree/master/sample-facialrecognition)。
+2.  <a name="zh-cn_topic_0228461922_li10170621131715"></a>常规部署，请参考：  [https://gitee.com/ascend/samples/tree/1.32.0.0/common/sample-README/sample-facialrecognition](https://gitee.com/Atlas200DK/sample-README/tree/master/sample-facialrecognition)。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >-   该部署方式，需要手动完成代码下载、模型转换、环境变量配置等过程。完成后，会对其中的过程更加了解。  
