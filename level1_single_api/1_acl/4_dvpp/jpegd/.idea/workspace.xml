@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fadfa922-dd5a-4921-a28e-b7aec1f14a6f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../jpegd/jpegd/data/dog1_1024_683.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/jpegd/sample_jpegd╗∙▒╛╘¡└φ.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/jpegd/src/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/jpegd/src/acl.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/jpegd/src/jpegd.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/jpegd/src/jpegd.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/public_sys-resources/icon-caution.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/public_sys-resources/icon-danger.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/public_sys-resources/icon-note.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/public_sys-resources/icon-notice.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/public_sys-resources/icon-tip.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/public_sys-resources/icon-warning.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/readme.md" beforeDir="false" />
-    </list>
+    <list default="true" id="8b13988c-2875-4ad7-8976-1158e7718aa8" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/../out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,17 +14,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="19" />
+            <state relative-caret-position="284">
+              <caret line="192" column="13" selection-start-line="192" selection-start-column="13" selection-end-line="192" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/dog1_1024_683.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+            <state relative-caret-position="400">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -46,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="800">
+              <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -56,17 +50,28 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ReadInputFile</find>
-      <find>inputHostBuff</find>
       <find>host</find>
+      <find>SaveDvppOutputData</find>
+      <find>dvppOutputfileName</find>
+      <find>runMode</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/main.h" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
-        <option value="$PROJECT_DIR$/src/CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
       </list>
     </option>
   </component>
@@ -82,24 +87,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="OperatorsViewPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="cropandpaste" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cropandpaste" type="462c0819:PsiDirectoryNode" />
+              <item name="jpegd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jpegd" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="OperatorsViewPane" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -118,7 +122,7 @@
     <configuration default="true" type="Ascend App Configuration Type" factoryName="Ascend App" hostip="192.168.1.2" commandArguments="">
       <method v="2" />
     </configuration>
-    <configuration name="cropandpaste" type="Ascend App Configuration Type" factoryName="Ascend App" hostip="192.168.1.2" commandArguments="../data/wood_rabbit_1024_1068_nv12.yuv 1024 1068 ./output/output.yuv 224 224" ProfilingParams="{&quot;--ai_core_profiling_mode&quot;:&quot;sample-based&quot;,&quot;ProfilingStatus&quot;:&quot;off&quot;,&quot;--ai_core_metrics&quot;:&quot;aicorePipeline&quot;,&quot;hasError&quot;:&quot;off&quot;,&quot;--profiling_options&quot;:&quot;task_trace&quot;,&quot;ai_core_sample_based&quot;:&quot;off&quot;,&quot;--aicore_sampling_interval&quot;:&quot;10&quot;,&quot;ai_core_task_based&quot;:&quot;off&quot;}">
+    <configuration name="jpegd" type="Ascend App Configuration Type" factoryName="Ascend App" hostip="192.168.1.2" commandArguments="" ProfilingParams="{&quot;--ai_core_profiling_mode&quot;:&quot;sample-based&quot;,&quot;ProfilingStatus&quot;:&quot;off&quot;,&quot;--ai_core_metrics&quot;:&quot;aicorePipeline&quot;,&quot;hasError&quot;:&quot;off&quot;,&quot;--profiling_options&quot;:&quot;task_trace&quot;,&quot;ai_core_sample_based&quot;:&quot;off&quot;,&quot;--aicore_sampling_interval&quot;:&quot;10&quot;,&quot;ai_core_task_based&quot;:&quot;off&quot;}">
       <method v="2" />
     </configuration>
   </component>
@@ -127,11 +131,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fadfa922-dd5a-4921-a28e-b7aec1f14a6f" name="Default Changelist" comment="" />
-      <created>1604888369485</created>
+      <changelist id="8b13988c-2875-4ad7-8976-1158e7718aa8" name="Default Changelist" comment="" />
+      <created>1604902792328</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1604888369485</updated>
+      <updated>1604902792328</updated>
     </task>
     <servers />
   </component>
@@ -143,7 +147,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.084791385" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42013422" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -155,31 +159,38 @@
       <window_info anchor="bottom" id="Pylint" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="14" weight="0.32885906" />
+      <window_info anchor="bottom" id="Build" order="14" weight="0.40402684" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main.h">
+    <entry file="file://$PROJECT_DIR$/src/jpegd.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="284">
+          <caret line="192" column="13" selection-start-line="192" selection-start-column="13" selection-end-line="192" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/data/dog1_1024_683.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+        <state relative-caret-position="400">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
         </state>
       </provider>
     </entry>
