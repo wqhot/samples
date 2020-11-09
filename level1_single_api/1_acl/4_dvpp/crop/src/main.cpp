@@ -166,13 +166,18 @@ int main(int argc, char *argv[])
     // GetPicDevBuffer4JpegD
     int modelInputWidth = (orimodelInputWidth+15)/16*16;
     int modelInputHeight = (orimodelInputHeight+1)/2*2;
-    uint32_t inputHostBuffSize = 0;
-    char* inputHostBuff = ReadBinFile(inPicDesc.picName, inputHostBuffSize);
+    uint32_t inputBuffSize = 0;
+    char* inputBuff = ReadBinFile(inPicDesc.picName, inputBuffSize);
     void *inBufferDev = nullptr;
-    inBufferSize = inputHostBuffSize;
+    inBufferSize = inputBuffSize;
     acldvppMalloc(&inBufferDev, inBufferSize);
-    aclrtMemcpy(inBufferDev, inBufferSize, inputHostBuff, inputHostBuffSize, ACL_MEMCPY_HOST_TO_DEVICE);
-    delete[] inputHostBuff;
+    if (runMode == ACL_HOST) {
+        aclrtMemcpy(inBufferDev, inBufferSize, inputBuff, inputBuffSize, ACL_MEMCPY_HOST_TO_DEVICE);
+    }
+    else {
+        aclrtMemcpy(inBufferDev, inBufferSize, inputBuff, inputBuffSize, ACL_MEMCPY_DEVICE_TO_DEVICE);
+    }
+    delete[] inputBuff;
     
     uint32_t oddNum = 1;
     uint32_t cropSizeWidth = modelInputWidth;
