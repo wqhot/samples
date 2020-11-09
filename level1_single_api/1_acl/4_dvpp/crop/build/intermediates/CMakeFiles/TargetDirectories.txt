@@ -1,0 +1,13 @@
+/home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates/CMakeFiles/install/strip.dir
+/home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates/CMakeFiles/install/local.dir
+/home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates/CMakeFiles/edit_cache.dir
+/home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates/CMakeFiles/rebuild_cache.dir
+/home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates/CMakeFiles/list_install_components.dir
+/home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates/CMakeFiles/install.dir
+/home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates/src/CMakeFiles/install/strip.dir
+/home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates/src/CMakeFiles/install/local.dir
+/home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates/src/CMakeFiles/main.dir
+/home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates/src/CMakeFiles/edit_cache.dir
+/home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates/src/CMakeFiles/rebuild_cache.dir
+/home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates/src/CMakeFiles/install.dir
+/home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates/src/CMakeFiles/list_install_components.dir

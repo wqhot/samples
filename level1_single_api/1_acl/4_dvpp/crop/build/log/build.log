@@ -1,0 +1,32 @@
+2020-11-05 23:40:23 [ INFO ] Build command: 
+2020-11-05 23:40:23 [ INFO ] export DDK_PATH=/home/ascend/Ascend/ascend-toolkit/20.0.RC1/acllib_centos7.6.aarch64 && export NPU_HOST_LIB=/home/ascend/Ascend/ascend-toolkit/20.0.RC1/acllib_centos7.6.aarch64/acllib/lib64/stub && export LANG="C" && cd /home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates && /home/ascend/MindStudio-ubuntu/tools/cmake/bin/cmake /home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop -DCMAKE_SKIP_RPATH=TRUE -Dtarget= -DCMAKE_CXX_COMPILER=aarch64-linux-gnu-g++-5 && make && echo crop build successfully.
+2020-11-05 23:40:23 [ INFO ] -- The C compiler identification is GNU 7.5.0
+2020-11-05 23:40:23 [ INFO ] -- The CXX compiler identification is GNU 5.5.0
+2020-11-05 23:40:23 [ INFO ] -- Check for working C compiler: /usr/bin/cc
+2020-11-05 23:40:23 [ INFO ] -- Check for working C compiler: /usr/bin/cc -- works
+2020-11-05 23:40:23 [ INFO ] -- Detecting C compiler ABI info
+2020-11-05 23:40:23 [ INFO ] -- Detecting C compiler ABI info - done
+2020-11-05 23:40:23 [ INFO ] -- Detecting C compile features
+2020-11-05 23:40:23 [ INFO ] -- Detecting C compile features - done
+2020-11-05 23:40:23 [ INFO ] -- Check for working CXX compiler: /usr/bin/aarch64-linux-gnu-g++-5
+2020-11-05 23:40:23 [ INFO ] -- Check for working CXX compiler: /usr/bin/aarch64-linux-gnu-g++-5 -- works
+2020-11-05 23:40:23 [ INFO ] -- Detecting CXX compiler ABI info
+2020-11-05 23:40:23 [ INFO ] -- Detecting CXX compiler ABI info - done
+2020-11-05 23:40:23 [ INFO ] -- Detecting CXX compile features
+2020-11-05 23:40:23 [ INFO ] -- Detecting CXX compile features - done
+2020-11-05 23:40:23 [ INFO ] -- env INC_PATH: /home/ascend/Ascend/ascend-toolkit/20.0.RC1/acllib_centos7.6.aarch64
+2020-11-05 23:40:23 [ INFO ] -- env LIB_PATH: /home/ascend/Ascend/ascend-toolkit/20.0.RC1/acllib_centos7.6.aarch64/acllib/lib64/stub
+2020-11-05 23:40:23 [ INFO ] -- Configuring done
+2020-11-05 23:40:23 [ INFO ] -- Generating done
+2020-11-05 23:40:23 [ WARN ] CMake Warning:
+2020-11-05 23:40:23 [ INFO ]   Manually-specified variables were not used by the project:
+2020-11-05 23:40:23 [ INFO ] 
+2020-11-05 23:40:23 [ INFO ]     target
+2020-11-05 23:40:23 [ INFO ] 
+2020-11-05 23:40:23 [ INFO ] 
+2020-11-05 23:40:23 [ INFO ] -- Build files have been written to: /home/ascend/samples/level1_single_api/1_acl/4_dvpp/crop/build/intermediates
+2020-11-05 23:40:23 [ INFO ] Scanning dependencies of target main
+2020-11-05 23:40:23 [ INFO ] [ 50%] Building CXX object src/CMakeFiles/main.dir/main.cpp.o
+2020-11-05 23:40:24 [ INFO ] [100%] Linking CXX executable ../../../out/main
+2020-11-05 23:40:24 [ INFO ] [100%] Built target main
+2020-11-05 23:40:24 [ INFO ] crop build successfully.
