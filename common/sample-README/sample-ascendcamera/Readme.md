@@ -28,7 +28,9 @@ Ascend Camera主要功能是通过Atlas 200 DK开发者板上的摄像头采集�
 
         在命令行中：$HOME/AscendProjects目录下执行以下命令下载代码。
 
-        **git clone https://gitee.com/Atlas200DK/sample-facialrecognition.git --branch 1.3x.0.0**
+        **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
+        
+        **mv samples/common/sample-README/sample-ascendcamera ./**
 
 2.  以Mind Studio安装用户登录Mind Studio所在Ubuntu服务器，确定当前使用的DDK版本号并设置环境变量DDK\_HOME，tools\_version，LD\_LIBRARY\_PATH。
     1.  <a name="zh-cn_topic_0203223312_zh-cn_topic_0203223294_li61417158198"></a>查询当前使用的DDK版本号。

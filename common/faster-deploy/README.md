@@ -8,11 +8,11 @@
 
     命令行中使用以下命令下载faster-deploy脚本。
 
-    **git clone https://gitee.com/Atlas200DK/faster-deploy.git**
+    **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
     
     进入faster-deploy文件夹下。
 
-    **cd faster-deploy**
+    **cd samples/commmon/faster-deploy**
 
 2. 使用source命令执行faster-deploy脚本，命令示例如下:
 
