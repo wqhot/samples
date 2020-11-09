@@ -32,7 +32,7 @@ Before running this application, obtain the source code package and configure th
 
         **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
         
-        **mv samples/common/sample-README/sample-segmentation-python ./**
+        **mv samples/sample-segmentation-python ./**
         
 2.  Obtain the network model required by the application.
 

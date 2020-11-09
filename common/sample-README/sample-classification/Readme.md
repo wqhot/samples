@@ -30,7 +30,7 @@
 
         **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
         
-        **mv samples/common/sample-README/sample-classification ./**
+        **mv samples/sample-classification ./**
 
 2.  <a name="zh-cn_topic_0203223265_li29641938112018"></a>获取此应用中所需要的原始网络模型。
 

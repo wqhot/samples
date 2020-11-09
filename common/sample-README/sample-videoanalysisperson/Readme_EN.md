@@ -30,7 +30,7 @@ Before running the sample, obtain the source code package and configure the envi
 
         **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
         
-        **mv samples/common/sample-README/sample-videoanalysisperson ./**
+        **mv samples/sample-videoanalysisperson ./**
         
 2.  <a name="en-us_topic_0203223281_li5507119145914"></a>Obtain the source network model required by the application.
 

@@ -32,7 +32,7 @@
 
         **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
         
-        **mv samples/common/sample-README/sample-segmentation-python ./**
+        **mv samples/sample-segmentation-python ./**
         
 2.  获取此应用中所需要的网络模型。
 

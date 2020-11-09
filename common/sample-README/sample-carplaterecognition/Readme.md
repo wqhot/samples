@@ -30,7 +30,7 @@
 
         **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
         
-        **mv samples/common/sample-README/sample-carplaterecognition ./**
+        **mv samples/sample-carplaterecognition ./**
 
 2.  <a name="zh-cn_topic_0218873008_li8221184418455"></a>获取此应用中所需要的原始网络模型。
 

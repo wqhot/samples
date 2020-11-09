@@ -32,7 +32,7 @@ Before running this application, obtain the source code package and configure th
 
         **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
         
-        **mv samples/common/sample-README/sample-headposeestimation-python ./**
+        **mv samples/sample-headposeestimation-python ./**
         
 2.  <a name="en-us_topic_0228757086_li12291771229"></a>Obtain the network model required by the application.
 

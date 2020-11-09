@@ -30,7 +30,7 @@ Before running the sample, obtain the source code package and configure the envi
 
         **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
         
-        **mv samples/common/sample-README/sample-ascendcamera ./**
+        **mv samples/sample-ascendcamera ./**
 
 2.  Log in to Ubuntu Server where Mind Studio is located as the Mind Studio installation user, confirm the current DDK version, and set the environment variables  **DDK\_HOME**,  **tools\_version**, and  **LD\_LIBRARY\_PATH**.
     1.  <a name="en-us_topic_0203223312_en-us_topic_0203223294_li61417158198"></a>Query the current DDK version.

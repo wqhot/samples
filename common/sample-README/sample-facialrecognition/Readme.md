@@ -30,7 +30,7 @@
 
         **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
         
-        **mv samples/common/sample-README/sample-facialrecognition ./**
+        **mv samples/sample-facialrecognition ./**
         
 2.  <a name="zh-cn_topic_0203223340_li99811487013"></a>获取此应用中所需要的原始网络模型。
 

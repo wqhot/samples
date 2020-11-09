@@ -30,7 +30,7 @@ Before running the sample, obtain the source code package and configure the envi
 
         **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
         
-        **mv samples/common/sample-README/sample-classification ./**
+        **mv samples/sample-classification ./**
 
 2.  <a name="en-us_topic_0203223265_li29641938112018"></a>Obtain the source network model required by the application.
 

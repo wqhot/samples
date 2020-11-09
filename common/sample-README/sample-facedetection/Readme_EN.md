@@ -30,7 +30,8 @@ Before running this sample, obtain the source code package, configure the enviro
 
         **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
         
-        **mv samples/common/sample-README/sample-facedetection ./**
+        **mv samples/sample-facedetection ./**
+        
 2.  <a name="en-us_topic_0203223294_li1365682471610"></a>Obtain the source network model required by the application.
 
     Obtain the source network model and its weight file used in the application by referring to  [Table 1](#en-us_topic_0203223294_table144841813177)  and save them to the same directory on Ubuntu Server where Mind Studio is located, for example,  **$HOME/models/facedetection**.

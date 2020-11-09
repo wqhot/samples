@@ -30,7 +30,7 @@ Before running the sample, obtain the source code package and configure the envi
 
         **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
         
-        **mv samples/common/sample-README/sample-colorization ./**
+        **mv samples/sample-colorization ./**
 2.  <a name="en-us_topic_0219108795_li2074865610364"></a>Obtain the source network model required by the application.
 
     Obtain the source network model and its weight file used in the application by referring to  [Table 1](#en-us_topic_0219108795_table19942111763710)  and save them to the same directory on Ubuntu Server where  Mind Studio  is located, for example,  **$HOME/models/colorization**.
