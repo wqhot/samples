@@ -22,7 +22,7 @@ Before running the sample, obtain the source code package and configure the envi
 1.  <a name="en-us_topic_0203223280_li953280133816"></a>Obtain the source code package.
     1.  By downloading the package
 
-        Download the code in the  [https://gitee.com/Atlas200DK/sample-objectdetection/tree/1.3x.0.0/](https://gitee.com/Atlas200DK/sample-objectdetection/tree/1.3x.0.0/)  repository to any directory on the Ubuntu server where Mind Studio is located as the Mind Studio installation user. The two files must be stored in the same directory. For example, the code can be stored in  **$HOME/AscendProjects/sample-objectdetection**.
+        Download the code in the  [https://gitee.com/ascend/samples/tree/1.32.0.0/sample-objectdetection/](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-objectdetection/)  repository to any directory on the Ubuntu server where Mind Studio is located as the Mind Studio installation user. The two files must be stored in the same directory. For example, the code can be stored in  **$HOME/AscendProjects/sample-objectdetection**.
 
     2.  By running the  **git**  command
 

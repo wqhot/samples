@@ -24,7 +24,7 @@
 1.  <a name="zh-cn_topic_0228757085_li953280133816"></a>获取源码包。
     1.  下载压缩包方式获取。
 
-        将[https://gitee.com/Atlas200DK/sample-segmentation-python](https://gitee.com/Atlas200DK/sample-classification-python)仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/sample-segmentation-python。
+        将[https://gitee.com/ascend/samples/tree/1.32.0.0/sample-segmentation-python](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-segmentation-python)仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/sample-segmentation-python。
 
     2.  命令行使用git命令方式获取。
 

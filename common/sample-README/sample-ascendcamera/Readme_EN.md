@@ -22,7 +22,7 @@ Before running the sample, obtain the source code package and configure the envi
 1.  Obtain the source code package.
     1.  By downloading the package
 
-        Download all the code in the repository at  [https://gitee.com/Atlas200DK/sample-ascendcamera/tree/1.3x.0.0/](https://gitee.com/Atlas200DK/sample-ascendcamera/tree/1.3x.0.0/)  to any directory on Ubuntu Server where Mind Studio is located as the Mind Studio installation user, for example,  _$HOME/sample-ascendcamera_.
+        Download all the code in the repository at  [https://gitee.com/ascend/samples/tree/1.32.0.0/sample-ascendcamera/](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-ascendcamera/)  to any directory on Ubuntu Server where Mind Studio is located as the Mind Studio installation user, for example,  _$HOME/sample-ascendcamera_.
 
     2.  By running the  **git**  command
 

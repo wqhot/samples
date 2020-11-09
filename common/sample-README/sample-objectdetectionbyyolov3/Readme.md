@@ -22,7 +22,7 @@
 1.  <a name="zh-cn_topic_0219028422_li953280133816"></a>获取源码包。
     1.  下载压缩包方式获取。
 
-        将[https://gitee.com/Atlas200DK/sample-objectdetectionbyyolov3/tree/1.3x.0.0/](https://gitee.com/Atlas200DK/sample-objectdetectionbyyolov3/tree/1.3x.0.0/)仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，这两个文件必须存放到同一个目录下。例如代码存放路径为：$HOME/AscendProjects/sample-objectdetectionbyyolov3。
+        将[https://gitee.com/ascend/samples/tree/1.32.0.0/sample-objectdetectionbyyolov3/](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-objectdetectionbyyolov3/)仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，这两个文件必须存放到同一个目录下。例如代码存放路径为：$HOME/AscendProjects/sample-objectdetectionbyyolov3。
 
     2.  命令行使用git命令方式获取。
 

@@ -24,7 +24,7 @@
 1.  <a name="zh-cn_topic_0228757086_li953280133816"></a>获取源码包。
     1.  下载压缩包方式获取。
 
-        将[https://gitee.com/Atlas200DK/sample-headposeestimation-python](https://gitee.com/Atlas200DK/sample-headposeestimation-python)仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/sample-headposeestimation-python。
+        将[https://gitee.com/ascend/samples/tree/1.32.0.0/sample-headposeestimation-python](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-headposeestimation-python)仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/sample-headposeestimation-python。
 
     2.  命令行使用git命令方式获取。
 

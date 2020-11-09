@@ -22,7 +22,7 @@
 1.  <a name="zh-cn_topic_0203223281_li953280133816"></a>获取源码包。
     1.  下载压缩包方式获取。
 
-        将[https://gitee.com/Atlas200DK/sample-videoanalysisperson/tree/1.3x.0.0/](https://gitee.com/Atlas200DK/sample-videoanalysisperson/tree/1.3x.0.0/)仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/AscendProjects/sample-videoanalysisperson。
+        将[https://gitee.com/ascend/samples/tree/1.32.0.0/sample-videoanalysisperson/](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-videoanalysisperson/)仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/AscendProjects/sample-videoanalysisperson。
 
     2.  命令行使用git命令方式获取。
 

@@ -24,7 +24,7 @@ Before running this application, obtain the source code package and configure th
 1.  <a name="en-us_topic_0228757085_li953280133816"></a>Obtain the source code package.
     1.  By downloading the package
 
-        Download all code in the repository at  [https://gitee.com/Atlas200DK/sample-segmentation-python](https://gitee.com/Atlas200DK/sample-classification-python)  to any directory on Ubuntu Server where  Mind Studio  is located as the  Mind Studio  installation user, for example,  **$HOME/sample-segmentation-python**.
+        Download all code in the repository at  [https://gitee.com/ascend/samples/tree/1.32.0.0/sample-segmentation-python](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-segmentation-python)  to any directory on Ubuntu Server where  Mind Studio  is located as the  Mind Studio  installation user, for example,  **$HOME/sample-segmentation-python**.
 
     2.  By running the  **git**  command
 
