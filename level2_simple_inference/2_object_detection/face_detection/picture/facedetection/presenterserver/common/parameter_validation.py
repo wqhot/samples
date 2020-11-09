@@ -34,10 +34,11 @@ import logging
 
 PORT_INTERVAL_BEGIN = 1024
 PORT_INTERVAL_END = 49151
-IP_ZERO = '0.0.0.0'
+
 def validate_ip(ip_str):
-    if ip_str == IP_ZERO:
-        logging.error("IP Addr %s is illegal",IP_ZERO)
+    if ip_str == '0.0.0.0':
+        logging.error("IP Addr \"0.0.0.0\" is illegal")
+        print("IP Addr \"0.0.0.0\" is illegal")
         return False
 
     sep = ip_str.split('.')
