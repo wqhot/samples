@@ -36,3 +36,5 @@ typedef struct PicDesc {
     int height;
 }PicDesc;
 
+aclrtRunMode runMode;
+
