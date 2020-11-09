@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fadfa922-dd5a-4921-a28e-b7aec1f14a6f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../jpegd/jpegd/data/dog1_1024_683.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/jpegd/sample_jpegd╗∙▒╛╘¡└φ.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/jpegd/src/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/jpegd/src/acl.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/jpegd/src/jpegd.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/jpegd/src/jpegd.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/public_sys-resources/icon-caution.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/public_sys-resources/icon-danger.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/public_sys-resources/icon-note.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/public_sys-resources/icon-notice.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/public_sys-resources/icon-tip.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/public_sys-resources/icon-warning.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpegd/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpegd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpegd/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/../out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +16,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="120">
               <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="19" />
             </state>
           </provider>
@@ -60,6 +48,9 @@
       <find>inputHostBuff</find>
       <find>host</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -137,13 +128,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1651" height="901" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.084791385" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.084791385" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -171,7 +163,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="120">
           <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="19" />
         </state>
       </provider>

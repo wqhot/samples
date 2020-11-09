@@ -45,10 +45,10 @@ link_directories(
     ${LIB_PATH}
 )
 
-add_executable(jpege
-        jpege.cpp)
+add_executable(main
+        main.cpp)
 
-target_link_libraries(jpege
+target_link_libraries(main
         ascendcl acl_cblas acl_dvpp stdc++)
 
-install(TARGETS jpege DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+install(TARGETS main DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
