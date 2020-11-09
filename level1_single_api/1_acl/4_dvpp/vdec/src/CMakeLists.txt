@@ -12,7 +12,7 @@ add_compile_options(-std=c++11)
 add_definitions(-DENABLE_DVPP_INTERFACE)
 
 # Specify target generation path
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY  "../out")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY  "../../../out")
 set(CMAKE_CXX_FLAGS_DEBUG "-fPIC -O0 -g -Wall")
 set(CMAKE_CXX_FLAGS_RELEASE "-fPIC -O2 -Wall")
 
@@ -45,7 +45,7 @@ link_directories(
 )
 
 add_executable(main
-        sample_vdec.cpp)
+        main.cpp)
 
 target_link_libraries(main
         ascendcl acl_dvpp pthread stdc++)
