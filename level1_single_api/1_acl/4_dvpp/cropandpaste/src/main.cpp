@@ -27,6 +27,9 @@ using namespace std;
 /* 运行管理资源申请,包括Device、Context、Stream*/
 Result Initparam(int argc, char *argv[])
 {
+    DIR *dir;
+    if ((dir = opendir("./output")) == NULL)
+        system("mkdir ./output");
     if(argc!=7)	{
         ERROR_LOG("./resize infile w h outfile w h");
         return FAILED;
