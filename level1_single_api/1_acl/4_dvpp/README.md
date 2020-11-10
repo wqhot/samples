@@ -29,6 +29,6 @@
 │   ├── model   
 │   └── src   
 └── [venc](https://gitee.com/ascend/samples/tree/dev/level1_single_api/1_acl/4_dvpp/venc)：**dvpp之venc接口，将YUV420SP图片数据编码成H264/H265格式的视频码流。**      
-    ├── data   
-    ├── model   
-    └── src  
+│   ├── data   
+│   ├── model   
+└   └── src   
