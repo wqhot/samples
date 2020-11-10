@@ -30,7 +30,7 @@
 
 3. 在Mindstudio右上角点击 **File->Open...** ,选择jpege样例并打开。
    
-   ![](https://images.gitee.com/uploads/images/2020/1110/114937_574fd95e_5395865.png "jpege.png")
+   ![](https://images.gitee.com/uploads/images/2020/1110/115026_0a700127_5395865.png "jpege.png")
    
 
 ### 样例编译
@@ -54,11 +54,11 @@
     ![](https://images.gitee.com/uploads/images/2020/1106/160652_6146f6a4_5395865.gif "icon-note.gif") **说明：**  
     > - 如果**Target Host Ip**没有取值，请点击后面的加号图标，自行配置运行环境。   
 
-2. 在Mindstudio右上角点击 **Run->Run 'cropandpaste'** ,运行样例。
+2. 在Mindstudio右上角点击 **Run->Run 'jpege'** ,运行样例。
 
     运行过程中，会将开发环境中的**data、out、model**文件夹上传到运行环境。并使用**adc**工具执行编译出来的**run.sh**脚本。
     
 
 ### 查看结果
 
-运行完成后，会在本地开发环境的**out**文件夹下得到相应的回传文件**output.yuv**，他是根据cropandpaste的宽度高度生成的yuv420文件。
+运行完成后，会在本地开发环境的**out**文件夹下得到相应的回传文件**jpege_output.jpg**。
