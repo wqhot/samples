@@ -12,7 +12,7 @@
 │   ├── CMakeLists.txt   
 │   ├── inc   
 │   └── src   
-└── [uart](https://gitee.com/ascend/samples/tree/dev/level1_single_api/5_200dk_peripheral/uart)**：Atlas200DK开发者板使用UART1串口收发数据的样例。**   
+├── [uart](https://gitee.com/ascend/samples/tree/dev/level1_single_api/5_200dk_peripheral/uart)**：Atlas200DK开发者板使用UART1串口收发数据的样例。**   
 │   ├── CMakeLists.txt   
 │   ├── inc   
 └   └── src   
