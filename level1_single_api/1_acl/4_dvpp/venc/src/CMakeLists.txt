@@ -12,7 +12,7 @@ add_compile_options(-std=c++11)
 add_definitions(-DENABLE_DVPP_INTERFACE)
 
 # Specify target generation path
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY  "../out")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY  "../../../out")
 set(CMAKE_CXX_FLAGS_DEBUG "-fPIC -O0 -g -Wall")
 set(CMAKE_CXX_FLAGS_RELEASE "-fPIC -O2 -Wall")
 
@@ -34,32 +34,31 @@ else ()
     message(STATUS "env LIB_PATH: ${LIB_PATH}")
 endif()
 
+if (${CMAKE_CXX_COMPILER} MATCHES "aarch")
+    set(ARCH "arm")
+else ()
+    set(ARCH "x86")
+endif()
+
 # Header path
 include_directories(
-    ../inc/
-    $ENV{HOME}/ascend_ddk/include/third_party/
     ${INC_PATH}/acllib/include/
-    $ENV{HOME}/ascend_ddk/include/ascenddk/
-    $ENV{HOME}/Ascend/
-    $ENV{HOME}/Ascend/ascenddk/
+    $ENV{HOME}/ascend_ddk/${ARCH}/include/opencv4
+    $ENV{HOME}/ascend_ddk/${ARCH}/include/
 )
 
 # add host lib path
 link_directories(
     ${LIB_PATH}
-    $ENV{HOME}/ascend_ddk/lib/
-    $ENV{HOME}/Ascend/driver/
-    $ENV{HOME}/Ascend/
+    $ENV{HOME}/ascend_ddk/${ARCH}/lib/
     ${INC_PATH}/atc/lib64/
 )
 
 add_executable(main
-        utils.cpp
-        camera.cpp
-        sample_venc.cpp)
+        main.cpp)
 
 #target_link_libraries(main
 #        ascendcl acl_dvpp pthread stdc++)
-target_link_libraries(main ascendcl acl_dvpp stdc++  c_sec slog media_mini pthread )
+target_link_libraries(main ascendcl acl_dvpp stdc++ pthread opencv_highgui opencv_core opencv_imgproc opencv_imgcodecs opencv_calib3d opencv_features2d opencv_videoio protobuf)
 
 install(TARGETS main DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
