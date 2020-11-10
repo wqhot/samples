@@ -1,4 +1,4 @@
-# HardwareExpansion-Atlas200DK
+# 200dk_peripheral
 
 #### 介绍
 本仓包含Atlas200DK各硬件接口的使用样例，各文件夹对应不同硬件设备的样例，以供用户参考。目录结构和具体说明如下。
