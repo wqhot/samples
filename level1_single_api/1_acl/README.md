@@ -8,14 +8,13 @@
 ├── [2_memory_management](https://gitee.com/ascend/samples/tree/dev/level1_single_api/1_acl/2_memory_management)：** 内存管理相关功能样例。**    
 ├── [3_model_management](https://gitee.com/ascend/samples/tree/dev/level1_single_api/1_acl/3_model_management)：** 模型管理相关功能样例。**    
 ├── [4_dvpp](https://gitee.com/ascend/samples/tree/dev/level1_single_api/1_acl/4_dvpp)：** dvpp相关功能样例。**    
-│   ├── crop
-│   ├── cropandpaste
-│   ├── jpegd
-│   ├── jpege
-│   ├── README.md
-│   ├── resize
-│   ├── vdec
-│   └── venc
+│   ├── crop   
+│   ├── cropandpaste   
+│   ├── jpegd   
+│   ├── jpege   
+│   ├── resize   
+│   ├── vdec   
+│   └── venc   
 └── [5_blas](https://gitee.com/ascend/samples/tree/dev/level1_single_api/1_acl/5_blas)：** blas相关功能样例。**    
 
 
