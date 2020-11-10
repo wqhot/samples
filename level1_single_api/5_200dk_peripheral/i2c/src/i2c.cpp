@@ -145,7 +145,7 @@ int i2c::atlas_i2c_read(unsigned char slave, unsigned char reg, unsigned char *d
     if (ret != 0) {
         close(fd);
         fd = 0;
-        ERROR_LOG("atlas_i2c_read %#x %#x to %#x fail!\n",  slave, data, reg);
+        ERROR_LOG("atlas_i2c_read %#x to %#x fail!\n",  slave, reg);
         return -1;
     }
     return 0;

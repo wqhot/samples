@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="273" />
+    <option name="y" value="139" />
+    <option name="width" value="1239" />
+    <option name="height" value="675" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Ascend App Configuration Type" factoryName="Ascend App" hostip="192.168.1.2" commandArguments="">
+      <method v="2" />
+    </configuration>
+    <configuration name="uart" type="Ascend App Configuration Type" factoryName="Ascend App" hostip="192.168.1.2" commandArguments="">
+      <method v="2" />
+    </configuration>
+  </component>
+</project>
