@@ -30,7 +30,7 @@
 
 3. 在Mindstudio右上角点击 **File->Open...** ,选择vdec样例并打开。
    
-   ![](https://images.gitee.com/uploads/images/2020/1109/173519_b19c6efe_5395865.png "jpegd.png")
+   ![](https://images.gitee.com/uploads/images/2020/1110/121055_ef98008b_5395865.png "vdec.png")
    
 
 ### 样例编译
