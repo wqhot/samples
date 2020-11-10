@@ -30,7 +30,7 @@
 
 3. 在Mindstudio右上角点击 **File->Open...** ,选择jpege样例并打开。
    
-   ![](https://images.gitee.com/uploads/images/2020/1110/115026_0a700127_5395865.png "jpege.png")
+   ![](https://images.gitee.com/uploads/images/2020/1110/120714_667f931d_5395865.png "jpege.png")
    
 
 ### 样例编译
