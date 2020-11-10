@@ -1,1 +1,0 @@
-cd $(dirname $0);./workspace_mind_studio_crop  ../data/wood_rabbit_1024_1068_nv12.yuv 1024 1068 ./output/output.yuv 350 280 200 200
