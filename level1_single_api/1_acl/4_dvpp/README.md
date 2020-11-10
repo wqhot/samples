@@ -3,7 +3,7 @@
 #### 介绍
 本仓包含Atlas支持的媒体数据处理功能，各文件夹对应不同功能，以供用户参考。目录结构与具体说明如下。
 
-4_dvpp   
+**./**   
 ├── [crop](https://gitee.com/ascend/samples/tree/dev/level1_single_api/1_acl/4_dvpp/crop)：**dvpp之crop接口，从输入图片中抠出需要用的图片区域**    
 │   ├── data   
 │   ├── model   
