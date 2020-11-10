@@ -1,0 +1,1 @@
+/usr/bin/c++    -Wl,-rpath-link, CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/gpio.cpp.o  -o ../../../out/main  -lascendcl -lstdc++ 
