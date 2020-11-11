@@ -5,6 +5,7 @@ remote_host=$1
 presenteragent_version="1.2.0"
 HOST_LIB_PATH="${HOME}/ascend_ddk/host/lib"
 AGENT_PATH="${HOME}/ascend_ddk"
+SAMPLES_PATH="${HOME}/AscendProjects/samples/common"
 
 . ${script_path}/func_util.sh
 
@@ -14,27 +15,19 @@ function download_code()
         echo "Presenteragent code is found..."
         return 0
     else
-        echo "Download presenteragent code..."
-        presenteragent_download_url="https://gitee.com/Atlas200DK/sdk-presenter/repository/archive/1.2.0?format=zip"
-        wget -O ${AGENT_PATH}/presenteragent-${presenteragent_version}.ing ${presenteragent_download_url} --no-check-certificate 1>/dev/null 2>&1
-    fi
-    if [[ $? -ne 0 ]];then
-        echo "ERROR: download failed, please check ${presenteragent_download_url} connection."
-        return 1
-    fi
-
-    mv ${AGENT_PATH}/presenteragent-${presenteragent_version}.ing ${AGENT_PATH}/presenteragent-${presenteragent_version}.zip
-    unzip ${AGENT_PATH}/presenteragent-${presenteragent_version}.zip -d ${AGENT_PATH} 1>/dev/null
-    if [[ $? -ne 0 ]];then
-        echo "ERROR: uncompress presenteragent tar.gz file failed, please check ${presenteragent_download_url} connection."
-        return 1
+        echo "remove presenteragent code..."
+		cp -rf ${SAMPLES_PATH}/sdk-presenter ${AGENT_PATH}
+        
+		mkdir -p ${AGENT_PATH}/presenteragent;rm -rf ${AGENT_PATH}/presenteragent/*
+		mv ${AGENT_PATH}/sdk-presenter/presenteragent/* ${AGENT_PATH}/presenteragent/
+		
+		rm -rf ${AGENT_PATH}/sdk-presenter
+		fi
+		if [[ $? -ne 0 ]];then
+			echo "ERROR: download failed, please check ${presenteragent_download_url} connection."
+			return 1
     fi
 	
-	mkdir -p ${AGENT_PATH}/presenteragent;rm -rf ${AGENT_PATH}/presenteragent/*
-    cp -rf  ${AGENT_PATH}/sdk-presenter/presenteragent/* ${AGENT_PATH}/presenteragent/
-
-    rm -rf ${AGENT_PATH}/presenteragent-${presenteragent_version}.zip
-    rm -rf ${AGENT_PATH}/sdk-presenter
     return 0
 
 }

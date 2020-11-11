@@ -6,56 +6,69 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
+#include <google/protobuf/stubs/port.h>
+#include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
+// This is a temporary google only hack
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+#include "third_party/protobuf/version.h"
+#endif
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
-
-extern PROTOBUF_INTERNAL_EXPORT_facial_5frecognition_5fmessage_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Box_facial_5frecognition_5fmessage_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_facial_5frecognition_5fmessage_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_CommonResponse_facial_5frecognition_5fmessage_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_facial_5frecognition_5fmessage_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_FaceFeature_facial_5frecognition_5fmessage_2eproto;
 namespace ascend {
 namespace presenter {
 namespace facial_recognition {
 class CommonResponseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<CommonResponse> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<CommonResponse>
+      _instance;
 } _CommonResponse_default_instance_;
 class RegisterAppDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<RegisterApp> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<RegisterApp>
+      _instance;
 } _RegisterApp_default_instance_;
 class BoxDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Box> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<Box>
+      _instance;
 } _Box_default_instance_;
 class FaceFeatureDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<FaceFeature> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<FaceFeature>
+      _instance;
 } _FaceFeature_default_instance_;
 class FaceInfoDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<FaceInfo> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<FaceInfo>
+      _instance;
 } _FaceInfo_default_instance_;
 class FaceResultDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<FaceResult> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<FaceResult>
+      _instance;
 } _FaceResult_default_instance_;
 class FrameInfoDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<FrameInfo> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<FrameInfo>
+      _instance;
 } _FrameInfo_default_instance_;
 }  // namespace facial_recognition
 }  // namespace presenter
 }  // namespace ascend
-static void InitDefaultsCommonResponse_facial_5frecognition_5fmessage_2eproto() {
+namespace protobuf_facial_5frecognition_5fmessage_2eproto {
+void InitDefaultsCommonResponseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::ascend::presenter::facial_recognition::_CommonResponse_default_instance_;
     new (ptr) ::ascend::presenter::facial_recognition::CommonResponse();
@@ -64,12 +77,19 @@ static void InitDefaultsCommonResponse_facial_5frecognition_5fmessage_2eproto() 
   ::ascend::presenter::facial_recognition::CommonResponse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_CommonResponse_facial_5frecognition_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsCommonResponse_facial_5frecognition_5fmessage_2eproto}, {}};
+void InitDefaultsCommonResponse() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsCommonResponseImpl);
+}
 
-static void InitDefaultsRegisterApp_facial_5frecognition_5fmessage_2eproto() {
+void InitDefaultsRegisterAppImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::ascend::presenter::facial_recognition::_RegisterApp_default_instance_;
     new (ptr) ::ascend::presenter::facial_recognition::RegisterApp();
@@ -78,12 +98,19 @@ static void InitDefaultsRegisterApp_facial_5frecognition_5fmessage_2eproto() {
   ::ascend::presenter::facial_recognition::RegisterApp::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_RegisterApp_facial_5frecognition_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsRegisterApp_facial_5frecognition_5fmessage_2eproto}, {}};
+void InitDefaultsRegisterApp() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsRegisterAppImpl);
+}
 
-static void InitDefaultsBox_facial_5frecognition_5fmessage_2eproto() {
+void InitDefaultsBoxImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::ascend::presenter::facial_recognition::_Box_default_instance_;
     new (ptr) ::ascend::presenter::facial_recognition::Box();
@@ -92,12 +119,20 @@ static void InitDefaultsBox_facial_5frecognition_5fmessage_2eproto() {
   ::ascend::presenter::facial_recognition::Box::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_Box_facial_5frecognition_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsBox_facial_5frecognition_5fmessage_2eproto}, {}};
+void InitDefaultsBox() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsBoxImpl);
+}
 
-static void InitDefaultsFaceFeature_facial_5frecognition_5fmessage_2eproto() {
+void InitDefaultsFaceFeatureImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsBox();
   {
     void* ptr = &::ascend::presenter::facial_recognition::_FaceFeature_default_instance_;
     new (ptr) ::ascend::presenter::facial_recognition::FaceFeature();
@@ -106,13 +141,19 @@ static void InitDefaultsFaceFeature_facial_5frecognition_5fmessage_2eproto() {
   ::ascend::presenter::facial_recognition::FaceFeature::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_FaceFeature_facial_5frecognition_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsFaceFeature_facial_5frecognition_5fmessage_2eproto}, {
-      &scc_info_Box_facial_5frecognition_5fmessage_2eproto.base,}};
+void InitDefaultsFaceFeature() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsFaceFeatureImpl);
+}
 
-static void InitDefaultsFaceInfo_facial_5frecognition_5fmessage_2eproto() {
+void InitDefaultsFaceInfoImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::ascend::presenter::facial_recognition::_FaceInfo_default_instance_;
     new (ptr) ::ascend::presenter::facial_recognition::FaceInfo();
@@ -121,12 +162,21 @@ static void InitDefaultsFaceInfo_facial_5frecognition_5fmessage_2eproto() {
   ::ascend::presenter::facial_recognition::FaceInfo::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_FaceInfo_facial_5frecognition_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsFaceInfo_facial_5frecognition_5fmessage_2eproto}, {}};
+void InitDefaultsFaceInfo() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsFaceInfoImpl);
+}
 
-static void InitDefaultsFaceResult_facial_5frecognition_5fmessage_2eproto() {
+void InitDefaultsFaceResultImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsCommonResponse();
+  protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsFaceFeature();
   {
     void* ptr = &::ascend::presenter::facial_recognition::_FaceResult_default_instance_;
     new (ptr) ::ascend::presenter::facial_recognition::FaceResult();
@@ -135,14 +185,20 @@ static void InitDefaultsFaceResult_facial_5frecognition_5fmessage_2eproto() {
   ::ascend::presenter::facial_recognition::FaceResult::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_FaceResult_facial_5frecognition_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsFaceResult_facial_5frecognition_5fmessage_2eproto}, {
-      &scc_info_CommonResponse_facial_5frecognition_5fmessage_2eproto.base,
-      &scc_info_FaceFeature_facial_5frecognition_5fmessage_2eproto.base,}};
+void InitDefaultsFaceResult() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsFaceResultImpl);
+}
 
-static void InitDefaultsFrameInfo_facial_5frecognition_5fmessage_2eproto() {
+void InitDefaultsFrameInfoImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsFaceFeature();
   {
     void* ptr = &::ascend::presenter::facial_recognition::_FrameInfo_default_instance_;
     new (ptr) ::ascend::presenter::facial_recognition::FrameInfo();
@@ -151,79 +207,69 @@ static void InitDefaultsFrameInfo_facial_5frecognition_5fmessage_2eproto() {
   ::ascend::presenter::facial_recognition::FrameInfo::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_FrameInfo_facial_5frecognition_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsFrameInfo_facial_5frecognition_5fmessage_2eproto}, {
-      &scc_info_FaceFeature_facial_5frecognition_5fmessage_2eproto.base,}};
-
-void InitDefaults_facial_5frecognition_5fmessage_2eproto() {
-  ::google::protobuf::internal::InitSCC(&scc_info_CommonResponse_facial_5frecognition_5fmessage_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_RegisterApp_facial_5frecognition_5fmessage_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Box_facial_5frecognition_5fmessage_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_FaceFeature_facial_5frecognition_5fmessage_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_FaceInfo_facial_5frecognition_5fmessage_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_FaceResult_facial_5frecognition_5fmessage_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_FrameInfo_facial_5frecognition_5fmessage_2eproto.base);
+void InitDefaultsFrameInfo() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsFrameInfoImpl);
 }
 
-::google::protobuf::Metadata file_level_metadata_facial_5frecognition_5fmessage_2eproto[7];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_facial_5frecognition_5fmessage_2eproto[1];
-constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_facial_5frecognition_5fmessage_2eproto = nullptr;
+::google::protobuf::Metadata file_level_metadata[7];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 
-const ::google::protobuf::uint32 TableStruct_facial_5frecognition_5fmessage_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::CommonResponse, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::CommonResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::CommonResponse, ret_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::CommonResponse, message_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::CommonResponse, ret_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::CommonResponse, message_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::RegisterApp, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::RegisterApp, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::RegisterApp, id_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::RegisterApp, type_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::RegisterApp, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::RegisterApp, type_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::Box, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::Box, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::Box, lt_x_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::Box, lt_y_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::Box, rb_x_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::Box, rb_y_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::Box, lt_x_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::Box, lt_y_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::Box, rb_x_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::Box, rb_y_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceFeature, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceFeature, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceFeature, box_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceFeature, vector_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceFeature, box_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceFeature, vector_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceInfo, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceInfo, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceInfo, id_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceInfo, image_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceInfo, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceInfo, image_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceResult, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceResult, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceResult, id_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceResult, response_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceResult, feature_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceResult, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceResult, response_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::FaceResult, feature_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::FrameInfo, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::FrameInfo, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::FrameInfo, image_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::facial_recognition::FrameInfo, feature_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::FrameInfo, image_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::facial_recognition::FrameInfo, feature_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::ascend::presenter::facial_recognition::CommonResponse)},
   { 7, -1, sizeof(::ascend::presenter::facial_recognition::RegisterApp)},
   { 14, -1, sizeof(::ascend::presenter::facial_recognition::Box)},
@@ -243,55 +289,72 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::ascend::presenter::facial_recognition::_FrameInfo_default_instance_),
 };
 
-::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_facial_5frecognition_5fmessage_2eproto = {
-  {}, AddDescriptors_facial_5frecognition_5fmessage_2eproto, "facial_recognition_message.proto", schemas,
-  file_default_instances, TableStruct_facial_5frecognition_5fmessage_2eproto::offsets,
-  file_level_metadata_facial_5frecognition_5fmessage_2eproto, 7, file_level_enum_descriptors_facial_5frecognition_5fmessage_2eproto, file_level_service_descriptors_facial_5frecognition_5fmessage_2eproto,
-};
-
-const char descriptor_table_protodef_facial_5frecognition_5fmessage_2eproto[] =
-  "\n facial_recognition_message.proto\022#asce"
-  "nd.presenter.facial_recognition\"^\n\016Commo"
-  "nResponse\022;\n\003ret\030\001 \001(\0162..ascend.presente"
-  "r.facial_recognition.ErrorCode\022\017\n\007messag"
-  "e\030\002 \001(\t\"\'\n\013RegisterApp\022\n\n\002id\030\001 \001(\t\022\014\n\004ty"
-  "pe\030\002 \001(\t\"=\n\003Box\022\014\n\004lt_x\030\001 \001(\r\022\014\n\004lt_y\030\002 "
-  "\001(\r\022\014\n\004rb_x\030\003 \001(\r\022\014\n\004rb_y\030\004 \001(\r\"T\n\013FaceF"
-  "eature\0225\n\003box\030\001 \001(\0132(.ascend.presenter.f"
-  "acial_recognition.Box\022\016\n\006vector\030\002 \003(\002\"%\n"
-  "\010FaceInfo\022\n\n\002id\030\001 \001(\t\022\r\n\005image\030\002 \001(\014\"\242\001\n"
-  "\nFaceResult\022\n\n\002id\030\001 \001(\t\022E\n\010response\030\002 \001("
-  "\01323.ascend.presenter.facial_recognition."
-  "CommonResponse\022A\n\007feature\030\003 \003(\01320.ascend"
-  ".presenter.facial_recognition.FaceFeatur"
-  "e\"]\n\tFrameInfo\022\r\n\005image\030\001 \001(\014\022A\n\007feature"
-  "\030\002 \003(\01320.ascend.presenter.facial_recogni"
-  "tion.FaceFeature*\177\n\tErrorCode\022\016\n\nkErrorN"
-  "one\020\000\022\032\n\026kErrorAppRegisterExist\020\001\022\031\n\025kEr"
-  "rorAppRegisterType\020\002\022\032\n\026kErrorAppRegiste"
-  "rLimit\020\003\022\017\n\013kErrorOther\020\005b\006proto3"
-  ;
-::google::protobuf::internal::DescriptorTable descriptor_table_facial_5frecognition_5fmessage_2eproto = {
-  false, InitDefaults_facial_5frecognition_5fmessage_2eproto, 
-  descriptor_table_protodef_facial_5frecognition_5fmessage_2eproto,
-  "facial_recognition_message.proto", &assign_descriptors_table_facial_5frecognition_5fmessage_2eproto, 793,
-};
-
-void AddDescriptors_facial_5frecognition_5fmessage_2eproto() {
-  static constexpr ::google::protobuf::internal::InitFunc deps[1] =
-  {
-  };
- ::google::protobuf::internal::AddDescriptors(&descriptor_table_facial_5frecognition_5fmessage_2eproto, deps, 0);
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  ::google::protobuf::MessageFactory* factory = NULL;
+  AssignDescriptors(
+      "facial_recognition_message.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      file_level_metadata, file_level_enum_descriptors, NULL);
 }
 
-// Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_facial_5frecognition_5fmessage_2eproto = []() { AddDescriptors_facial_5frecognition_5fmessage_2eproto(); return true; }();
+void protobuf_AssignDescriptorsOnce() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+}
+
+void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
+void protobuf_RegisterTypes(const ::std::string&) {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 7);
+}
+
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      "\n facial_recognition_message.proto\022#asce"
+      "nd.presenter.facial_recognition\"^\n\016Commo"
+      "nResponse\022;\n\003ret\030\001 \001(\0162..ascend.presente"
+      "r.facial_recognition.ErrorCode\022\017\n\007messag"
+      "e\030\002 \001(\t\"\'\n\013RegisterApp\022\n\n\002id\030\001 \001(\t\022\014\n\004ty"
+      "pe\030\002 \001(\t\"=\n\003Box\022\014\n\004lt_x\030\001 \001(\r\022\014\n\004lt_y\030\002 "
+      "\001(\r\022\014\n\004rb_x\030\003 \001(\r\022\014\n\004rb_y\030\004 \001(\r\"T\n\013FaceF"
+      "eature\0225\n\003box\030\001 \001(\0132(.ascend.presenter.f"
+      "acial_recognition.Box\022\016\n\006vector\030\002 \003(\002\"%\n"
+      "\010FaceInfo\022\n\n\002id\030\001 \001(\t\022\r\n\005image\030\002 \001(\014\"\242\001\n"
+      "\nFaceResult\022\n\n\002id\030\001 \001(\t\022E\n\010response\030\002 \001("
+      "\01323.ascend.presenter.facial_recognition."
+      "CommonResponse\022A\n\007feature\030\003 \003(\01320.ascend"
+      ".presenter.facial_recognition.FaceFeatur"
+      "e\"]\n\tFrameInfo\022\r\n\005image\030\001 \001(\014\022A\n\007feature"
+      "\030\002 \003(\01320.ascend.presenter.facial_recogni"
+      "tion.FaceFeature*\177\n\tErrorCode\022\016\n\nkErrorN"
+      "one\020\000\022\032\n\026kErrorAppRegisterExist\020\001\022\031\n\025kEr"
+      "rorAppRegisterType\020\002\022\032\n\026kErrorAppRegiste"
+      "rLimit\020\003\022\017\n\013kErrorOther\020\005b\006proto3"
+  };
+  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
+      descriptor, 793);
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
+    "facial_recognition_message.proto", &protobuf_RegisterTypes);
+}
+
+void AddDescriptors() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+}
+// Force AddDescriptors() to be called at dynamic initialization time.
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
+  }
+} static_descriptor_initializer;
+}  // namespace protobuf_facial_5frecognition_5fmessage_2eproto
 namespace ascend {
 namespace presenter {
 namespace facial_recognition {
 const ::google::protobuf::EnumDescriptor* ErrorCode_descriptor() {
-  ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_facial_5frecognition_5fmessage_2eproto);
-  return file_level_enum_descriptors_facial_5frecognition_5fmessage_2eproto[0];
+  protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_facial_5frecognition_5fmessage_2eproto::file_level_enum_descriptors[0];
 }
 bool ErrorCode_IsValid(int value) {
   switch (value) {
@@ -311,23 +374,23 @@ bool ErrorCode_IsValid(int value) {
 
 void CommonResponse::InitAsDefaultInstance() {
 }
-class CommonResponse::HasBitSetters {
- public:
-};
-
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CommonResponse::kRetFieldNumber;
 const int CommonResponse::kMessageFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CommonResponse::CommonResponse()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsCommonResponse();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.facial_recognition.CommonResponse)
 }
 CommonResponse::CommonResponse(const CommonResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   message_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.message().size() > 0) {
@@ -338,10 +401,9 @@ CommonResponse::CommonResponse(const CommonResponse& from)
 }
 
 void CommonResponse::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_CommonResponse_facial_5frecognition_5fmessage_2eproto.base);
   message_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ret_ = 0;
+  _cached_size_ = 0;
 }
 
 CommonResponse::~CommonResponse() {
@@ -354,13 +416,27 @@ void CommonResponse::SharedDtor() {
 }
 
 void CommonResponse::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* CommonResponse::descriptor() {
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const CommonResponse& CommonResponse::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_CommonResponse_facial_5frecognition_5fmessage_2eproto.base);
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsCommonResponse();
   return *internal_default_instance();
 }
 
+CommonResponse* CommonResponse::New(::google::protobuf::Arena* arena) const {
+  CommonResponse* n = new CommonResponse;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void CommonResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.facial_recognition.CommonResponse)
@@ -373,81 +449,21 @@ void CommonResponse::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* CommonResponse::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<CommonResponse*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // .ascend.presenter.facial_recognition.ErrorCode ret = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_ret(static_cast<::ascend::presenter::facial_recognition::ErrorCode>(val));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // string message = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("ascend.presenter.facial_recognition.CommonResponse.message");
-        object = msg->mutable_message();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-string_till_end:
-  static_cast<::std::string*>(object)->clear();
-  static_cast<::std::string*>(object)->reserve(size);
-  goto len_delim_till_end;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool CommonResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.facial_recognition.CommonResponse)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .ascend.presenter.facial_recognition.ErrorCode ret = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
-          int value = 0;
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+          int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
@@ -460,7 +476,8 @@ bool CommonResponse::MergePartialFromCodedStream(
 
       // string message = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_message()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -492,7 +509,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void CommonResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -516,15 +532,16 @@ void CommonResponse::SerializeWithCachedSizes(
       2, this->message(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.facial_recognition.CommonResponse)
 }
 
 ::google::protobuf::uint8* CommonResponse::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.facial_recognition.CommonResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -546,9 +563,9 @@ void CommonResponse::SerializeWithCachedSizes(
         2, this->message(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.facial_recognition.CommonResponse)
   return target;
@@ -558,15 +575,11 @@ size_t CommonResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.facial_recognition.CommonResponse)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // string message = 2;
   if (this->message().size() > 0) {
     total_size += 1 +
@@ -581,7 +594,9 @@ size_t CommonResponse::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -589,9 +604,9 @@ void CommonResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.facial_recognition.CommonResponse)
   GOOGLE_DCHECK_NE(&from, this);
   const CommonResponse* source =
-      ::google::protobuf::DynamicCastToGenerated<CommonResponse>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const CommonResponse>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.facial_recognition.CommonResponse)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -640,15 +655,15 @@ void CommonResponse::Swap(CommonResponse* other) {
 }
 void CommonResponse::InternalSwap(CommonResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  message_.Swap(&other->message_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  message_.Swap(&other->message_);
   swap(ret_, other->ret_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata CommonResponse::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_facial_5frecognition_5fmessage_2eproto);
-  return ::file_level_metadata_facial_5frecognition_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -656,23 +671,23 @@ void CommonResponse::InternalSwap(CommonResponse* other) {
 
 void RegisterApp::InitAsDefaultInstance() {
 }
-class RegisterApp::HasBitSetters {
- public:
-};
-
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int RegisterApp::kIdFieldNumber;
 const int RegisterApp::kTypeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 RegisterApp::RegisterApp()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsRegisterApp();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.facial_recognition.RegisterApp)
 }
 RegisterApp::RegisterApp(const RegisterApp& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.id().size() > 0) {
@@ -686,10 +701,9 @@ RegisterApp::RegisterApp(const RegisterApp& from)
 }
 
 void RegisterApp::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_RegisterApp_facial_5frecognition_5fmessage_2eproto.base);
   id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 RegisterApp::~RegisterApp() {
@@ -703,13 +717,27 @@ void RegisterApp::SharedDtor() {
 }
 
 void RegisterApp::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* RegisterApp::descriptor() {
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const RegisterApp& RegisterApp::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_RegisterApp_facial_5frecognition_5fmessage_2eproto.base);
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsRegisterApp();
   return *internal_default_instance();
 }
 
+RegisterApp* RegisterApp::New(::google::protobuf::Arena* arena) const {
+  RegisterApp* n = new RegisterApp;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void RegisterApp::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.facial_recognition.RegisterApp)
@@ -722,88 +750,20 @@ void RegisterApp::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* RegisterApp::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<RegisterApp*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // string id = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("ascend.presenter.facial_recognition.RegisterApp.id");
-        object = msg->mutable_id();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string type = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("ascend.presenter.facial_recognition.RegisterApp.type");
-        object = msg->mutable_type();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-string_till_end:
-  static_cast<::std::string*>(object)->clear();
-  static_cast<::std::string*>(object)->reserve(size);
-  goto len_delim_till_end;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool RegisterApp::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.facial_recognition.RegisterApp)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string id = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -818,7 +778,8 @@ bool RegisterApp::MergePartialFromCodedStream(
 
       // string type = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_type()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -850,7 +811,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void RegisterApp::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -878,15 +838,16 @@ void RegisterApp::SerializeWithCachedSizes(
       2, this->type(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.facial_recognition.RegisterApp)
 }
 
 ::google::protobuf::uint8* RegisterApp::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.facial_recognition.RegisterApp)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -913,9 +874,9 @@ void RegisterApp::SerializeWithCachedSizes(
         2, this->type(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.facial_recognition.RegisterApp)
   return target;
@@ -925,15 +886,11 @@ size_t RegisterApp::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.facial_recognition.RegisterApp)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // string id = 1;
   if (this->id().size() > 0) {
     total_size += 1 +
@@ -949,7 +906,9 @@ size_t RegisterApp::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -957,9 +916,9 @@ void RegisterApp::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.facial_recognition.RegisterApp)
   GOOGLE_DCHECK_NE(&from, this);
   const RegisterApp* source =
-      ::google::protobuf::DynamicCastToGenerated<RegisterApp>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const RegisterApp>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.facial_recognition.RegisterApp)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1009,16 +968,15 @@ void RegisterApp::Swap(RegisterApp* other) {
 }
 void RegisterApp::InternalSwap(RegisterApp* other) {
   using std::swap;
+  id_.Swap(&other->id_);
+  type_.Swap(&other->type_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  id_.Swap(&other->id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  type_.Swap(&other->type_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata RegisterApp::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_facial_5frecognition_5fmessage_2eproto);
-  return ::file_level_metadata_facial_5frecognition_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -1026,10 +984,6 @@ void RegisterApp::InternalSwap(RegisterApp* other) {
 
 void Box::InitAsDefaultInstance() {
 }
-class Box::HasBitSetters {
- public:
-};
-
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Box::kLtXFieldNumber;
 const int Box::kLtYFieldNumber;
@@ -1038,13 +992,17 @@ const int Box::kRbYFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Box::Box()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsBox();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.facial_recognition.Box)
 }
 Box::Box(const Box& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&lt_x_, &from.lt_x_,
     static_cast<size_t>(reinterpret_cast<char*>(&rb_y_) -
@@ -1056,6 +1014,7 @@ void Box::SharedCtor() {
   ::memset(&lt_x_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&rb_y_) -
       reinterpret_cast<char*>(&lt_x_)) + sizeof(rb_y_));
+  _cached_size_ = 0;
 }
 
 Box::~Box() {
@@ -1067,13 +1026,27 @@ void Box::SharedDtor() {
 }
 
 void Box::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* Box::descriptor() {
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const Box& Box::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_Box_facial_5frecognition_5fmessage_2eproto.base);
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsBox();
   return *internal_default_instance();
 }
 
+Box* Box::New(::google::protobuf::Arena* arena) const {
+  Box* n = new Box;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void Box::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.facial_recognition.Box)
@@ -1087,77 +1060,20 @@ void Box::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* Box::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<Box*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // uint32 lt_x = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
-        msg->set_lt_x(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // uint32 lt_y = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
-        msg->set_lt_y(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // uint32 rb_x = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 24) goto handle_unusual;
-        msg->set_rb_x(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // uint32 rb_y = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
-        msg->set_rb_y(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool Box::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.facial_recognition.Box)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // uint32 lt_x = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1170,7 +1086,8 @@ bool Box::MergePartialFromCodedStream(
 
       // uint32 lt_y = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1183,7 +1100,8 @@ bool Box::MergePartialFromCodedStream(
 
       // uint32 rb_x = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (24 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1196,7 +1114,8 @@ bool Box::MergePartialFromCodedStream(
 
       // uint32 rb_y = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (32 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1226,7 +1145,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void Box::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -1254,15 +1172,16 @@ void Box::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->rb_y(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.facial_recognition.Box)
 }
 
 ::google::protobuf::uint8* Box::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.facial_recognition.Box)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1287,9 +1206,9 @@ void Box::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->rb_y(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.facial_recognition.Box)
   return target;
@@ -1299,15 +1218,11 @@ size_t Box::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.facial_recognition.Box)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // uint32 lt_x = 1;
   if (this->lt_x() != 0) {
     total_size += 1 +
@@ -1337,7 +1252,9 @@ size_t Box::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -1345,9 +1262,9 @@ void Box::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.facial_recognition.Box)
   GOOGLE_DCHECK_NE(&from, this);
   const Box* source =
-      ::google::protobuf::DynamicCastToGenerated<Box>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const Box>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.facial_recognition.Box)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1401,16 +1318,17 @@ void Box::Swap(Box* other) {
 }
 void Box::InternalSwap(Box* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(lt_x_, other->lt_x_);
   swap(lt_y_, other->lt_y_);
   swap(rb_x_, other->rb_x_);
   swap(rb_y_, other->rb_y_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Box::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_facial_5frecognition_5fmessage_2eproto);
-  return ::file_level_metadata_facial_5frecognition_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -1420,42 +1338,36 @@ void FaceFeature::InitAsDefaultInstance() {
   ::ascend::presenter::facial_recognition::_FaceFeature_default_instance_._instance.get_mutable()->box_ = const_cast< ::ascend::presenter::facial_recognition::Box*>(
       ::ascend::presenter::facial_recognition::Box::internal_default_instance());
 }
-class FaceFeature::HasBitSetters {
- public:
-  static const ::ascend::presenter::facial_recognition::Box& box(const FaceFeature* msg);
-};
-
-const ::ascend::presenter::facial_recognition::Box&
-FaceFeature::HasBitSetters::box(const FaceFeature* msg) {
-  return *msg->box_;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int FaceFeature::kBoxFieldNumber;
 const int FaceFeature::kVectorFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 FaceFeature::FaceFeature()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsFaceFeature();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.facial_recognition.FaceFeature)
 }
 FaceFeature::FaceFeature(const FaceFeature& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr),
-      vector_(from.vector_) {
+      _internal_metadata_(NULL),
+      vector_(from.vector_),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_box()) {
     box_ = new ::ascend::presenter::facial_recognition::Box(*from.box_);
   } else {
-    box_ = nullptr;
+    box_ = NULL;
   }
   // @@protoc_insertion_point(copy_constructor:ascend.presenter.facial_recognition.FaceFeature)
 }
 
 void FaceFeature::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_FaceFeature_facial_5frecognition_5fmessage_2eproto.base);
-  box_ = nullptr;
+  box_ = NULL;
+  _cached_size_ = 0;
 }
 
 FaceFeature::~FaceFeature() {
@@ -1468,13 +1380,27 @@ void FaceFeature::SharedDtor() {
 }
 
 void FaceFeature::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* FaceFeature::descriptor() {
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const FaceFeature& FaceFeature::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_FaceFeature_facial_5frecognition_5fmessage_2eproto.base);
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsFaceFeature();
   return *internal_default_instance();
 }
 
+FaceFeature* FaceFeature::New(::google::protobuf::Arena* arena) const {
+  FaceFeature* n = new FaceFeature;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void FaceFeature::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.facial_recognition.FaceFeature)
@@ -1483,92 +1409,27 @@ void FaceFeature::Clear() {
   (void) cached_has_bits;
 
   vector_.Clear();
-  if (GetArenaNoVirtual() == nullptr && box_ != nullptr) {
+  if (GetArenaNoVirtual() == NULL && box_ != NULL) {
     delete box_;
   }
-  box_ = nullptr;
+  box_ = NULL;
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* FaceFeature::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<FaceFeature*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // .ascend.presenter.facial_recognition.Box box = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::ascend::presenter::facial_recognition::Box::_InternalParse;
-        object = msg->mutable_box();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // repeated float vector = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) == 18) {
-          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          parser_till_end = ::google::protobuf::internal::PackedFloatParser;
-          object = msg->mutable_vector();
-          if (size > end - ptr) goto len_delim_till_end;
-          auto newend = ptr + size;
-          if (size) ptr = parser_till_end(ptr, newend, object, ctx);
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr == newend);
-          break;
-        } else if (static_cast<::google::protobuf::uint8>(tag) != 21) goto handle_unusual;
-        do {
-          msg->add_vector(::google::protobuf::io::UnalignedLoad<float>(ptr));
-          ptr += sizeof(float);
-          if (ptr >= end) break;
-        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 21 && (ptr += 1));
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool FaceFeature::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.facial_recognition.FaceFeature)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .ascend.presenter.facial_recognition.Box box = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_box()));
         } else {
@@ -1579,11 +1440,14 @@ bool FaceFeature::MergePartialFromCodedStream(
 
       // repeated float vector = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, this->mutable_vector())));
-        } else if (static_cast< ::google::protobuf::uint8>(tag) == (21 & 0xFF)) {
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(21u /* 21 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  1, 18u, input, this->mutable_vector())));
@@ -1612,7 +1476,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void FaceFeature::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -1623,27 +1486,28 @@ void FaceFeature::SerializeWithCachedSizes(
   // .ascend.presenter.facial_recognition.Box box = 1;
   if (this->has_box()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::box(this), output);
+      1, *this->box_, output);
   }
 
   // repeated float vector = 2;
   if (this->vector_size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteTag(2, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_vector_cached_byte_size_.load(
-        std::memory_order_relaxed));
+    output->WriteVarint32(static_cast< ::google::protobuf::uint32>(
+        _vector_cached_byte_size_));
     ::google::protobuf::internal::WireFormatLite::WriteFloatArray(
       this->vector().data(), this->vector_size(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.facial_recognition.FaceFeature)
 }
 
 ::google::protobuf::uint8* FaceFeature::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.facial_recognition.FaceFeature)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1652,7 +1516,7 @@ void FaceFeature::SerializeWithCachedSizes(
   if (this->has_box()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, HasBitSetters::box(this), target);
+        1, *this->box_, deterministic, target);
   }
 
   // repeated float vector = 2;
@@ -1662,15 +1526,15 @@ void FaceFeature::SerializeWithCachedSizes(
       ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
       target);
     target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-        _vector_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
+        static_cast< ::google::protobuf::int32>(
+            _vector_cached_byte_size_), target);
     target = ::google::protobuf::internal::WireFormatLite::
       WriteFloatNoTagToArray(this->vector_, target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.facial_recognition.FaceFeature)
   return target;
@@ -1680,15 +1544,11 @@ size_t FaceFeature::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.facial_recognition.FaceFeature)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // repeated float vector = 2;
   {
     unsigned int count = static_cast<unsigned int>(this->vector_size());
@@ -1696,11 +1556,12 @@ size_t FaceFeature::ByteSizeLong() const {
     if (data_size > 0) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(
-            static_cast<::google::protobuf::int32>(data_size));
+            static_cast< ::google::protobuf::int32>(data_size));
     }
     int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
-    _vector_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+    _vector_cached_byte_size_ = cached_size;
+    GOOGLE_SAFE_CONCURRENT_WRITES_END();
     total_size += data_size;
   }
 
@@ -1708,11 +1569,13 @@ size_t FaceFeature::ByteSizeLong() const {
   if (this->has_box()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *box_);
+        *this->box_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -1720,9 +1583,9 @@ void FaceFeature::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.facial_recognition.FaceFeature)
   GOOGLE_DCHECK_NE(&from, this);
   const FaceFeature* source =
-      ::google::protobuf::DynamicCastToGenerated<FaceFeature>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const FaceFeature>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.facial_recognition.FaceFeature)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1768,14 +1631,15 @@ void FaceFeature::Swap(FaceFeature* other) {
 }
 void FaceFeature::InternalSwap(FaceFeature* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   vector_.InternalSwap(&other->vector_);
   swap(box_, other->box_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata FaceFeature::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_facial_5frecognition_5fmessage_2eproto);
-  return ::file_level_metadata_facial_5frecognition_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -1783,23 +1647,23 @@ void FaceFeature::InternalSwap(FaceFeature* other) {
 
 void FaceInfo::InitAsDefaultInstance() {
 }
-class FaceInfo::HasBitSetters {
- public:
-};
-
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int FaceInfo::kIdFieldNumber;
 const int FaceInfo::kImageFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 FaceInfo::FaceInfo()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsFaceInfo();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.facial_recognition.FaceInfo)
 }
 FaceInfo::FaceInfo(const FaceInfo& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.id().size() > 0) {
@@ -1813,10 +1677,9 @@ FaceInfo::FaceInfo(const FaceInfo& from)
 }
 
 void FaceInfo::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_FaceInfo_facial_5frecognition_5fmessage_2eproto.base);
   id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   image_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 FaceInfo::~FaceInfo() {
@@ -1830,13 +1693,27 @@ void FaceInfo::SharedDtor() {
 }
 
 void FaceInfo::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* FaceInfo::descriptor() {
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const FaceInfo& FaceInfo::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_FaceInfo_facial_5frecognition_5fmessage_2eproto.base);
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsFaceInfo();
   return *internal_default_instance();
 }
 
+FaceInfo* FaceInfo::New(::google::protobuf::Arena* arena) const {
+  FaceInfo* n = new FaceInfo;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void FaceInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.facial_recognition.FaceInfo)
@@ -1849,87 +1726,20 @@ void FaceInfo::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* FaceInfo::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<FaceInfo*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // string id = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("ascend.presenter.facial_recognition.FaceInfo.id");
-        object = msg->mutable_id();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // bytes image = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        object = msg->mutable_image();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParser;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheck(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-string_till_end:
-  static_cast<::std::string*>(object)->clear();
-  static_cast<::std::string*>(object)->reserve(size);
-  goto len_delim_till_end;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool FaceInfo::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.facial_recognition.FaceInfo)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string id = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1944,7 +1754,8 @@ bool FaceInfo::MergePartialFromCodedStream(
 
       // bytes image = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_image()));
         } else {
@@ -1972,7 +1783,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void FaceInfo::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -1996,15 +1806,16 @@ void FaceInfo::SerializeWithCachedSizes(
       2, this->image(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.facial_recognition.FaceInfo)
 }
 
 ::google::protobuf::uint8* FaceInfo::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.facial_recognition.FaceInfo)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2027,9 +1838,9 @@ void FaceInfo::SerializeWithCachedSizes(
         2, this->image(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.facial_recognition.FaceInfo)
   return target;
@@ -2039,15 +1850,11 @@ size_t FaceInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.facial_recognition.FaceInfo)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // string id = 1;
   if (this->id().size() > 0) {
     total_size += 1 +
@@ -2063,7 +1870,9 @@ size_t FaceInfo::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -2071,9 +1880,9 @@ void FaceInfo::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.facial_recognition.FaceInfo)
   GOOGLE_DCHECK_NE(&from, this);
   const FaceInfo* source =
-      ::google::protobuf::DynamicCastToGenerated<FaceInfo>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const FaceInfo>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.facial_recognition.FaceInfo)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -2123,16 +1932,15 @@ void FaceInfo::Swap(FaceInfo* other) {
 }
 void FaceInfo::InternalSwap(FaceInfo* other) {
   using std::swap;
+  id_.Swap(&other->id_);
+  image_.Swap(&other->image_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  id_.Swap(&other->id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  image_.Swap(&other->image_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata FaceInfo::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_facial_5frecognition_5fmessage_2eproto);
-  return ::file_level_metadata_facial_5frecognition_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -2142,15 +1950,6 @@ void FaceResult::InitAsDefaultInstance() {
   ::ascend::presenter::facial_recognition::_FaceResult_default_instance_._instance.get_mutable()->response_ = const_cast< ::ascend::presenter::facial_recognition::CommonResponse*>(
       ::ascend::presenter::facial_recognition::CommonResponse::internal_default_instance());
 }
-class FaceResult::HasBitSetters {
- public:
-  static const ::ascend::presenter::facial_recognition::CommonResponse& response(const FaceResult* msg);
-};
-
-const ::ascend::presenter::facial_recognition::CommonResponse&
-FaceResult::HasBitSetters::response(const FaceResult* msg) {
-  return *msg->response_;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int FaceResult::kIdFieldNumber;
 const int FaceResult::kResponseFieldNumber;
@@ -2158,14 +1957,18 @@ const int FaceResult::kFeatureFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 FaceResult::FaceResult()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsFaceResult();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.facial_recognition.FaceResult)
 }
 FaceResult::FaceResult(const FaceResult& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr),
-      feature_(from.feature_) {
+      _internal_metadata_(NULL),
+      feature_(from.feature_),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.id().size() > 0) {
@@ -2174,16 +1977,15 @@ FaceResult::FaceResult(const FaceResult& from)
   if (from.has_response()) {
     response_ = new ::ascend::presenter::facial_recognition::CommonResponse(*from.response_);
   } else {
-    response_ = nullptr;
+    response_ = NULL;
   }
   // @@protoc_insertion_point(copy_constructor:ascend.presenter.facial_recognition.FaceResult)
 }
 
 void FaceResult::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_FaceResult_facial_5frecognition_5fmessage_2eproto.base);
   id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  response_ = nullptr;
+  response_ = NULL;
+  _cached_size_ = 0;
 }
 
 FaceResult::~FaceResult() {
@@ -2197,13 +1999,27 @@ void FaceResult::SharedDtor() {
 }
 
 void FaceResult::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* FaceResult::descriptor() {
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const FaceResult& FaceResult::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_FaceResult_facial_5frecognition_5fmessage_2eproto.base);
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsFaceResult();
   return *internal_default_instance();
 }
 
+FaceResult* FaceResult::New(::google::protobuf::Arena* arena) const {
+  FaceResult* n = new FaceResult;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void FaceResult::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.facial_recognition.FaceResult)
@@ -2213,108 +2029,27 @@ void FaceResult::Clear() {
 
   feature_.Clear();
   id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == nullptr && response_ != nullptr) {
+  if (GetArenaNoVirtual() == NULL && response_ != NULL) {
     delete response_;
   }
-  response_ = nullptr;
+  response_ = NULL;
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* FaceResult::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<FaceResult*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // string id = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("ascend.presenter.facial_recognition.FaceResult.id");
-        object = msg->mutable_id();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // .ascend.presenter.facial_recognition.CommonResponse response = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::ascend::presenter::facial_recognition::CommonResponse::_InternalParse;
-        object = msg->mutable_response();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // repeated .ascend.presenter.facial_recognition.FaceFeature feature = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        do {
-          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          parser_till_end = ::ascend::presenter::facial_recognition::FaceFeature::_InternalParse;
-          object = msg->add_feature();
-          if (size > end - ptr) goto len_delim_till_end;
-          ptr += size;
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-              {parser_till_end, object}, ptr - size, ptr));
-          if (ptr >= end) break;
-        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 26 && (ptr += 1));
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-string_till_end:
-  static_cast<::std::string*>(object)->clear();
-  static_cast<::std::string*>(object)->reserve(size);
-  goto len_delim_till_end;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool FaceResult::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.facial_recognition.FaceResult)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string id = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2329,7 +2064,8 @@ bool FaceResult::MergePartialFromCodedStream(
 
       // .ascend.presenter.facial_recognition.CommonResponse response = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_response()));
         } else {
@@ -2340,9 +2076,9 @@ bool FaceResult::MergePartialFromCodedStream(
 
       // repeated .ascend.presenter.facial_recognition.FaceFeature feature = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_feature()));
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_feature()));
         } else {
           goto handle_unusual;
         }
@@ -2368,7 +2104,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void FaceResult::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -2389,27 +2124,26 @@ void FaceResult::SerializeWithCachedSizes(
   // .ascend.presenter.facial_recognition.CommonResponse response = 2;
   if (this->has_response()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::response(this), output);
+      2, *this->response_, output);
   }
 
   // repeated .ascend.presenter.facial_recognition.FaceFeature feature = 3;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->feature_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3,
-      this->feature(static_cast<int>(i)),
-      output);
+      3, this->feature(static_cast<int>(i)), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.facial_recognition.FaceResult)
 }
 
 ::google::protobuf::uint8* FaceResult::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.facial_recognition.FaceResult)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2429,7 +2163,7 @@ void FaceResult::SerializeWithCachedSizes(
   if (this->has_response()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, HasBitSetters::response(this), target);
+        2, *this->response_, deterministic, target);
   }
 
   // repeated .ascend.presenter.facial_recognition.FaceFeature feature = 3;
@@ -2437,12 +2171,12 @@ void FaceResult::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->feature_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, this->feature(static_cast<int>(i)), target);
+        3, this->feature(static_cast<int>(i)), deterministic, target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.facial_recognition.FaceResult)
   return target;
@@ -2452,15 +2186,11 @@ size_t FaceResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.facial_recognition.FaceResult)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // repeated .ascend.presenter.facial_recognition.FaceFeature feature = 3;
   {
     unsigned int count = static_cast<unsigned int>(this->feature_size());
@@ -2483,11 +2213,13 @@ size_t FaceResult::ByteSizeLong() const {
   if (this->has_response()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *response_);
+        *this->response_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -2495,9 +2227,9 @@ void FaceResult::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.facial_recognition.FaceResult)
   GOOGLE_DCHECK_NE(&from, this);
   const FaceResult* source =
-      ::google::protobuf::DynamicCastToGenerated<FaceResult>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const FaceResult>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.facial_recognition.FaceResult)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -2547,16 +2279,16 @@ void FaceResult::Swap(FaceResult* other) {
 }
 void FaceResult::InternalSwap(FaceResult* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&feature_)->InternalSwap(CastToBase(&other->feature_));
-  id_.Swap(&other->id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  feature_.InternalSwap(&other->feature_);
+  id_.Swap(&other->id_);
   swap(response_, other->response_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata FaceResult::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_facial_5frecognition_5fmessage_2eproto);
-  return ::file_level_metadata_facial_5frecognition_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -2564,24 +2296,24 @@ void FaceResult::InternalSwap(FaceResult* other) {
 
 void FrameInfo::InitAsDefaultInstance() {
 }
-class FrameInfo::HasBitSetters {
- public:
-};
-
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int FrameInfo::kImageFieldNumber;
 const int FrameInfo::kFeatureFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 FrameInfo::FrameInfo()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsFrameInfo();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.facial_recognition.FrameInfo)
 }
 FrameInfo::FrameInfo(const FrameInfo& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr),
-      feature_(from.feature_) {
+      _internal_metadata_(NULL),
+      feature_(from.feature_),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   image_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.image().size() > 0) {
@@ -2591,9 +2323,8 @@ FrameInfo::FrameInfo(const FrameInfo& from)
 }
 
 void FrameInfo::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_FrameInfo_facial_5frecognition_5fmessage_2eproto.base);
   image_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 FrameInfo::~FrameInfo() {
@@ -2606,13 +2337,27 @@ void FrameInfo::SharedDtor() {
 }
 
 void FrameInfo::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* FrameInfo::descriptor() {
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const FrameInfo& FrameInfo::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_FrameInfo_facial_5frecognition_5fmessage_2eproto.base);
+  ::protobuf_facial_5frecognition_5fmessage_2eproto::InitDefaultsFrameInfo();
   return *internal_default_instance();
 }
 
+FrameInfo* FrameInfo::New(::google::protobuf::Arena* arena) const {
+  FrameInfo* n = new FrameInfo;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void FrameInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.facial_recognition.FrameInfo)
@@ -2625,87 +2370,20 @@ void FrameInfo::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* FrameInfo::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<FrameInfo*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // bytes image = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        object = msg->mutable_image();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParser;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheck(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // repeated .ascend.presenter.facial_recognition.FaceFeature feature = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        do {
-          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          parser_till_end = ::ascend::presenter::facial_recognition::FaceFeature::_InternalParse;
-          object = msg->add_feature();
-          if (size > end - ptr) goto len_delim_till_end;
-          ptr += size;
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-              {parser_till_end, object}, ptr - size, ptr));
-          if (ptr >= end) break;
-        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 18 && (ptr += 1));
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-string_till_end:
-  static_cast<::std::string*>(object)->clear();
-  static_cast<::std::string*>(object)->reserve(size);
-  goto len_delim_till_end;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool FrameInfo::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.facial_recognition.FrameInfo)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // bytes image = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_image()));
         } else {
@@ -2716,9 +2394,9 @@ bool FrameInfo::MergePartialFromCodedStream(
 
       // repeated .ascend.presenter.facial_recognition.FaceFeature feature = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_feature()));
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_feature()));
         } else {
           goto handle_unusual;
         }
@@ -2744,7 +2422,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void FrameInfo::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -2762,20 +2439,19 @@ void FrameInfo::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->feature_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->feature(static_cast<int>(i)),
-      output);
+      2, this->feature(static_cast<int>(i)), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.facial_recognition.FrameInfo)
 }
 
 ::google::protobuf::uint8* FrameInfo::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.facial_recognition.FrameInfo)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2792,12 +2468,12 @@ void FrameInfo::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->feature_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, this->feature(static_cast<int>(i)), target);
+        2, this->feature(static_cast<int>(i)), deterministic, target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.facial_recognition.FrameInfo)
   return target;
@@ -2807,15 +2483,11 @@ size_t FrameInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.facial_recognition.FrameInfo)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // repeated .ascend.presenter.facial_recognition.FaceFeature feature = 2;
   {
     unsigned int count = static_cast<unsigned int>(this->feature_size());
@@ -2835,7 +2507,9 @@ size_t FrameInfo::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -2843,9 +2517,9 @@ void FrameInfo::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.facial_recognition.FrameInfo)
   GOOGLE_DCHECK_NE(&from, this);
   const FrameInfo* source =
-      ::google::protobuf::DynamicCastToGenerated<FrameInfo>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const FrameInfo>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.facial_recognition.FrameInfo)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -2892,15 +2566,15 @@ void FrameInfo::Swap(FrameInfo* other) {
 }
 void FrameInfo::InternalSwap(FrameInfo* other) {
   using std::swap;
+  feature_.InternalSwap(&other->feature_);
+  image_.Swap(&other->image_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&feature_)->InternalSwap(CastToBase(&other->feature_));
-  image_.Swap(&other->image_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata FrameInfo::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_facial_5frecognition_5fmessage_2eproto);
-  return ::file_level_metadata_facial_5frecognition_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_facial_5frecognition_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_facial_5frecognition_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -2908,31 +2582,5 @@ void FrameInfo::InternalSwap(FrameInfo* other) {
 }  // namespace facial_recognition
 }  // namespace presenter
 }  // namespace ascend
-namespace google {
-namespace protobuf {
-template<> PROTOBUF_NOINLINE ::ascend::presenter::facial_recognition::CommonResponse* Arena::CreateMaybeMessage< ::ascend::presenter::facial_recognition::CommonResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::facial_recognition::CommonResponse >(arena);
-}
-template<> PROTOBUF_NOINLINE ::ascend::presenter::facial_recognition::RegisterApp* Arena::CreateMaybeMessage< ::ascend::presenter::facial_recognition::RegisterApp >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::facial_recognition::RegisterApp >(arena);
-}
-template<> PROTOBUF_NOINLINE ::ascend::presenter::facial_recognition::Box* Arena::CreateMaybeMessage< ::ascend::presenter::facial_recognition::Box >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::facial_recognition::Box >(arena);
-}
-template<> PROTOBUF_NOINLINE ::ascend::presenter::facial_recognition::FaceFeature* Arena::CreateMaybeMessage< ::ascend::presenter::facial_recognition::FaceFeature >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::facial_recognition::FaceFeature >(arena);
-}
-template<> PROTOBUF_NOINLINE ::ascend::presenter::facial_recognition::FaceInfo* Arena::CreateMaybeMessage< ::ascend::presenter::facial_recognition::FaceInfo >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::facial_recognition::FaceInfo >(arena);
-}
-template<> PROTOBUF_NOINLINE ::ascend::presenter::facial_recognition::FaceResult* Arena::CreateMaybeMessage< ::ascend::presenter::facial_recognition::FaceResult >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::facial_recognition::FaceResult >(arena);
-}
-template<> PROTOBUF_NOINLINE ::ascend::presenter::facial_recognition::FrameInfo* Arena::CreateMaybeMessage< ::ascend::presenter::facial_recognition::FrameInfo >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::facial_recognition::FrameInfo >(arena);
-}
-}  // namespace protobuf
-}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>

@@ -5,6 +5,7 @@ remote_host=$1
 ezdvpp_version="1.2.0"
 DEVICE_LIB_PATH="${HOME}/ascend_ddk/device/lib"
 AGENT_PATH="${HOME}/ascend_ddk"
+SAMPLES_PATH="${HOME}/AscendProjects/samples/common"
 
 . ${script_path}/func_util.sh
 function download_code()
@@ -13,23 +14,19 @@ function download_code()
         echo "EZdvpp code if found..."
         return 0
     else
-        echo "Download ezdvpp code..."
-        ezdvpp_download_url="https://gitee.com/Atlas200DK/sdk-ezdvpp/repository/archive/1.2.0?format=tar.gz"
-        wget -O ${AGENT_PATH}/${ezdvpp_version}.ing ${ezdvpp_download_url} --no-check-certificate 1>/dev/null 2>&1
-        if [[ $? -ne 0 ]];then
-            echo "ERROR: download failed, please check ${ezdvpp_download_url} connection."
+        echo "remove ezdvpp code..."
+		cp -rf ${SAMPLES_PATH}/sdk-ezdvpp ${AGENT_PATH}
+       
+		mkdir -p ${AGENT_PATH}/ezdvpp
+		mv ${AGENT_PATH}/sdk-ezdvpp/* ${AGENT_PATH}/ezdvpp
+		rm -rf ${AGENT_PATH}/sdk-ezdvpp
+		
+		if [[ $? -ne 0 ]];then
+            echo "ERROR: remove failed, please check "${HOME}/ascend/AscendProjects/samples" file ."
             return 1
         fi
     fi
-
-    mv ${AGENT_PATH}/${ezdvpp_version}.ing ${AGENT_PATH}/${ezdvpp_version}
-    tar -zxvf ${AGENT_PATH}/${ezdvpp_version} -C ${AGENT_PATH} 1>/dev/null
-    if [[ $? -ne 0 ]];then
-        echo "ERROR: uncompress ezdvpp tar.gz file failed, please check ${ezdvpp_download_url} connection."
-        return 1
-    fi
-    mv ${AGENT_PATH}/sdk-ezdvpp ${AGENT_PATH}/ezdvpp
-    rm -rf ${AGENT_PATH}/${ezdvpp_version}
+	   
     return 0
 }
 
