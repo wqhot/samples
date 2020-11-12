@@ -210,7 +210,7 @@ class VideoAnalysisServer(PresenterSocketServer):
         '''
         request = pb2.ImageSet()
         response = pb2.CommonResponse()
-        msg_name = msg_name = pb2._COMMONRESPONSE.full_name
+        msg_name = pb2._COMMONRESPONSE.full_name
         if not self._parse_protobuf(request, msg_data):
             self._response_error_unknown(conn)
             return False
@@ -282,7 +282,7 @@ class VideoAnalysisServer(PresenterSocketServer):
         '''
         request = pb2.CarInferenceResult()
         response = pb2.CommonResponse()
-        msg_name = msg_name = pb2._COMMONRESPONSE.full_name
+        msg_name = pb2._COMMONRESPONSE.full_name
         inference_dict = {}
         if not self._parse_protobuf(request, msg_data):
             self._response_error_unknown(conn)
@@ -340,7 +340,7 @@ class VideoAnalysisServer(PresenterSocketServer):
         '''
         request = pb2.HumanInferenceResult()
         response = pb2.CommonResponse()
-        msg_name = msg_name = pb2._COMMONRESPONSE.full_name
+        msg_name = pb2._COMMONRESPONSE.full_name
         inference_dict = {}
         if not self._parse_protobuf(request, msg_data):
             self._response_error_unknown(conn)
@@ -388,7 +388,7 @@ class VideoAnalysisServer(PresenterSocketServer):
         '''
         request = pb2.FaceInferenceResult()
         response = pb2.CommonResponse()
-        msg_name = msg_name = pb2._COMMONRESPONSE.full_name
+        msg_name = pb2._COMMONRESPONSE.full_name
         inference_dict = {}
         if not self._parse_protobuf(request, msg_data):
             self._response_error_unknown(conn)
@@ -440,7 +440,7 @@ class VideoAnalysisServer(PresenterSocketServer):
             conn: a socket connection
         Returns: NA
         '''
-        msg_name = msg_name = pb2._COMMONRESPONSE.full_name
+        msg_name = pb2._COMMONRESPONSE.full_name
         response = pb2.CommonResponse()
         response.ret = pb2.kErrorOther
         response.message = "Error unknown on Presenter Server"
