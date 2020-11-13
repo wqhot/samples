@@ -24,7 +24,7 @@
 using namespace std;
 
 
-/* 运行管理资源申请,包括Device、Context、Stream*/
+/* Run managed resource applications, including Device, Context, and Stream*/
 Result Initparam(int argc, char *argv[])
 {
     DIR *dir;
@@ -103,25 +103,26 @@ char* ReadInputFile(std::string fileName, uint32_t &fileSize)
 
 int main(int argc, char *argv[])
 {
-    /* 1.ACL初始化 */
+    /* 1.ACL initialization */
     const char *aclConfigPath = "../acl.json";
     aclInit(aclConfigPath);
 
-    /* 2.运行管理资源申请,包括Device、Context、Stream */
+    /* 2.Run the management resource application, including Device, Context, Stream */
+
     aclrtSetDevice(deviceId_);
     aclrtCreateContext(&context_, deviceId_);
     aclrtCreateStream(&stream_);
     aclrtGetRunMode(&runMode);
 
-    /* 3.初始化参数：原图宽高，crop宽高。初始化文件夹：输出结果文件夹*/
+    /* 3.Initialization parameters */
     Initparam(argc, argv);
     const int outputWidth = outPicDesc.width; // cur model shape is 224 * 224
     const int outputHeight = outPicDesc.height;
 
-	/* 4. 创建图片数据处理通道时的通道描述信息，dvppChannelDesc_是acldvppChannelDesc类型*/
+	/* 4. Channel description information when creating image data processing channels, dvppChannelDesc_ is acldvppChannelDesc type*/
     dvppChannelDesc_ = acldvppCreateChannelDesc();
 
-    /* 5. 创建图片数据处理的通道。*/
+    /* 5. Create the image data processing channel.*/
     acldvppCreateChannel(dvppChannelDesc_);
 
     // GetPicDevBuffer4JpegD
@@ -139,9 +140,7 @@ int main(int argc, char *argv[])
     }
     delete[] inputBuff;
     devPicBufferSize = inBufferSize;
-    //char *picDevBuffer = reinterpret_cast<char *>(inBufferDev);
 
-    acldvppRoiConfig *cropArea_ = nullptr;
     uint32_t midNum = 2;
     uint32_t oddNum = 1;
     uint32_t cropSizeWidth = 200;
@@ -150,15 +149,14 @@ int main(int argc, char *argv[])
     uint32_t cropRightOffset = cropLeftOffset + cropSizeWidth - oddNum;  // must odd
     uint32_t cropTopOffset = 512;  // must even
     uint32_t cropBottomOffset = cropTopOffset + cropSizeHeight - oddNum;  // must odd
-    cropArea_ = acldvppCreateRoiConfig(cropLeftOffset, cropRightOffset,
+    acldvppRoiConfig *cropArea_ = acldvppCreateRoiConfig(cropLeftOffset, cropRightOffset,
         cropTopOffset, cropBottomOffset);
 	
-	acldvppRoiConfig *pasteArea_ = nullptr;
     uint32_t pasteLeftOffset = 16;  // must even
     uint32_t pasteRightOffset = pasteLeftOffset + cropSizeWidth - oddNum;  // must odd
     uint32_t pasteTopOffset = 0;  // must even
     uint32_t pasteBottomOffset = pasteTopOffset + cropSizeHeight - oddNum;  // must odd
-    pasteArea_ = acldvppCreateRoiConfig(pasteLeftOffset, pasteRightOffset,
+    acldvppRoiConfig *pasteArea_ = acldvppCreateRoiConfig(pasteLeftOffset, pasteRightOffset,
         pasteTopOffset, pasteBottomOffset);
 
     uint32_t widthAlignment = 16;
@@ -170,9 +168,7 @@ int main(int argc, char *argv[])
     uint32_t jpegOutWidthStride = AlignmentHelper(inputWidth, widthAlignment);
     uint32_t jpegOutHeightStride = AlignmentHelper(inputHeight, heightAlignment);
     uint32_t jpegOutBufferSize = jpegOutWidthStride * jpegOutHeightStride * sizeAlignment / sizeNum;
-    acldvppPicDesc *vpcInputDesc_ = nullptr;
-    acldvppPicDesc *vpcOutputDesc_ = nullptr;
-    vpcInputDesc_ = acldvppCreatePicDesc();
+    acldvppPicDesc *vpcInputDesc_ =  acldvppCreatePicDesc();
     acldvppSetPicDescData(vpcInputDesc_, inBufferDev); // JpegD -> vpcCropAndPaste
     acldvppSetPicDescFormat(vpcInputDesc_, PIXEL_FORMAT_YUV_SEMIPLANAR_420);
     acldvppSetPicDescWidth(vpcInputDesc_, inputWidth);
@@ -189,8 +185,8 @@ int main(int argc, char *argv[])
     uint32_t vpcOutBufferSize_ =
         dvppOutWidthStride * dvppOutHeightStride * sizeAlignment / sizeNum;
     aclError aclRet = acldvppMalloc(&vpcOutBufferDev_, vpcOutBufferSize_);
-    vpcOutputDesc_ = acldvppCreatePicDesc();
-	INFO_LOG("acldvppCreatePicDesc w=%d/%d,h=%d/%d,vpcOutBufferSize=%d",dvppOutWidth,dvppOutWidthStride,dvppOutHeight,dvppOutHeightStride,vpcOutBufferSize_);
+    acldvppPicDesc *vpcOutputDesc_ = acldvppCreatePicDesc();
+	INFO_LOG("acldvppCreatePicDesc w=%d/%d,h=%d/%d,vpcOutBufferSize=%u",dvppOutWidth,dvppOutWidthStride,dvppOutHeight,dvppOutHeightStride,vpcOutBufferSize_);
     acldvppSetPicDescData(vpcOutputDesc_, vpcOutBufferDev_);
     acldvppSetPicDescFormat(vpcOutputDesc_, PIXEL_FORMAT_YUV_SEMIPLANAR_420);
     acldvppSetPicDescWidth(vpcOutputDesc_, dvppOutWidth);

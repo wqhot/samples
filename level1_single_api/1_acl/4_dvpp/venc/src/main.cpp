@@ -131,13 +131,13 @@ Result Init(int imgWidth, int imgHeight){
 
     InitResource();
 
-    int createThreadErr = pthread_create(&threadId, nullptr, ThreadFunc, nullptr);
+    pthread_create(&threadId, nullptr, ThreadFunc, nullptr);
     int width = imgWidth;
     int height = imgHeight;
     uint32_t alignWidth = ALIGN_UP128(width);
     uint32_t alignHeight = ALIGN_UP16(height);
     if (alignWidth == 0 || alignHeight == 0) {
-        ERROR_LOG("InitCodeInputDesc AlignmentHelper failed. image w %d, h %d, align w%d, h%d",
+        ERROR_LOG("InitCodeInputDesc AlignmentHelper failed. image w %d, h %d, align w%u, h%u",
         width, height, alignWidth, alignHeight);
         return FAILED;
     }
@@ -261,7 +261,7 @@ void DestroyResource(){
     runFlag = false;
     void *res = nullptr;
     pthread_cancel(threadId);
-    int joinThreadErr = pthread_join(threadId, &res);
+    pthread_join(threadId, &res);
     fclose(outFileFp);
     DestroyAclResource();
     INFO_LOG("end to destroy Resource");

@@ -53,7 +53,8 @@ char* GetPicDevBuffer4JpegE(const PicDesc &picDesc, uint32_t &PicBufferSize)
 
     if (fileLen < PicBufferSize) {
         ERROR_LOG("need read %u bytes but file %s only %u bytes",
-        PicBufferSize, picDesc.picName.c_str(), fileLen);
+            PicBufferSize, picDesc.picName.c_str(), fileLen);				
+		fclose(fp); 
         return nullptr;
     }
 
@@ -63,7 +64,8 @@ char* GetPicDevBuffer4JpegE(const PicDesc &picDesc, uint32_t &PicBufferSize)
     if (readSize < PicBufferSize) {
         ERROR_LOG("need read file %s %u bytes, but only %zu readed",
         picDesc.picName.c_str(), PicBufferSize, readSize);
-        delete[] inputBuff;
+        delete[] inputBuff;			
+		fclose(fp); 
         return nullptr;
     }
 
@@ -71,7 +73,8 @@ char* GetPicDevBuffer4JpegE(const PicDesc &picDesc, uint32_t &PicBufferSize)
     aclError aclRet = acldvppMalloc(&inputDevBuff, PicBufferSize);
     if (aclRet !=  ACL_ERROR_NONE) {
         delete[] inputBuff;
-        ERROR_LOG("malloc device data buffer failed, aclRet is %d", aclRet);
+        ERROR_LOG("malloc device data buffer failed, aclRet is %d", aclRet);	
+		fclose(fp); 
         return nullptr;
     }
     if (runMode == ACL_HOST) {
@@ -83,10 +86,12 @@ char* GetPicDevBuffer4JpegE(const PicDesc &picDesc, uint32_t &PicBufferSize)
     if (aclRet != ACL_ERROR_NONE) {
         ERROR_LOG("memcpy from host to device failed, aclRet is %d", aclRet);
         (void)acldvppFree(inputDevBuff);
-        delete[] inputBuff;
+        delete[] inputBuff;	
+		fclose(fp); 
         return nullptr;
     }
-
+	
+	fclose(fp); 
     return reinterpret_cast<char *>(inputDevBuff);
 }
 
@@ -110,6 +115,7 @@ Result SaveDvppOutputData(const char *fileName, const void *devPtr, uint32_t dat
         aclError aclRet = aclrtMallocHost(&hostPtr, dataSize);
         if (aclRet != ACL_ERROR_NONE) {
             ERROR_LOG("malloc host data buffer failed, aclRet is %d", aclRet);
+		    fclose(outFileFp);
             return FAILED;
         }
 
@@ -117,6 +123,7 @@ Result SaveDvppOutputData(const char *fileName, const void *devPtr, uint32_t dat
         if (aclRet != ACL_ERROR_NONE) {
             ERROR_LOG("dvpp output memcpy to host failed, aclRet is %d", aclRet);
             (void)aclrtFreeHost(hostPtr);
+		    fclose(outFileFp);
             return FAILED;
         }
 
@@ -125,6 +132,7 @@ Result SaveDvppOutputData(const char *fileName, const void *devPtr, uint32_t dat
             ERROR_LOG("need write %u bytes to %s, but only write %zu bytes.",
             dataSize, fileName, writeSize);
             (void)aclrtFreeHost(hostPtr);
+		    fclose(outFileFp);
             return FAILED;
         }
         (void)aclrtFreeHost(hostPtr);
@@ -134,6 +142,8 @@ Result SaveDvppOutputData(const char *fileName, const void *devPtr, uint32_t dat
         if (writeSize != dataSize) {
             ERROR_LOG("need write %u bytes to %s, but only write %zu bytes.",
             dataSize, fileName, writeSize);
+
+		    fclose(outFileFp);
             return FAILED;
         }
     }
