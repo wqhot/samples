@@ -164,7 +164,7 @@ void* Utils::SaveJpegImage(ImageData& image)
     static uint32_t yuv_cnt = 0;
     char filename[32];
 
-    snprintf(filename, 32, "%d.yuv", ++yuv_cnt);
+    snprintf(filename, 32, "%u.yuv", ++yuv_cnt);
 
     void* buffer = CopyDataDeviceToDevice(image.data.get(), image.size);
     SaveBinFile(filename, (char*)buffer, image.size);

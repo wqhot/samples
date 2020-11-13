@@ -68,8 +68,6 @@ Result DvppJpegE::InitEncodeInputDesc(ImageData& inputImage)
 }
 
 Result DvppJpegE::InitJpegEResource(ImageData& inputImage) {
-    uint32_t encodeLevel = 1; // default optimal level (0-100)
-
     if (SUCCESS != InitEncodeInputDesc(inputImage)) {
         ERROR_LOG("Dvpp jpege init input desc failed\n");
         return FAILED;

@@ -272,8 +272,7 @@ void* ObjectDetect::GetInferenceOutputItem(uint32_t& itemDataSize,
         return nullptr;
     }
 
-    void* data = nullptr;
-    data = dataBufferDev;
+    void* data = dataBufferDev;
 
     itemDataSize = bufferSize;
     return data;

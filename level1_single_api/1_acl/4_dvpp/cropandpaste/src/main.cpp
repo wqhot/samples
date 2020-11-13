@@ -126,7 +126,6 @@ int main(int argc, char *argv[])
     acldvppCreateChannel(dvppChannelDesc_);
 
     // GetPicDevBuffer4JpegD
-    uint32_t devPicBufferSize;
     uint32_t inputBuffSize = 0;
     char* inputBuff = ReadInputFile(inPicDesc.picName, inputBuffSize);
     void *inBufferDev = nullptr;
@@ -139,9 +138,7 @@ int main(int argc, char *argv[])
         aclrtMemcpy(inBufferDev, inBufferSize, inputBuff, inputBuffSize, ACL_MEMCPY_DEVICE_TO_DEVICE);
     }
     delete[] inputBuff;
-    devPicBufferSize = inBufferSize;
 
-    uint32_t midNum = 2;
     uint32_t oddNum = 1;
     uint32_t cropSizeWidth = 200;
     uint32_t cropSizeHeight = 200;
