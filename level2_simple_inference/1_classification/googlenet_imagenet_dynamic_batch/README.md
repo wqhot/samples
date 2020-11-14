@@ -30,7 +30,7 @@
 
 3. 在Mindstudio右上角点击 **File->Open...** ,选择googlenet_imagenet_dynamic_batch样例并打开。
    
-   ![](https://images.gitee.com/uploads/images/2020/1106/153346_26b0580f_5395865.png "crop-open.png")
+   ![](https://images.gitee.com/uploads/images/2020/1114/180115_6a3d616c_5395865.png "open.png")
 
 4. 模型转换。
 
@@ -67,3 +67,5 @@
 ### 查看结果
 
 运行完成后，会在Mindstudio的命令行中打印出推理结果。
+
+![](https://images.gitee.com/uploads/images/2020/1114/180126_c34533c2_5395865.png "result.png")
