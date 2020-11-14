@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="416d24e0-c19f-4c05-9a52-a03a862e8a9f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../common/faster-deploy/C32/ascendcameraC32.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../common/faster-deploy/C32/ascendcameraC32.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/faster-deploy/C32/carplaterecognitionC32.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../common/faster-deploy/C32/carplaterecognitionC32.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/faster-deploy/C32/classificationC32.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../common/faster-deploy/C32/classificationC32.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/faster-deploy/C32/colorizationC32.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../common/faster-deploy/C32/colorizationC32.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/faster-deploy/C32/facedetectionC32.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../common/faster-deploy/C32/facedetectionC32.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/faster-deploy/C32/facialrecognitionC32.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../common/faster-deploy/C32/facialrecognitionC32.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/faster-deploy/C32/headposeestimationpythonC32.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../common/faster-deploy/C32/headposeestimationpythonC32.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/faster-deploy/C32/objectdetectionC32.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../common/faster-deploy/C32/objectdetectionC32.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/faster-deploy/C32/objectdetectionbyyolov3C32.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../common/faster-deploy/C32/objectdetectionbyyolov3C32.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/faster-deploy/C32/segmentationpythonC32.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../common/faster-deploy/C32/segmentationpythonC32.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/faster-deploy/C32/videoanalysispersonC32.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../common/faster-deploy/C32/videoanalysispersonC32.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-ascendcamera/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-ascendcamera/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-ascendcamera/run_present_server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-ascendcamera/run_present_server.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-carplaterecognition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-carplaterecognition/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-carplaterecognition/run_present_server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-carplaterecognition/run_present_server.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-carplaterecognition/script/build_ezdvpp.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-carplaterecognition/script/build_ezdvpp.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-carplaterecognition/script/func_util.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-carplaterecognition/script/func_util.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-carplaterecognition/src/common/include/video_analysis_params.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-carplaterecognition/src/common/include/video_analysis_params.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-classification/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-classification/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-classification/script/func_util.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-classification/script/func_util.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-colorization/.build_project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-colorization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-colorization/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-facedetection/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-facedetection/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-facedetection/src/common/face_detection_params.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-facedetection/src/common/face_detection_params.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-facialrecognition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-facialrecognition/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-headposeestimation-python/headposeestimationapp/Head_pose_inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-headposeestimation-python/headposeestimationapp/Head_pose_inference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-headposeestimation-python/headposeestimationapp/ModelManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-headposeestimation-python/headposeestimationapp/ModelManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-headposeestimation-python/headposeestimationapp/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-headposeestimation-python/headposeestimationapp/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-headposeestimation-python/headposeestimationapp/face_inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-headposeestimation-python/headposeestimationapp/face_inference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-headposeestimation-python/headposeestimationapp/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-headposeestimation-python/headposeestimationapp/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-objectdetectionbyyolov3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-objectdetectionbyyolov3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-objectdetectionbyyolov3/src/general_post/general_post.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-objectdetectionbyyolov3/src/general_post/general_post.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-videoanalysisperson/run_present_server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-videoanalysisperson/run_present_server.sh" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/../out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Readme_EN.md" />
+        <option value="$PROJECT_DIR$/Readme.md" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="842" />
+    <option name="y" value="53" />
+    <option name="width" value="926" />
+    <option name="height" value="873" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="sample-objectdetection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sample-objectdetection" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AscendAppConfigurationType" factoryName="Ascend App" hostip="192.168.1.2">
+      <method v="2" />
+    </configuration>
+    <configuration name="sample-objectdetection" type="AscendAppConfigurationType" factoryName="Ascend App" hostip="192.168.1.2">
+      <method v="2">
+        <option name="ToolBeforeAscendAppRunTask" enabled="false" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="416d24e0-c19f-4c05-9a52-a03a862e8a9f" name="Default Changelist" comment="" />
+      <created>1574837944742</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574837944742</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="842" y="53" width="926" height="873" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.50610435" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Log" order="7" />
+      <window_info active="true" anchor="bottom" id="Output" order="8" visible="true" weight="0.30039012" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="SOQL Query" order="12" />
+      <window_info anchor="bottom" id="Log Analyzer" order="13" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="14" />
+      <window_info anchor="bottom" id="Build" order="15" visible="true" weight="0.35370612" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="210">
+            <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readme_EN.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="315">
+            <caret line="21" column="154" selection-start-line="21" selection-start-column="154" selection-end-line="21" selection-end-column="168" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
