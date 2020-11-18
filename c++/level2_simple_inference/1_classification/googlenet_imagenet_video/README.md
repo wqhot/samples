@@ -105,11 +105,11 @@
 
 1.进行网址替换
 
-    启动Presenter Server服务时提示的URL是ai1环境内网的ip。此时我们只要将ip替换为ai1环境的公网ip，就可以在windows的浏览器中直接打开网页了。
+  启动Presenter Server服务时提示的URL是ai1环境内网的ip。此时我们只要将ip替换为ai1环境的公网ip，就可以在windows的浏览器中直接打开网页了。
 
-    比如，本ai1s环境的显示内容如下Please visit http://192.168.0.194:7009 for display server只需要将192.168.0.194替换为Ai1环境的公网ip，如124.70.8.192。
+  比如，本ai1s环境的显示内容如下Please visit http://192.168.0.194:7009 for display server只需要将192.168.0.194替换为Ai1环境的公网ip，如124.70.8.192。
 
-    在windows下的浏览器中输入 http://124.70.8.192:7009 即可打开Presenter Server网页。
+  在windows下的浏览器中输入 http://124.70.8.192:7009 即可打开Presenter Server网页。
 
 2. 等待Presenter Agent传输数据给服务端，单击“Refresh“刷新，当有数据时相应的Channel 的Status变成绿色。
 
