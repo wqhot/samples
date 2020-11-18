@@ -8,11 +8,11 @@
 
 ### 样例介绍
 
-功能：使用googlenet模型对输入图片进行分类推理，本案例采用了动态batch特性。
+功能：使用googlenet模型对输入视频进行分类推理。
 
-样例输入：原始图片bin文件。
+样例输入：原始mp4视频。
 
-样例输出：推理后的结果。
+样例输出：presenter界面展现推理结果。
 
 ### 工程准备
 
@@ -28,23 +28,59 @@
 
    **./Mindstudio.sh**
 
-3. 在Mindstudio右上角点击 **File->Open...** ,选择googlenet_imagenet_dynamic_batch样例并打开。
+3. 在Mindstudio右上角点击 **File->Open...** ,选择googlenet_imagenet_video样例并打开。
    
-   ![](https://images.gitee.com/uploads/images/2020/1114/180115_6a3d616c_5395865.png "open.png")
+   ![](https://images.gitee.com/uploads/images/2020/1118/164949_9f0d1f7b_5400693.png "video.png")
 
 4. 模型转换。
 
-   在**ModelZoo**种下载对应模型，获取模型文件，并放置到对应工程的model目录下。
+   在**ModelZoo**中下载对应模型，获取模型文件，并放置到对应工程的model目录下。
+
+5. 在Mindstudio左下角的Terminal中执行以下命令进行视频准备。
+
+    **wget -P ./data https://c7xcode.obs.cn-north-4.myhuaweicloud.com/data/cat.mp4**
+
+    ![](https://images.gitee.com/uploads/images/2020/1118/170934_6eb306e2_5400693.png "download.png")
+
 
 ### 样例编译
+
+1. presenterserver运行。
+
+    - 使用产品为200DK开发者板。
+
+      **以本地开发环境中配置的虚拟网卡ip为192.168.1.223为例说明**
+
+      1. 将**script/param.conf**中的 presenter_server_ip、presenter_view_ip 修改为Mind Studio所在Ubuntu服务器的虚拟网卡的ip地址，如都填写为192.168.1.223（可以通过ifconfig查看到）。
+      
+      2. 在Mindstudio左下角的Terminal中执行以下命令运行presenterserver。
+       
+          **bash script/run_presenter_server.sh**
+
+    - 使用产品为300加速卡（ai1s云端推理环境）。
+
+      **以ai1s公网ip为124.70.8.19，内网ip为192.168.0.194，普通用户为HwHiAiUser为例说明**
+
+      1. 将**script/param.conf**中的 presenter_server_ip、presenter_view_ip 修改为ai1s云端推理环境的内网ip地址，如都填写为192.168.0.194（登录云端环境后ifconfig可以查看到）。
+
+      2. 在Mindstudio左下角的Terminal中执行以下命令，将script和presenterserver文件夹copy到云端环境中，并登录云端环境。
+
+          **scp -r script/ presenterserver/ HwHiAiUser@124.70.8.19:/home/HwHiAiUser**
+
+          **ssh HwHiAiUser@124.70.8.19**
+      
+      3. 在Mindstudio左下角的Terminal中执行以下命令运行presenterserver。
+       
+          **bash script/run_presenter_server.sh**
+
  
-在Mindstudio右上角点击 **Build->Edit Build Configuration...** ,进行编译配置。    
+2. 在Mindstudio右上角点击 **Build->Edit Build Configuration...** ,进行编译配置。    
    
-- 使用产品为200DK开发者板，选择 **Target Architecture为aarch64**。
+    - 使用产品为200DK开发者板，选择 **Target Architecture为aarch64**。
    
-- 使用产品为300加速卡（ai1s云端推理环境），选择 **Target Architecture为x86_64**。
+    - 使用产品为300加速卡（ai1s云端推理环境），选择 **Target Architecture为x86_64**。
    
-选择完成后点击**Build**开始编译,编译完成后，会在工程中生成**build和out**文件夹。
+    选择完成后点击**Build**开始编译,编译完成后，会在工程中生成**build和out**文件夹。
 
 ### 样例运行
 
@@ -52,20 +88,30 @@
 
    **Target Host Ip** 选择为已经配置好的运行环境ip地址。一般USB方式连接的200DK为192.168.1.2，ai1s云端推理环境为公网ip地址。   
 
-   **Command Arguments** 填写为：**../data**。
+   **Command Arguments** 填写为：**../data/cat.mp4**。
 
    参数填写完成后，点击右下角的**Apply**，再点击**OK**。
 ​    
     ![](https://images.gitee.com/uploads/images/2020/1106/160652_6146f6a4_5395865.gif "icon-note.gif") **说明：**  
-    > - 如果**Target Host Ip**没有取值，请点击后面的加号图标，自行配置运行环境。   
+    > - 如果**Target Host Ip**没有取值，请点击后面的加号图标，自行配置运行环境。  
+    > - **../data/cat.mp4**可以自行替换mp4文件并修改对应参数即可运行。
 
-2. 在Mindstudio右上角点击 **Run->Run 'googlenet_imagenet_dynamic_batch'** ,运行样例。
+2. 在Mindstudio右上角点击 **Run->Run 'googlenet_imagenet_video'** ,运行样例。
 
     运行过程中，会将开发环境中的**data、out、model**文件夹上传到运行环境。并使用**adc**工具执行编译出来的**run.sh**脚本。
     
 
 ### 查看结果
 
-运行完成后，会在Mindstudio的命令行中打印出推理结果。
+1.进行网址替换
 
-![](https://images.gitee.com/uploads/images/2020/1114/180126_c34533c2_5395865.png "result.png")
+    启动Presenter Server服务时提示的URL是ai1环境内网的ip。此时我们只要将ip替换为ai1环境的公网ip，就可以在windows的浏览器中直接打开网页了。
+
+    比如，本ai1s环境的显示内容如下Please visit http://192.168.0.194:7009 for display server只需要将192.168.0.194替换为Ai1环境的公网ip，如124.70.8.192。
+
+    在windows下的浏览器中输入 http://124.70.8.192:7009 即可打开Presenter Server网页。
+
+2. 等待Presenter Agent传输数据给服务端，单击“Refresh“刷新，当有数据时相应的Channel 的Status变成绿色。
+
+3. 单击右侧对应的View Name链接，查看结果。
+
