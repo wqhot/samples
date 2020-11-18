@@ -28,9 +28,9 @@
 
    **./Mindstudio.sh**
 
-3. 在Mindstudio右上角点击 **File->Open...** ,选择googlenet_imagenet_dynamic_batch样例并打开。
+3. 在Mindstudio右上角点击 **File->Open...** ,选择googlenet_imagenet_multi_batch样例并打开。
    
-   ![](https://images.gitee.com/uploads/images/2020/1114/180115_6a3d616c_5395865.png "open.png")
+   ![](https://images.gitee.com/uploads/images/2020/1118/163409_7bfb1b7c_5395865.png "multi_batch.png")
 
 4. 模型转换。
 
@@ -59,7 +59,7 @@
     ![](https://images.gitee.com/uploads/images/2020/1106/160652_6146f6a4_5395865.gif "icon-note.gif") **说明：**  
     > - 如果**Target Host Ip**没有取值，请点击后面的加号图标，自行配置运行环境。   
 
-2. 在Mindstudio右上角点击 **Run->Run 'googlenet_imagenet_dynamic_batch'** ,运行样例。
+2. 在Mindstudio右上角点击 **Run->Run 'googlenet_imagenet_multi_batch'** ,运行样例。
 
     运行过程中，会将开发环境中的**data、out、model**文件夹上传到运行环境。并使用**adc**工具执行编译出来的**run.sh**脚本。
     
@@ -67,5 +67,3 @@
 ### 查看结果
 
 运行完成后，会在Mindstudio的命令行中打印出推理结果。
-
-![](https://images.gitee.com/uploads/images/2020/1114/180126_c34533c2_5395865.png "result.png")
