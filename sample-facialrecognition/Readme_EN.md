@@ -6,7 +6,7 @@ English|[中文](Readme.md)
 
 Developers can deploy the application on the Atlas 200 DK to implement face registrations, predict the face information in a video by using cameras, and compare the predicted face with the registered face to output the most possible user.
 
-The applications in the current version branch adapt to  [DDK&RunTime](https://ascend.huawei.com/resources) **1.32.0.0 and later**.
+The applications in the current version branch adapt to  [DDK&RunTime](https://ascend.huawei.com/resources) **1.32.0.0**.
 
 ## Prerequisites<a name="en-us_topic_0228461922_section137245294533"></a>
 
