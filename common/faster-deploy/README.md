@@ -59,15 +59,11 @@
 
     6.sample-objectdetection
 
-    7.sample-headposeestimation
+    7.sample-colorization
 
-    8.sample-colorization
+    8.sample-carplaterecognition
 
-    9.sample-carplaterecognition
-
-    10.sample-segmentation
-
-    11.sample-objectdetectionbyyolov3
+    9.sample-objectdetectionbyyolov3
 
     Please input your want download sample number in list(eg:1).:1
 
