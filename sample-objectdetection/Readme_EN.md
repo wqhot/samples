@@ -6,7 +6,7 @@ English|[中文](Readme.md)
 
 This application can run on the Atlas 200 DK or the AI acceleration cloud server to implement the inference function by using Faster R-CNN object detection network.
 
-The applications in the current version branch adapt to  [DDK&RunTime](https://ascend.huawei.com/resources) **1.32.0.0 and later**.
+The applications in the current version branch adapt to  [DDK&RunTime](https://ascend.huawei.com/resources) **1.32.0.0**.
 
 ## Prerequisites<a name="en-us_topic_0228461892_section137245294533"></a>
 
