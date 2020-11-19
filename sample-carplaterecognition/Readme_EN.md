@@ -6,7 +6,7 @@ English|[中文](Readme.md)
 
 This application can run on the Atlas 200 DK to collect camera data in real time and predict vehicle license plate information in the video. The precision is low due to the model. To improve the precision, you can train a model to replace it.
 
-The applications in the current version branch adapt to  [DDK&RunTime](https://ascend.huawei.com/resources) **1.32.0.0 and later**.
+The applications in the current version branch adapt to  [DDK&RunTime](https://ascend.huawei.com/resources) **1.32.0.0**.
 
 ## Prerequisites<a name="en-us_topic_0228461932_section137245294533"></a>
 
