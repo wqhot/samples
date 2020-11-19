@@ -6,7 +6,7 @@ English|[中文](Readme.md)
 
 This application runs on the Atlas 200 DK to automatically color black and white images.
 
-The applications in the current version branch adapt to  [DDK&RunTime](https://ascend.huawei.com/resources) **1.32.0.0 and later**.
+The applications in the current version branch adapt to  [DDK&RunTime](https://ascend.huawei.com/resources) **1.32.0.0**.
 
 ## Prerequisites<a name="en-us_topic_0228461725_section137245294533"></a>
 
