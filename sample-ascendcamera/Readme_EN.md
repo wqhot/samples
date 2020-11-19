@@ -5,7 +5,7 @@ English|[中文](Readme.md)
 
 The Ascend camera application collects data through the camera on the Atlas 200 DK developer board, convert the data into JPG by using the digital vision pre-processing \(DVPP\) module, and save the video streams as files or remote output.
 
-The applications in the current version branch adapt to  [DDK&RunTime](https://ascend.huawei.com/resources) **1.32.0.0 **.
+The applications in the current version branch adapt to  [DDK&RunTime](https://ascend.huawei.com/resources) 1.32.0.0 .
 
 ## Prerequisites<a name="en-us_topic_0228461908_section137245294533"></a>
 
