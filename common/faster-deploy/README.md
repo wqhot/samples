@@ -10,7 +10,7 @@
 
     **git clone -b 1.32.0.0 https://gitee.com/ascend/samples.git**
     
-    进入faster-deploy文件夹下。
+    进入faster-deploy文件夹下，其中ascend改为你系统的普通用户名。
 
     **cd /home/ascend/AscendProjectssamples/samples/commmon/faster-deploy**
 
