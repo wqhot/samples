@@ -6,7 +6,7 @@ English|[中文](Readme.md)
 
 You can deploy this application on the Atlas 200 DK to collect camera data in real time and predict facial information in the video.
 
-The applications in the current version branch adapt to  [DDK&RunTime](https://ascend.huawei.com/resources) **1.32.0.0 and later**.
+The applications in the current version branch adapt to  [DDK&RunTime](https://ascend.huawei.com/resources) **1.32.0.0 **.
 
 ## Prerequisites<a name="en-us_topic_0228461904_section137245294533"></a>
 
