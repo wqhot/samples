@@ -6,7 +6,7 @@
 
 本Application支持运行在Atlas 200 DK上，实现了erfnet网络的推理功能并输出带有推理结果的图片。
 
-当前分支中的应用适配**1.3.0.0**与**1.32.0.0及以上**版本的[DDK&RunTime](https://ascend.huawei.com/resources)。
+当前分支中的应用适配**1.32.0.0**版本的[DDK&RunTime](https://ascend.huawei.com/resources)。
 
 ## 前提条件<a name="zh-cn_topic_0228752400_zh-cn_topic_0219036254_section137245294533"></a>
 
