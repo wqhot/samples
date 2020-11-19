@@ -6,7 +6,7 @@ English|[中文](Readme.md)
 
 This application can run on the Atlas 200 DK to implement the inference function of the ERFNet network and output images with inference result.
 
-The current application adapts to  [DDK&RunTime](https://ascend.huawei.com/resources)  of 1.3.0.0 as well as 1.32.0.0 and later versions.
+The current application adapts to  [DDK&RunTime](https://ascend.huawei.com/resources)  of 1.32.0.0.
 
 ## Prerequisites<a name="en-us_topic_0228752400_en-us_topic_0219036254_section137245294533"></a>
 
