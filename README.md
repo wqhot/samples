@@ -1,3 +1,5 @@
+中文|[English](README_EN.md)
+
 # samples
 
 #### 介绍
@@ -88,6 +90,7 @@ sample仓使用Apache License 2.0，如项目中未引用其他开源项目则�
 9. - [for_atlas200dk_1.32.0.0_sample-objectdetectionbyyolov3](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-objectdetectionbyyolov3)：本Application支持运行在Atlas 200 DK或者AI加速云服务器上，实现了对yolov3目标检测网络的推理功能。
 10. - [for_atlas200dk_1.32.0.0_sample-segmentation-python](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-segmentation-python)：本Application支持运行在Atlas 200 DK上，实现了erfnet网络的推理功能并输出带有推理结果的图片。
 11. - [for_atlas200dk_1.32.0.0_sample-videoanalysisperson](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-videoanalysisperson)：开发者将本Application部署至Atlas 200 DK或者AI加速云服务器上实现对本地mp4文件或者RTSP视频流进行解码，对视频帧中的行人和人脸进行检测并对其属性进行预测，生成结构化信息发送至Server端进行保存、展示的功能。
+
 
 
 
