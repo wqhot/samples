@@ -6,7 +6,7 @@
 
 开发者可以将本application部署至Atlas 200DK上实现对摄像头数据的实时采集、并对视频中的车辆车牌信息进行预测的功能。受模型影响，精准度较低，如果需要提高精度，可以自己训练模型替换。
 
-当前分支中的应用适配**1.32.0.0及以上**版本的[DDK&RunTime](https://ascend.huawei.com/resources)。
+当前分支中的应用适配**1.32.0.0**的[DDK&RunTime](https://ascend.huawei.com/resources)。
 
 ## 前提条件<a name="zh-cn_topic_0228461932_section137245294533"></a>
 
