@@ -77,14 +77,19 @@ sample仓使用Apache License 2.0，如项目中未引用其他开源项目则�
 
 #### 使用说明
 
-1.  - [for_atlas200dk_1.32.0.0_c++](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-ascendcamera)：Ascend Camera主要功能是通过Atlas 200 DK开发者板上的摄像头采集数据，经过DVPP转换为jpg，最终保存为文件或者远程输出。
+1.  - [for_atlas200dk_1.32.0.0_sample-ascendcamera](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-ascendcamera)：Ascend Camera主要功能是通过Atlas 200 DK开发者板上的摄像头采集数据，经过DVPP转换为jpg，最终保存为文件或者远程输出。
+2. - [for_atlas200dk_1.32.0.0_sample-carplaterecognition](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-carplaterecognition)：开发者可以将本application部署至Atlas 200DK上实现对摄像头数据的实时采集、并对视频中的车辆车牌信息进行预测的功能。受模型影响，精准度较低，如果需要提高精度，可以自己训练模型替换。
+3. - [for_atlas200dk_1.32.0.0_sample-classification](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-classification)：本Application支持运行在Atlas 200 DK或者AI加速云服务器上，实现了对常见的分类网络的推理功能并输出前n个推理结果。
+4. - [for_atlas200dk_1.32.0.0_sample-colorization](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-colorization)：本应用支持运行在Atlas 200 DK上，实现了对黑白图像自动上色的功能。
+5. - [for_atlas200dk_1.32.0.0_sample-facedetection](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-facedetection)：开发者可以将本application部署至Atlas 200DK上实现对摄像头数据的实时采集、并对视频中的人脸信息进行预测的功能。
+6. - [for_atlas200dk_1.32.0.0_sample-facialrecognition](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-facialrecognition)：开发者可以将本Application部署至Atlas 200 DK上实现人脸注册、并通过摄像头对视频中的人脸信息进行预测，与已注册的人脸进行比对，预测出最可能的用户。
+7. - [for_atlas200dk_1.32.0.0_sample-headposeestimation-python](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-headposeestimation-python)：开发者将本应用部署至Atlas 200 DK或者AI加速云服务器上实现对本地mp4文件或者RTSP视频流进行解码，对视频帧中的人脸图像进行头部姿势估计，并将预测的结果信息发送至Presenter Server端进行展示。
+8. - [for_atlas200dk_1.32.0.0_sample-objectdetection](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-objectdetection)：本Application支持运行在Atlas 200 DK或者AI加速云服务器上，实现了对faster-rcnn目标检测网络的推理功能。
+9. - [for_atlas200dk_1.32.0.0_sample-objectdetectionbyyolov3](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-objectdetectionbyyolov3)：本Application支持运行在Atlas 200 DK或者AI加速云服务器上，实现了对yolov3目标检测网络的推理功能。
+10. - [for_atlas200dk_1.32.0.0_sample-segmentation-python](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-segmentation-python)：本Application支持运行在Atlas 200 DK上，实现了erfnet网络的推理功能并输出带有推理结果的图片。
+11. - [for_atlas200dk_1.32.0.0_sample-videoanalysisperson](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-videoanalysisperson)：开发者将本Application部署至Atlas 200 DK或者AI加速云服务器上实现对本地mp4文件或者RTSP视频流进行解码，对视频帧中的行人和人脸进行检测并对其属性进行预测，生成结构化信息发送至Server端进行保存、展示的功能。
 
-#### 参与贡献
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
 
 
 
