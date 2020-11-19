@@ -75,17 +75,9 @@ sample仓使用Apache License 2.0，如项目中未引用其他开源项目则�
 9. 统一错误码，通过错误码可以确认那个分支返回错误；
 10. 禁止出现打印一堆无影响的错误级别的日志；
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  - [for_atlas200dk_1.32.0.0_c++](https://gitee.com/ascend/samples/tree/1.32.0.0/sample-ascendcamera)：Ascend Camera主要功能是通过Atlas 200 DK开发者板上的摄像头采集数据，经过DVPP转换为jpg，最终保存为文件或者远程输出。
 
 #### 参与贡献
 
