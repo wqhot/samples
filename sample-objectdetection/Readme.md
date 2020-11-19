@@ -6,7 +6,7 @@
 
 本Application支持运行在Atlas 200 DK或者AI加速云服务器上，实现了对faster-rcnn目标检测网络的推理功能。
 
-当前分支中的应用适配**1.32.0.0及以上**版本的[DDK&RunTime](https://ascend.huawei.com/resources)。
+当前分支中的应用适配**1.32.0.0**版本的[DDK&RunTime](https://ascend.huawei.com/resources)。
 
 ## 前提条件<a name="zh-cn_topic_0228461892_section137245294533"></a>
 
