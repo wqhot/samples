@@ -12,7 +12,7 @@
     
     进入faster-deploy文件夹下。
 
-    **cd /home/ascend/AscendProjectssamples/commmon/faster-deploy**
+    **cd /home/ascend/AscendProjectssamples/samples/commmon/faster-deploy**
 
 2. 使用source命令执行faster-deploy脚本，命令示例如下:
 
