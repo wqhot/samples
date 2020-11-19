@@ -20,11 +20,11 @@
 
 3. 执行后，会自动检查当前ddk版本号.
 如果安装了多个ddk，则需要选择对应版本号填入。
-如安装了1.31.T20.B200和1.31.T15.B150两个版本的DDK，当前需要部署B200的样例,填入方式如下：
+如安装了1.32.0.B080和1.31.T15.B150两个版本的DDK，当前需要部署B080的样例,填入方式如下：
 
     The currently installed ddk version numbers are as follows:
 
-    1:1.31.T20.B200
+    1:1.32.0.B080
 
     2:1.31.T15.B150
 
@@ -53,29 +53,21 @@
 
     3.sample-videoanalysisperson
 
-    4.sample-videoanalysiscar
+    4.sample-ascendcamera
 
-    5.sample-ascendcamera
+    5.sample-classification
 
-    6.sample-classification
+    6.sample-objectdetection
 
-    7.sample-objectdetection
+    7.sample-headposeestimation
 
-    8.sample-faceantispoofing
+    8.sample-colorization
 
-    9.sample-headposeestimation
+    9.sample-carplaterecognition
 
-    10.sample-colorization
+    10.sample-segmentation
 
-    11.sample-carplaterecognition
-
-    12.sample-segmentation
-
-    13.sample-crowdcounting
-
-    14.sample-faceemotion
-
-    15.sample-objectdetectionbyyolov3
+    11.sample-objectdetectionbyyolov3
 
     Please input your want download sample number in list(eg:1).:1
 
