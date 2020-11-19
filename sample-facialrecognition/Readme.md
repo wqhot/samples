@@ -6,7 +6,7 @@
 
 开发者可以将本Application部署至Atlas 200 DK上实现人脸注册、并通过摄像头对视频中的人脸信息进行预测，与已注册的人脸进行比对，预测出最可能的用户。
 
-当前分支中的应用适配**1.32.0.0及以上**版本的[DDK&RunTime](https://ascend.huawei.com/resources)。
+当前分支中的应用适配**1.32.0.0**的[DDK&RunTime](https://ascend.huawei.com/resources)。
 
 ## 前提条件<a name="zh-cn_topic_0228461922_section137245294533"></a>
 
