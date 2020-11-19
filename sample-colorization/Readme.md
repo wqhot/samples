@@ -6,7 +6,7 @@
 
 本应用支持运行在Atlas 200 DK上，实现了对黑白图像自动上色的功能。
 
-当前分支中的应用适配**1.32.0.0及以上**版本的[DDK&RunTime](https://ascend.huawei.com/resources)。
+当前分支中的应用适配**1.32.0.0**的[DDK&RunTime](https://ascend.huawei.com/resources)。
 
 ## 前提条件<a name="zh-cn_topic_0228461725_section137245294533"></a>
 
