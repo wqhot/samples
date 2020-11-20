@@ -1,0 +1,24 @@
+2020-11-19 22:34:14,688-INFO-object_detection_server.py:222 presenter server is starting...
+2020-11-19 22:34:14,689-INFO-presenter_server.py:79 presenter server starting, type: object_detection
+2020-11-19 22:36:48,792-INFO-object_detection_server.py:222 presenter server is starting...
+2020-11-19 22:36:48,793-INFO-presenter_server.py:79 presenter server starting, type: object_detection
+2020-11-19 23:15:41,310-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:52088, fd:12
+2020-11-19 23:15:41,311-ERROR-presenter_socket_server.py:354 channel name object is not exist.
+2020-11-19 23:15:41,311-INFO-channel_manager.py:216 register channel: object
+2020-11-19 23:15:41,311-INFO-channel_handler.py:215 create videothread-object...
+2020-11-19 23:15:41,312-INFO-channel_manager.py:127 create channel resource, channel_name:object, channel_fd:12, media_type:video
+2020-11-19 23:16:08,317-ERROR-presenter_socket_server.py:142 socket 12 receive msg head null
+2020-11-19 23:16:08,317-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-19 23:16:08,317-INFO-object_detection_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7006), raddr=('192.168.1.2', 52088)>}
+2020-11-19 23:16:08,317-INFO-channel_handler.py:124 videothread-object set _close_thread_switch True
+2020-11-19 23:16:08,317-INFO-channel_manager.py:139 clean channel: object's resource
+2020-11-19 23:16:08,320-INFO-channel_handler.py:226 Stop thread:videothread-object.
+2020-11-19 23:17:49,134-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:52090, fd:12
+2020-11-19 23:17:49,135-INFO-channel_handler.py:215 create videothread-object...
+2020-11-19 23:17:49,135-INFO-channel_manager.py:127 create channel resource, channel_name:object, channel_fd:12, media_type:video
+2020-11-19 23:18:14,645-ERROR-presenter_socket_server.py:142 socket 12 receive msg head null
+2020-11-19 23:18:14,645-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-19 23:18:14,646-INFO-object_detection_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7006), raddr=('192.168.1.2', 52090)>}
+2020-11-19 23:18:14,646-INFO-channel_handler.py:124 videothread-object set _close_thread_switch True
+2020-11-19 23:18:14,646-INFO-channel_manager.py:139 clean channel: object's resource
+2020-11-19 23:18:14,648-INFO-channel_handler.py:226 Stop thread:videothread-object.
