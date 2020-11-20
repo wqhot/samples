@@ -63,7 +63,7 @@ main()
     fi  
 
     
-	mv $HOME/AscendProjects/samples/sample-carplaterecognition $HOME/AscendProjects/
+	cp -r $HOME/AscendProjects/samples/sample-carplaterecognition $HOME/AscendProjects/
     if [[ $? -ne 0 ]];then
         echo "[ERROR] Git clone failed. Please check your network connection."
         return 1

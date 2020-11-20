@@ -28,7 +28,7 @@ main()
         return 1
     fi
 
-	mv $HOME/AscendProjects/samples/sample-ascendcamera $HOME/AscendProjects/
+	cp -r $HOME/AscendProjects/samples/sample-ascendcamera $HOME/AscendProjects/
     if [[ $? -ne 0 ]];then
         echo "[ERROR] Git clone failed. Please check your network connection."
         return 1

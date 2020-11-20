@@ -9,24 +9,18 @@ Download_C31sample()
     if [[ $typeofSample == "1" ]];then
         echo "Current samples and corresponding numbers:"
         echo "1.sample-headposeestimation-python"
-        echo "2.sample-facedetection-python"
-        echo "3.sample-classification-python"
-        echo "4.sample-crowdcounting-python"
-        echo "5.sample-segmentation-python"
-        echo "6.sample-fasterrcnndetection-python"
+        
+        
+        
+        echo "2.sample-segmentation-python"
+        
         read -p "Please input the number of sample you want to download(eg:1):" NumberofSample
         if [[ $NumberofSample == "1" ]];then
             bash ./C32/headposeestimationpythonC32.sh
+  
         elif [[ $NumberofSample == "2" ]];then
-            bash ./C32/facedetectionpythonC32.sh
-        elif [[ $NumberofSample == "3" ]];then
-            bash ./C32/classificationpythonC32.sh
-        elif [[ $NumberofSample == "4" ]];then
-            bash ./C32/crowdcountingpythonC32.sh
-        elif [[ $NumberofSample == "5" ]];then
             bash ./C32/segmentationpythonC32.sh
-        elif [[ $NumberofSample == "6" ]];then
-            bash ./C32/fasterrcnndetectionpythonC32.sh
+    
         else
             echo "[ERROR] Input Error!"
             return 1
@@ -37,20 +31,20 @@ Download_C31sample()
         echo "1.sample-facedetection"
         echo "2.sample-facialrecognition"
         echo "3.sample-videoanalysisperson"
-        echo "4.sample-videoanalysiscar"
-        echo "5.sample-ascendcamera"
-        echo "6.sample-classification"
-        echo "7.sample-objectdetection"
-        echo "8.sample-faceantispoofing"
-        echo "9.sample-headposeestimation"
-        echo "10.sample-colorization"
-        echo "11.sample-carplaterecognition"
-        echo "12.sample-segmentation"
-        echo "13.sample-crowdcounting"
-        echo "14.sample-faceemotion"
-        echo "15.sample-objectdetectionbyyolov3"
-        echo "16.sample-peppapigdetection"
-	echo "17.sample-maskdetection"
+        
+        echo "4.sample-ascendcamera"
+        echo "5.sample-classification"
+        echo "6.sample-objectdetection"
+        
+      
+        echo "7.sample-colorization"
+        echo "8.sample-carplaterecognition"
+       
+       
+    
+        echo "9.sample-objectdetectionbyyolov3"
+       
+
         read -p "Please input the number of sample you want to download(eg:1):" NumberofSample
         if [[ $NumberofSample == "1" ]];then
             bash ./C32/facedetectionC32.sh
@@ -58,34 +52,23 @@ Download_C31sample()
             bash ./C32/facialrecognitionC32.sh
         elif [[ $NumberofSample == "3" ]];then
             bash ./C32/videoanalysispersonC32.sh
+        
         elif [[ $NumberofSample == "4" ]];then
-            bash ./C32/videoanalysiscarC32.sh
-        elif [[ $NumberofSample == "5" ]];then
             bash ./C32/ascendcameraC32.sh
-        elif [[ $NumberofSample == "6" ]];then
+        elif [[ $NumberofSample == "5" ]];then
             bash ./C32/classificationC32.sh
-        elif [[ $NumberofSample == "7" ]];then
+        elif [[ $NumberofSample == "6" ]];then
             bash ./C32/objectdetectionC32.sh
-        elif [[ $NumberofSample == "8" ]];then
-            bash ./C32/faceantispoofingC32.sh
-        elif [[ $NumberofSample == "9" ]];then
-            bash ./C32/headposeestimationC32.sh
-        elif [[ $NumberofSample == "10" ]];then
+        
+    
+        elif [[ $NumberofSample == "7" ]];then
             bash ./C32/colorizationC32.sh
-        elif [[ $NumberofSample == "11" ]];then
+        elif [[ $NumberofSample == "8" ]];then
             bash ./C32/carplaterecognitionC32.sh
-        elif [[ $NumberofSample == "12" ]];then
-            bash ./C32/segmentationC32.sh
-        elif [[ $NumberofSample == "13" ]];then
-            bash ./C32/crowdcountingC32.sh
-        elif [[ $NumberofSample == "14" ]];then
-            bash ./C32/faceemotionC32.sh
-        elif [[ $NumberofSample == "15" ]];then
+    
+        elif [[ $NumberofSample == "9" ]];then
             bash ./C32/objectdetectionbyyolov3C32.sh
-        elif [[ $NumberofSample == "16" ]];then
-            bash ./C32/peppapigdetectionC32.sh
-        elif [[ $NumberofSample == "17" ]];then
-            bash ./C32/maskdetectionC32.sh
+       
         else 
             echo "[ERROR] Input Error!"
             return 1
