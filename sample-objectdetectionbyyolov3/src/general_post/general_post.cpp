@@ -352,7 +352,7 @@ HIAI_StatusT GeneralPost::PostProcess(
               result->image_info.path.c_str());
     return HIAI_ERROR;
   }
-  printf(" %d %d \n",mat.cols,mat.rows);
+  HIAI_ENGINE_LOG(" %d %d \n",mat.cols,mat.rows);
 
   stringstream sstream;
   
@@ -376,7 +376,7 @@ HIAI_StatusT GeneralPost::PostProcess(
     cv::putText(mat, obj_str, cv::Point(p1.x, p1.y + kLabelOffset),
                 cv::FONT_HERSHEY_COMPLEX, kFountScale, kFontColor);
 
-    printf("%s %f \n",label[1+bboxesNew[i].attribute].c_str(), 100 * bboxesNew[i].score);
+    HIAI_ENGINE_LOG("%s %f \n",label[1+bboxesNew[i].attribute].c_str(), 100 * bboxesNew[i].score);
                 
   }
 

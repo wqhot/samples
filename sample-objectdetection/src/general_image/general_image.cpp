@@ -126,9 +126,10 @@ void GeneralImage::SplitPath(const string &path, vector<string> &path_vec) {
 }
 
 void GeneralImage::GetPathFiles(const string &path, vector<string> &file_vec) {
-  struct dirent *dirent_ptr = nullptr;
-  DIR *dir = nullptr;
+  
   if (IsDirectory(path)) {
+	struct dirent *dirent_ptr = nullptr;
+	DIR *dir = nullptr;
     dir = opendir(path.c_str());
     while ((dirent_ptr = readdir(dir)) != nullptr) {
       // skip . and ..

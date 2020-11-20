@@ -293,8 +293,8 @@ bool CarPlateRecognition::ConstructInferenceResult(
       }
 
       car_palte_str += kCarPlateChars[max_index];
-      printf("max_index %d\n",max_index);
-      printf("car_plate_str if for is %s\n",kCarPlateChars[max_index].c_str());
+      HIAI_ENGINE_LOG("max_index %d\n",max_index);
+      HIAI_ENGINE_LOG("car_plate_str if for is %s\n",kCarPlateChars[max_index].c_str());
       car_plate_score += *(result + max_index);
     }
 
@@ -302,7 +302,7 @@ bool CarPlateRecognition::ConstructInferenceResult(
     out.box = image_handle->obj_imgs[batch_index + ind].box;
     //out.attribute_name = kCarPlateStr;
     out.inference_result = car_palte_str;
-    printf("car_plate_str is %s\n",car_palte_str.c_str());
+    HIAI_ENGINE_LOG("car_plate_str is %s\n",car_palte_str.c_str());
     // get the mean value of 7 car plate number inference score
     out.confidence = car_plate_score / kCarPlateLength;
 	  //out.box = image_handle->box;
@@ -447,7 +447,7 @@ HIAI_IMPL_ENGINE_PROCESS("car_plate_recognition", CarPlateRecognition,
   }
   else
   {
-    printf("not not not not empty------car_plate_recognition\n");
+    HIAI_ENGINE_LOG("not not not not empty------car_plate_recognition\n");
   }
 
   std::shared_ptr<VideoDetectionImageParaT> image_handle = std::make_shared<
@@ -457,12 +457,12 @@ HIAI_IMPL_ENGINE_PROCESS("car_plate_recognition", CarPlateRecognition,
   BatchImageResize(image_input, image_handle);
   if (image_handle->obj_imgs.empty()) { // check result vector is empty
     HIAI_ENGINE_LOG("[CarPlateRecognition] image_input resize failed");
-    printf("print ResultData\n");
+    HIAI_ENGINE_LOG(" ResultData\n");
     tran_data->status = false;
 	  SendResultData(tran_data);
     return HIAI_ERROR;
   }
-  printf("print inference result\n");
+  HIAI_ENGINE_LOG(" inference result\n");
   // inference and send inference result;
   return BatchInferenceProcess(image_handle, tran_data);
 }

@@ -242,7 +242,7 @@ void ObjectDetectionPostProcess::FilterBoundingBox(
     detection_image->obj_imgs.push_back(object_image);
     //need change
     //detection_image->box = bbox;
-    printf("%d,%d,%d,%d\n",bbox.lt_x,bbox.lt_y,bbox.rb_x,bbox.rb_y);
+    HIAI_ENGINE_LOG("%d,%d,%d,%d\n",bbox.lt_x,bbox.lt_y,bbox.rb_x,bbox.rb_y);
   }
 }
 HIAI_StatusT ObjectDetectionPostProcess::HandleResults(
@@ -262,7 +262,7 @@ HIAI_StatusT ObjectDetectionPostProcess::HandleResults(
     SendDetectImage(detection_image);
     HIAI_ENGINE_LOG(HIAI_ENGINE_RUN_ARGS_NOT_RIGHT,
                     "[ODPostProcess] inference_result status is false!");
-    printf("status is false\n");
+    HIAI_ENGINE_LOG("status is false\n");
     return HIAI_ERROR;
   }
 
@@ -276,7 +276,7 @@ HIAI_StatusT ObjectDetectionPostProcess::HandleResults(
     HIAI_ENGINE_LOG(HIAI_ENGINE_RUN_ARGS_NOT_RIGHT,
                     "[ODPostProcess] image inference out");
     SendDetectImage(detection_image);
-    printf("out_num||out_bbox is empty\n");
+    HIAI_ENGINE_LOG("out_num||out_bbox is empty\n");
     return HIAI_ERROR;
   }
 
@@ -291,12 +291,12 @@ HIAI_StatusT ObjectDetectionPostProcess::HandleResults(
   FilterBoundingBox(bbox_buffer, bbox_buffer_size, detection_image, car_plate_imgs);
 
   if (detection_image->obj_imgs.empty()) { // check input vector is empty
-    printf("empty-------object_detection_post\n");
-    printf("%d",inference_result->status);
+    HIAI_ENGINE_LOG("empty-------object_detection_post\n");
+    HIAI_ENGINE_LOG("%d",inference_result->status);
   }
   else
   {
-    printf("not not not not empty-------object_detection_post\n");
+    HIAI_ENGINE_LOG("not not not not empty-------object_detection_post\n");
   }
   // send_data
   HIAI_StatusT send_ret = SendDetectImage(detection_image);

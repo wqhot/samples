@@ -236,7 +236,7 @@ HIAI_StatusT CarPlateDetection::PerformInference(
     if (neural_buffer.get() == nullptr) { // check new memory result
       HIAI_ENGINE_LOG(HIAI_ENGINE_RUN_ARGS_NOT_RIGHT,
                       "Fail to new memory when initialize neural buffer!");
-      printf("neual_buffer get failed\n");
+      HIAI_ENGINE_LOG("neual_buffer get failed\n");
       return HIAI_ERROR;
     }
 
@@ -250,12 +250,12 @@ HIAI_StatusT CarPlateDetection::PerformInference(
     vector<shared_ptr<hiai::IAITensor>> output_tensors;
     input_tensors.push_back(input_tensor);
 
-    HIAI_StatusT ret = hiai::SUCCESS;
-    ret = ai_model_manager_->CreateOutputTensor(input_tensors, output_tensors);
+    //HIAI_StatusT ret = hiai::SUCCESS;
+    HIAI_StatusT ret = ai_model_manager_->CreateOutputTensor(input_tensors, output_tensors);
     if (ret != hiai::SUCCESS) { // check create output tenser result
       HIAI_ENGINE_LOG(HIAI_ENGINE_RUN_ARGS_NOT_RIGHT,
                       "[CarPlateDetection] create output tensor failed!");
-      printf("OutputTensor create failed\n");
+      HIAI_ENGINE_LOG("OutputTensor create failed\n");
       return HIAI_ERROR;
     }
     hiai::AIContext ai_context;
@@ -266,7 +266,7 @@ HIAI_StatusT CarPlateDetection::PerformInference(
     if (ret != hiai::SUCCESS) { // check  neural network inference result
       HIAI_ENGINE_LOG(HIAI_ENGINE_RUN_ARGS_NOT_RIGHT,
                       "[CarPlateDetection] car plate detect inference failed!");
-      printf("model process failed\n");
+      HIAI_ENGINE_LOG("model process failed\n");
       return HIAI_ERROR;
     }
 
@@ -278,7 +278,7 @@ HIAI_StatusT CarPlateDetection::PerformInference(
 
       const char* res_data = reinterpret_cast<char*>(result_tensor->GetBuffer());
       
-      printf("%x %x %x %x\n", res_data[0], res_data[1], res_data[2], res_data[3]);
+      HIAI_ENGINE_LOG("%x %x %x %x\n", res_data[0], res_data[1], res_data[2], res_data[3]);
 
       OutputT out;
       out.size = result_tensor->GetSize();
@@ -288,7 +288,7 @@ HIAI_StatusT CarPlateDetection::PerformInference(
             HIAI_ENGINE_RUN_ARGS_NOT_RIGHT,
             "the inference output size:%d is invalid! value range: 1~134217728",
             out.size);
-        printf("outsize is empty\n");
+        HIAI_ENGINE_LOG("outsize is empty\n");
         return HIAI_ERROR;
       }
 
@@ -298,7 +298,7 @@ HIAI_StatusT CarPlateDetection::PerformInference(
         HIAI_ENGINE_LOG(
             HIAI_ENGINE_RUN_ARGS_NOT_RIGHT,
             "Fail to new memory when handle ai model inference output!");
-        printf("outdata is empty\n");
+        HIAI_ENGINE_LOG("outdata is empty\n");
         return HIAI_ERROR;
       }
 
@@ -307,7 +307,7 @@ HIAI_StatusT CarPlateDetection::PerformInference(
       if (ret != EOK) { // check memory copy result
         HIAI_ENGINE_LOG(HIAI_ENGINE_RUN_ARGS_NOT_RIGHT,
                         "[CarPlateDetection] copy output tensor failure!");
-        printf("memcpy_s is empty\n");
+        HIAI_ENGINE_LOG("memcpy_s is empty\n");
         continue;
       }
 
@@ -320,7 +320,7 @@ HIAI_StatusT CarPlateDetection::PerformInference(
       HIAI_ENGINE_LOG(
           HIAI_ENGINE_RUN_ARGS_NOT_RIGHT,
           "[CarPlateDetection] detection result tensor is empty or invalid!");
-      printf("inference_result is empty\n");
+      HIAI_ENGINE_LOG("inference_result is empty\n");
       continue;
     }
 
@@ -329,7 +329,7 @@ HIAI_StatusT CarPlateDetection::PerformInference(
 
     // check out bbox is valid
     if (!CheckBBoxData(out_bbox, out_num)) {
-      printf("checkBBoxData failed\n");
+      HIAI_ENGINE_LOG("checkBBoxData failed\n");
       return HIAI_ERROR;
     }
 
@@ -337,8 +337,8 @@ HIAI_StatusT CarPlateDetection::PerformInference(
     float bbox_number = *reinterpret_cast<float*>(out_num.data.get());
     int32_t bbox_buffer_size = bbox_number * kSizePerResultset;
     HIAI_ENGINE_LOG("[CarPlateDetection] the number of bbox:%d", bbox_number);
-    printf("[CarPlateDetection] the number of bbox:%f\n", bbox_number);
-    printf("[CarPlateDetection] the bbox_buffer_size:%d\n", bbox_buffer_size);
+    HIAI_ENGINE_LOG("[CarPlateDetection] the number of bbox:%f\n", bbox_number);
+    HIAI_ENGINE_LOG("[CarPlateDetection] the bbox_buffer_size:%d\n", bbox_buffer_size);
 
     float* ptr = bbox_buffer;
 
@@ -354,8 +354,8 @@ HIAI_StatusT CarPlateDetection::PerformInference(
         HIAI_ENGINE_LOG(
             "[CarPlateDetection] car plate detection score:%f is too less",
             score);
-        printf("score is failed\n");
-        printf("score is %f\n",score);
+        HIAI_ENGINE_LOG("score is failed\n");
+        HIAI_ENGINE_LOG("score is %f\n",score);
         continue;
       }
 
@@ -373,7 +373,7 @@ HIAI_StatusT CarPlateDetection::PerformInference(
       if (rb_x - lt_x < kMinCropPixel || rb_y - lt_x < kMinCropPixel) {
         HIAI_ENGINE_LOG(
             "[CarPlateDetection] the car plate image is too small!");
-        printf("zuo biao dian  you wen ti\n");
+        HIAI_ENGINE_LOG("zuo biao dian  you wen ti\n");
         continue;
       }
 
@@ -385,7 +385,7 @@ HIAI_StatusT CarPlateDetection::PerformInference(
       if (crop_ret != HIAI_OK) { // check crop result
         HIAI_ENGINE_LOG(HIAI_ENGINE_RUN_ARGS_NOT_RIGHT,
                         "[CarPlateDetection] fail to crop car plate image!");
-        printf("CropObjectFromImage failed\n");
+        HIAI_ENGINE_LOG("CropObjectFromImage failed\n");
         continue;
       }
 
@@ -393,7 +393,7 @@ HIAI_StatusT CarPlateDetection::PerformInference(
       object_image.box = iter->box;
       car_plate_image->obj_imgs.push_back(object_image);
 	    //car_plate_image->box = bbox;
-      printf("%d,%d,%d,%d\n",iter->box.lt_x,iter->box.lt_y,iter->box.rb_x,iter->box.rb_y);
+      HIAI_ENGINE_LOG("%d,%d,%d,%d\n",iter->box.lt_x,iter->box.lt_y,iter->box.rb_x,iter->box.rb_y);
     }
   }
 
@@ -517,7 +517,7 @@ HIAI_IMPL_ENGINE_PROCESS("car_plate_detection", CarPlateDetection, INPUT_SIZE) {
   }
   else
   {
-    printf("not not not empty-----car_plate_detection\n");
+    HIAI_ENGINE_LOG("not not not empty-----car_plate_detection\n");
   }
 
   shared_ptr<VideoDetectionImageParaT> resized_image = std::make_shared<
@@ -527,11 +527,11 @@ HIAI_IMPL_ENGINE_PROCESS("car_plate_detection", CarPlateDetection, INPUT_SIZE) {
   BatchImageResize(image_input, resized_image);
   if (resized_image->obj_imgs.empty()) 
   {
-    printf("BatchImageResize is empty!!!\n");
+    HIAI_ENGINE_LOG("BatchImageResize is empty!!!\n");
   }
   else
   {
-    printf("BatchImageResize is not not not not not empty!!!\n");
+    HIAI_ENGINE_LOG("BatchImageResize is not not not not not empty!!!\n");
   }
   // detect and crop car plate image from input image
   shared_ptr<VideoDetectionImageParaT> car_plate_image = std::make_shared<

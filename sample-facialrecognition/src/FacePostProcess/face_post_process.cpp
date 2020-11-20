@@ -100,9 +100,10 @@ HIAI_StatusT FacePostProcess::SendFeature(
 
   // 2. repeated FaceFeature
   vector<FaceImage> face_imgs = info->face_imgs;
-  facial_recognition::FaceFeature *feature = nullptr;
+  
   for (int i = 0; i < face_imgs.size(); i++) {
     // every face feature
+	facial_recognition::FaceFeature *feature = nullptr;
     feature = frame_info.add_feature();
 
     // box
@@ -157,9 +158,10 @@ HIAI_StatusT FacePostProcess::ReplyFeature(
   // 2. dealing success, need set FaceFeature
   result.mutable_response()->set_ret(facial_recognition::kErrorNone);
   vector<FaceImage> face_imgs = info->face_imgs;
-  facial_recognition::FaceFeature *face_feature = nullptr;
+  
   for (int i = 0; i < face_imgs.size(); i++) {
     // every face feature
+	facial_recognition::FaceFeature *face_feature = nullptr;
     face_feature = result.add_feature();
 
     // box

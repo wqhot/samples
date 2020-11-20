@@ -602,8 +602,8 @@ HIAI_StatusT FaceDetection::PerformInference(
   vector < shared_ptr < hiai::IAITensor >> output_tensors;
   input_tensors.push_back(input_tensor);
 
-  HIAI_StatusT ret = hiai::SUCCESS;
-  ret = ai_model_manager_->CreateOutputTensor(input_tensors, output_tensors);
+  //HIAI_StatusT ret = hiai::SUCCESS;
+  HIAI_StatusT ret = ai_model_manager_->CreateOutputTensor(input_tensors, output_tensors);
   if (ret != hiai::SUCCESS) {
     HIAI_ENGINE_LOG(HIAI_ENGINE_RUN_ARGS_NOT_RIGHT,
                     "[FaceDetection] output tensor created failed!");

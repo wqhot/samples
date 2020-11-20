@@ -401,11 +401,12 @@ int DvppProcess::DvppYuvChangeToJpeg(const char *input_buf, int input_size,
     input_data.buf = (unsigned char*) ALIGN_UP((uint64_t ) addr_orig,
                                                kJpegEAddressAlgin);
 
-    const char *temp_buf = nullptr;
+    
 
     // input data align to specify requirement
     if (JPGENC_FORMAT_YUV420 == (input_data.format & JPGENC_FORMAT_BIT)) {
-        temp_buf = input_buf;
+        const char *temp_buf = nullptr;
+		temp_buf = input_buf;
         if (dvpp_instance_para_.jpg_para.is_align_image) {
             memcpy_s(input_data.buf, mmap_size, temp_buf, input_size);
             CHECK_MEMCPY_RESULT(ret, nullptr);  // if exist error,program exit

@@ -146,7 +146,7 @@ HIAI_StatusT VideoAnalysisPost::Init(
   }
 
 
-  uint16_t u_port = static_cast<uint16_t>(app_config_->port);
+  //uint16_t u_port = static_cast<uint16_t>(app_config_->port);
   OpenChannelParam channel_param = { app_config_->host_ip,
       app_config_->port, app_config_->app_name, ContentType::kVideo };
   Channel *chan = nullptr;
@@ -257,10 +257,10 @@ HIAI_StatusT VideoAnalysisPost::HandleResults(
 	
 		  one_result.lt = point_lt;
 		  one_result.rb = point_rb;
-	    printf("point:%d %d %d %d\n",point_lt.x,point_lt.y,point_rb.x,point_rb.y);
-      printf("score=%f\n",score);
-      printf("inference_result=%s\n",inference_res->car_infos[k].inference_result.c_str());
-      printf("width=%d  height=%d\n",width,height);
+		  HIAI_ENGINE_LOG("point:%d %d %d %d\n",point_lt.x,point_lt.y,point_rb.x,point_rb.y);
+		  HIAI_ENGINE_LOG("score=%f\n",score);
+		  HIAI_ENGINE_LOG("inference_result=%s\n",inference_res->car_infos[k].inference_result.c_str());
+		  HIAI_ENGINE_LOG("width=%d  height=%d\n",width,height);
 		  // check results is valid
 		  if (IsInvalidResults(score, point_lt, point_rb)) {
 		    continue;
@@ -308,9 +308,9 @@ HIAI_IMPL_ENGINE_PROCESS("video_analysis_post", VideoAnalysisPost, INPUT_SIZE) {
   // inference failed, dealing original images
   if (!inference_res->status) {
     HIAI_ENGINE_LOG(HIAI_OK, "will handle original image.");
-    printf("[video_analysis_post] inference failed,handle original image\n");
+    HIAI_ENGINE_LOG("[video_analysis_post] inference failed,handle original image\n");
     return HandleOriginalImage(inference_res);
   }
-  printf("[video_analysis_post] inference successed,handle Results\n");
+  HIAI_ENGINE_LOG("[video_analysis_post] inference successed,handle Results\n");
   return HandleResults(inference_res);
 }
