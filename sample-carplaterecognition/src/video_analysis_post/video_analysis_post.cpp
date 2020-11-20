@@ -146,7 +146,7 @@ HIAI_StatusT VideoAnalysisPost::Init(
   }
 
 
-  //uint16_t u_port = static_cast<uint16_t>(app_config_->port);
+  uint16_t u_port = static_cast<uint16_t>(app_config_->port);
   OpenChannelParam channel_param = { app_config_->host_ip,
       app_config_->port, app_config_->app_name, ContentType::kVideo };
   Channel *chan = nullptr;
