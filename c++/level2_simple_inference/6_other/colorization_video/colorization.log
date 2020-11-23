@@ -1,0 +1,354 @@
+2020-11-12 22:21:26,483-INFO-colorization_server.py:222 presenter server is starting...
+2020-11-12 22:22:09,995-INFO-colorization_server.py:222 presenter server is starting...
+2020-11-12 22:22:09,996-INFO-presenter_server.py:79 presenter server starting, type: colorization
+2020-11-12 22:22:10,725-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42758, fd:12
+2020-11-12 22:22:10,726-ERROR-presenter_socket_server.py:354 channel name colorization-video is not exist.
+2020-11-12 22:22:10,726-INFO-channel_manager.py:216 register channel: colorization-video
+2020-11-12 22:22:10,726-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-12 22:22:10,726-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:12, media_type:video
+2020-11-12 22:23:07,346-ERROR-presenter_socket_server.py:142 socket 12 receive msg head null
+2020-11-12 22:23:07,347-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-12 22:23:07,347-INFO-colorization_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42758)>}
+2020-11-12 22:23:07,347-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-12 22:23:07,347-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-12 22:23:07,347-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-12 22:26:16,075-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42760, fd:13
+2020-11-12 22:26:16,076-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-12 22:26:16,076-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:13, media_type:video
+2020-11-12 22:27:26,320-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-12 22:27:26,320-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-12 22:27:26,320-INFO-channel_manager.py:227 unregister channel: colorization-video
+2020-11-12 22:27:26,320-INFO-web.py:163 delete channel colorization-video succeed
+2020-11-12 22:27:26,320-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-12 22:27:26,337-ERROR-colorization_server.py:178 get channel handler failed
+2020-11-12 22:27:26,337-ERROR-colorization_server.py:135 Present data not known error.
+2020-11-12 22:27:26,337-INFO-colorization_server.py:60 clean fd:13, conns:{13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42760)>}
+2020-11-12 22:27:26,594-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42762, fd:13
+2020-11-12 22:27:26,594-ERROR-presenter_socket_server.py:354 channel name colorization-video is not exist.
+2020-11-12 22:27:26,594-INFO-channel_manager.py:216 register channel: colorization-video
+2020-11-12 22:27:26,594-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-12 22:27:26,594-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:13, media_type:video
+2020-11-12 22:27:31,951-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-12 22:27:31,951-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-12 22:27:31,951-INFO-channel_manager.py:227 unregister channel: colorization-video
+2020-11-12 22:27:31,951-INFO-web.py:163 delete channel colorization-video succeed
+2020-11-12 22:27:31,952-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-12 22:27:31,992-ERROR-colorization_server.py:178 get channel handler failed
+2020-11-12 22:27:31,992-ERROR-colorization_server.py:135 Present data not known error.
+2020-11-12 22:27:31,992-INFO-colorization_server.py:60 clean fd:13, conns:{13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42762)>}
+2020-11-12 22:27:32,601-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42764, fd:13
+2020-11-12 22:27:32,601-ERROR-presenter_socket_server.py:354 channel name colorization-video is not exist.
+2020-11-12 22:27:32,601-INFO-channel_manager.py:216 register channel: colorization-video
+2020-11-12 22:27:32,601-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-12 22:27:32,601-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:13, media_type:video
+2020-11-12 22:31:36,740-INFO-colorization_server.py:222 presenter server is starting...
+2020-11-12 22:31:36,741-INFO-presenter_server.py:79 presenter server starting, type: colorization
+2020-11-12 22:31:37,160-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42768, fd:12
+2020-11-12 22:31:37,162-ERROR-presenter_socket_server.py:354 channel name colorization-video is not exist.
+2020-11-12 22:31:37,162-INFO-channel_manager.py:216 register channel: colorization-video
+2020-11-12 22:31:37,162-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-12 22:31:37,162-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:12, media_type:video
+2020-11-12 22:39:43,525-ERROR-presenter_socket_server.py:142 socket 12 receive msg head null
+2020-11-12 22:39:43,525-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-12 22:39:43,525-INFO-colorization_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42768)>}
+2020-11-12 22:39:43,526-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-12 22:39:43,526-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-12 22:39:43,526-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-15 18:19:25,971-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42770, fd:12
+2020-11-15 18:19:25,983-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-15 18:19:25,983-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:12, media_type:video
+2020-11-15 18:20:04,994-ERROR-presenter_socket_server.py:142 socket 12 receive msg head null
+2020-11-15 18:20:04,995-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-15 18:20:04,995-INFO-colorization_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42770)>}
+2020-11-15 18:20:04,995-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-15 18:20:04,995-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-15 18:20:04,995-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-15 18:24:38,616-INFO-colorization_server.py:222 presenter server is starting...
+2020-11-15 18:24:38,617-INFO-presenter_server.py:79 presenter server starting, type: colorization
+2020-11-15 19:19:35,215-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42772, fd:12
+2020-11-15 19:19:35,216-ERROR-presenter_socket_server.py:354 channel name colorization-video is not exist.
+2020-11-15 19:19:35,216-INFO-channel_manager.py:216 register channel: colorization-video
+2020-11-15 19:19:35,216-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-15 19:19:35,216-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:12, media_type:video
+2020-11-15 19:20:14,244-ERROR-presenter_socket_server.py:142 socket 12 receive msg head null
+2020-11-15 19:20:14,245-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-15 19:20:14,245-INFO-colorization_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42772)>}
+2020-11-15 19:20:14,245-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-15 19:20:14,245-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-15 19:20:14,245-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-15 23:56:20,138-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42774, fd:13
+2020-11-15 23:56:20,139-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-15 23:56:20,139-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:13, media_type:video
+2020-11-15 23:56:59,149-ERROR-presenter_socket_server.py:142 socket 13 receive msg head null
+2020-11-15 23:56:59,149-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-15 23:56:59,149-INFO-colorization_server.py:60 clean fd:13, conns:{13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42774)>}
+2020-11-15 23:56:59,149-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-15 23:56:59,149-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-15 23:56:59,149-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-15 23:58:13,971-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42776, fd:12
+2020-11-15 23:58:13,974-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-15 23:58:13,974-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:12, media_type:video
+2020-11-15 23:58:52,990-ERROR-presenter_socket_server.py:142 socket 12 receive msg head null
+2020-11-15 23:58:52,990-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-15 23:58:52,990-INFO-colorization_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42776)>}
+2020-11-15 23:58:52,990-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-15 23:58:52,990-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-15 23:58:52,990-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-15 23:59:11,280-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42778, fd:12
+2020-11-15 23:59:11,281-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-15 23:59:11,282-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:12, media_type:video
+2020-11-15 23:59:50,297-ERROR-presenter_socket_server.py:142 socket 12 receive msg head null
+2020-11-15 23:59:50,297-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-15 23:59:50,297-INFO-colorization_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42778)>}
+2020-11-15 23:59:50,297-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-15 23:59:50,297-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-15 23:59:50,297-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 00:38:55,573-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42780, fd:13
+2020-11-16 00:38:55,576-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 00:38:55,576-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:13, media_type:video
+2020-11-16 00:39:34,588-ERROR-presenter_socket_server.py:142 socket 13 receive msg head null
+2020-11-16 00:39:34,588-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 00:39:34,588-INFO-colorization_server.py:60 clean fd:13, conns:{13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42780)>}
+2020-11-16 00:39:34,589-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 00:39:34,589-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 00:39:34,589-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 00:41:07,229-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42782, fd:19
+2020-11-16 00:41:07,231-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 00:41:07,231-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:19, media_type:video
+2020-11-16 00:46:00,725-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42784, fd:13
+2020-11-16 00:46:00,726-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 00:46:00,727-INFO-colorization_server.py:60 clean fd:13, conns:{19: <socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42782)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42784)>}
+2020-11-16 00:47:21,147-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42786, fd:13
+2020-11-16 00:47:21,150-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 00:47:21,150-INFO-colorization_server.py:60 clean fd:13, conns:{19: <socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42782)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42786)>}
+2020-11-16 00:58:36,841-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42788, fd:12
+2020-11-16 00:58:36,846-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 00:58:36,846-INFO-colorization_server.py:60 clean fd:12, conns:{19: <socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42782)>, 12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42788)>}
+2020-11-16 00:59:57,337-INFO-colorization_server.py:222 presenter server is starting...
+2020-11-16 00:59:57,339-INFO-presenter_server.py:79 presenter server starting, type: colorization
+2020-11-16 00:59:58,644-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42792, fd:12
+2020-11-16 00:59:58,644-ERROR-presenter_socket_server.py:354 channel name colorization-video is not exist.
+2020-11-16 00:59:58,644-INFO-channel_manager.py:216 register channel: colorization-video
+2020-11-16 00:59:58,645-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 00:59:58,645-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:12, media_type:video
+2020-11-16 01:01:36,902-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42794, fd:14
+2020-11-16 01:01:36,905-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 01:01:36,905-INFO-colorization_server.py:60 clean fd:14, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42792)>, 14: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42794)>}
+2020-11-16 01:02:03,374-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 01:02:03,374-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 01:02:03,374-INFO-channel_manager.py:227 unregister channel: colorization-video
+2020-11-16 01:02:03,375-INFO-web.py:163 delete channel colorization-video succeed
+2020-11-16 01:02:03,375-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 01:02:03,445-ERROR-colorization_server.py:178 get channel handler failed
+2020-11-16 01:02:03,445-ERROR-colorization_server.py:135 Present data not known error.
+2020-11-16 01:02:03,445-INFO-colorization_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42792)>}
+2020-11-16 01:02:04,802-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:42796, fd:12
+2020-11-16 01:02:04,803-ERROR-presenter_socket_server.py:354 channel name colorization-video is not exist.
+2020-11-16 01:02:04,803-INFO-channel_manager.py:216 register channel: colorization-video
+2020-11-16 01:02:04,803-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 01:02:04,803-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:12, media_type:video
+2020-11-16 03:44:28,172-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:44992, fd:13
+2020-11-16 03:44:28,176-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 03:44:28,176-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42796)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 44992)>}
+2020-11-16 03:44:45,050-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 03:44:45,050-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 03:44:45,050-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 04:20:20,800-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:44994, fd:14
+2020-11-16 04:20:20,801-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 04:20:20,801-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:14, media_type:video
+2020-11-16 04:20:55,309-ERROR-presenter_socket_server.py:142 socket 14 receive msg head null
+2020-11-16 04:20:55,310-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 04:20:55,310-INFO-colorization_server.py:60 clean fd:14, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42796)>, 14: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 44994)>}
+2020-11-16 04:20:55,310-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 04:20:55,310-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 04:20:55,311-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 04:38:21,124-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:44996, fd:13
+2020-11-16 04:38:21,125-ERROR-presenter_socket_server.py:354 channel name a is not exist.
+2020-11-16 04:38:21,125-INFO-channel_manager.py:216 register channel: a
+2020-11-16 04:38:21,125-INFO-channel_handler.py:215 create videothread-a...
+2020-11-16 04:38:21,125-INFO-channel_manager.py:127 create channel resource, channel_name:a, channel_fd:13, media_type:video
+2020-11-16 04:38:54,132-ERROR-presenter_socket_server.py:142 socket 13 receive msg head null
+2020-11-16 04:38:54,132-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 04:38:54,132-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42796)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 44996)>}
+2020-11-16 04:38:54,132-INFO-channel_handler.py:124 videothread-a set _close_thread_switch True
+2020-11-16 04:38:54,132-INFO-channel_manager.py:139 clean channel: a's resource
+2020-11-16 04:38:54,132-INFO-channel_handler.py:226 Stop thread:videothread-a.
+2020-11-16 04:47:22,416-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45006, fd:13
+2020-11-16 04:47:22,417-ERROR-presenter_socket_server.py:354 channel name person is not exist.
+2020-11-16 04:47:22,417-INFO-channel_manager.py:216 register channel: person
+2020-11-16 04:47:22,417-INFO-channel_handler.py:215 create videothread-person...
+2020-11-16 04:47:22,417-INFO-channel_manager.py:127 create channel resource, channel_name:person, channel_fd:13, media_type:video
+2020-11-16 04:47:23,919-ERROR-presenter_socket_server.py:142 socket 13 receive msg head null
+2020-11-16 04:47:23,919-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 04:47:23,919-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42796)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45006)>}
+2020-11-16 04:47:23,920-INFO-channel_handler.py:124 videothread-person set _close_thread_switch True
+2020-11-16 04:47:23,920-INFO-channel_manager.py:139 clean channel: person's resource
+2020-11-16 04:47:23,920-INFO-channel_handler.py:226 Stop thread:videothread-person.
+2020-11-16 04:49:53,318-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45010, fd:13
+2020-11-16 04:49:53,318-ERROR-presenter_socket_server.py:354 channel name 10 is not exist.
+2020-11-16 04:49:53,318-INFO-channel_manager.py:216 register channel: 10
+2020-11-16 04:49:53,318-INFO-channel_handler.py:215 create videothread-10...
+2020-11-16 04:49:53,318-INFO-channel_manager.py:127 create channel resource, channel_name:10, channel_fd:13, media_type:video
+2020-11-16 04:50:27,827-ERROR-presenter_socket_server.py:142 socket 13 receive msg head null
+2020-11-16 04:50:27,827-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 04:50:27,827-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42796)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45010)>}
+2020-11-16 04:50:27,827-INFO-channel_handler.py:124 videothread-10 set _close_thread_switch True
+2020-11-16 04:50:27,827-INFO-channel_manager.py:139 clean channel: 10's resource
+2020-11-16 04:50:27,828-INFO-channel_handler.py:226 Stop thread:videothread-10.
+2020-11-16 04:52:33,182-INFO-channel_manager.py:227 unregister channel: colorization-video
+2020-11-16 04:52:33,182-INFO-web.py:163 delete channel colorization-video succeed
+2020-11-16 04:52:33,182-INFO-channel_manager.py:227 unregister channel: a
+2020-11-16 04:52:33,182-INFO-web.py:163 delete channel a succeed
+2020-11-16 04:52:33,182-INFO-channel_manager.py:227 unregister channel: person
+2020-11-16 04:52:33,182-INFO-web.py:163 delete channel person succeed
+2020-11-16 04:52:33,182-INFO-channel_manager.py:227 unregister channel: 10
+2020-11-16 04:52:33,182-INFO-web.py:163 delete channel 10 succeed
+2020-11-16 05:06:58,674-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45012, fd:14
+2020-11-16 05:06:58,675-ERROR-presenter_socket_server.py:354 channel name 10 is not exist.
+2020-11-16 05:06:58,675-INFO-channel_manager.py:216 register channel: 10
+2020-11-16 05:06:58,675-INFO-channel_handler.py:215 create videothread-10...
+2020-11-16 05:06:58,675-INFO-channel_manager.py:127 create channel resource, channel_name:10, channel_fd:14, media_type:video
+2020-11-16 05:07:30,185-ERROR-presenter_socket_server.py:142 socket 14 receive msg head null
+2020-11-16 05:07:30,185-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 05:07:30,185-INFO-colorization_server.py:60 clean fd:14, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42796)>, 14: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45012)>}
+2020-11-16 05:07:30,185-INFO-channel_handler.py:124 videothread-10 set _close_thread_switch True
+2020-11-16 05:07:30,185-INFO-channel_manager.py:139 clean channel: 10's resource
+2020-11-16 05:07:30,185-INFO-channel_handler.py:226 Stop thread:videothread-10.
+2020-11-16 05:08:03,051-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45014, fd:14
+2020-11-16 05:08:03,052-ERROR-presenter_socket_server.py:354 channel name colorization-video is not exist.
+2020-11-16 05:08:03,052-INFO-channel_manager.py:216 register channel: colorization-video
+2020-11-16 05:08:03,052-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 05:08:03,052-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:14, media_type:video
+2020-11-16 05:08:37,561-ERROR-presenter_socket_server.py:142 socket 14 receive msg head null
+2020-11-16 05:08:37,561-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 05:08:37,561-INFO-colorization_server.py:60 clean fd:14, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42796)>, 14: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45014)>}
+2020-11-16 05:08:37,562-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 05:08:37,562-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 05:08:37,562-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 17:49:28,916-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45016, fd:13
+2020-11-16 17:49:28,923-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 17:49:28,923-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:13, media_type:video
+2020-11-16 17:50:01,931-ERROR-presenter_socket_server.py:142 socket 13 receive msg head null
+2020-11-16 17:50:01,932-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 17:50:01,932-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42796)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45016)>}
+2020-11-16 17:50:01,932-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 17:50:01,932-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 17:50:01,932-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 17:51:16,828-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45018, fd:13
+2020-11-16 17:51:16,830-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 17:51:16,830-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:13, media_type:video
+2020-11-16 17:51:49,839-ERROR-presenter_socket_server.py:142 socket 13 receive msg head null
+2020-11-16 17:51:49,839-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 17:51:49,839-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42796)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45018)>}
+2020-11-16 17:51:49,839-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 17:51:49,839-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 17:51:49,839-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 17:52:10,752-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45020, fd:13
+2020-11-16 17:52:10,753-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 17:52:10,753-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:13, media_type:video
+2020-11-16 17:52:43,759-ERROR-presenter_socket_server.py:142 socket 13 receive msg head null
+2020-11-16 17:52:43,760-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 17:52:43,760-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42796)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45020)>}
+2020-11-16 17:52:43,760-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 17:52:43,760-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 17:52:43,760-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 17:54:11,163-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45022, fd:13
+2020-11-16 17:54:11,164-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 17:54:11,164-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:13, media_type:video
+2020-11-16 17:56:17,084-INFO-channel_manager.py:227 unregister channel: 10
+2020-11-16 17:56:17,085-INFO-web.py:163 delete channel 10 succeed
+2020-11-16 17:56:17,085-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 17:56:17,085-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 17:56:17,085-INFO-channel_manager.py:227 unregister channel: colorization-video
+2020-11-16 17:56:17,085-INFO-web.py:163 delete channel colorization-video succeed
+2020-11-16 17:56:17,085-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 17:56:17,153-ERROR-colorization_server.py:178 get channel handler failed
+2020-11-16 17:56:17,153-ERROR-colorization_server.py:135 Present data not known error.
+2020-11-16 17:56:17,153-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42796)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45022)>}
+2020-11-16 17:56:18,690-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45024, fd:13
+2020-11-16 17:56:18,692-ERROR-presenter_socket_server.py:354 channel name colorization-video is not exist.
+2020-11-16 17:56:18,692-INFO-channel_manager.py:216 register channel: colorization-video
+2020-11-16 17:56:18,692-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 17:56:18,692-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:13, media_type:video
+2020-11-16 18:22:30,588-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45026, fd:14
+2020-11-16 18:22:30,589-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 18:22:30,589-INFO-colorization_server.py:60 clean fd:14, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42796)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45024)>, 14: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45026)>}
+2020-11-16 18:23:51,984-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45028, fd:14
+2020-11-16 18:23:51,986-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 18:23:51,986-INFO-colorization_server.py:60 clean fd:14, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 42796)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45024)>, 14: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45028)>}
+2020-11-16 18:24:18,589-INFO-colorization_server.py:222 presenter server is starting...
+2020-11-16 18:24:18,590-INFO-presenter_server.py:79 presenter server starting, type: colorization
+2020-11-16 18:24:19,061-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45032, fd:12
+2020-11-16 18:24:19,061-ERROR-presenter_socket_server.py:354 channel name colorization-video is not exist.
+2020-11-16 18:24:19,061-INFO-channel_manager.py:216 register channel: colorization-video
+2020-11-16 18:24:19,061-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 18:24:19,061-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:12, media_type:video
+2020-11-16 18:24:55,143-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45034, fd:15
+2020-11-16 18:24:55,144-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 18:24:55,144-INFO-colorization_server.py:60 clean fd:15, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45032)>, 15: <socket.socket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45034)>}
+2020-11-16 18:25:18,309-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45036, fd:15
+2020-11-16 18:25:18,310-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 18:25:18,310-INFO-colorization_server.py:60 clean fd:15, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45032)>, 15: <socket.socket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45036)>}
+2020-11-16 18:27:34,403-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45038, fd:13
+2020-11-16 18:27:34,404-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 18:27:34,404-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45032)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45038)>}
+2020-11-16 18:32:20,693-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45040, fd:13
+2020-11-16 18:32:20,694-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 18:32:20,695-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45032)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45040)>}
+2020-11-16 18:33:54,014-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45042, fd:13
+2020-11-16 18:33:54,015-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 18:33:54,015-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45032)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45042)>}
+2020-11-16 18:35:37,235-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45044, fd:13
+2020-11-16 18:35:37,236-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 18:35:37,236-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45032)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45044)>}
+2020-11-16 18:43:29,148-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45046, fd:13
+2020-11-16 18:43:29,149-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 18:43:29,149-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45032)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45046)>}
+2020-11-16 18:44:13,206-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45048, fd:13
+2020-11-16 18:44:13,206-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 18:44:13,206-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45032)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45048)>}
+2020-11-16 18:44:31,602-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45050, fd:13
+2020-11-16 18:44:31,603-ERROR-presenter_socket_server.py:364 channel path colorization-video is busy.
+2020-11-16 18:44:31,603-INFO-colorization_server.py:60 clean fd:13, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45032)>, 13: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45050)>}
+2020-11-16 18:44:59,086-ERROR-presenter_socket_server.py:142 socket 12 receive msg head null
+2020-11-16 18:44:59,087-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 18:44:59,087-INFO-colorization_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45032)>}
+2020-11-16 18:44:59,087-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 18:44:59,087-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 18:44:59,087-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 18:45:04,573-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45052, fd:12
+2020-11-16 18:45:04,573-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 18:45:04,573-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:12, media_type:video
+2020-11-16 18:45:28,356-ERROR-presenter_socket_server.py:142 socket 12 receive msg head null
+2020-11-16 18:45:28,357-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 18:45:28,357-INFO-colorization_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45052)>}
+2020-11-16 18:45:28,357-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 18:45:28,357-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 18:45:28,358-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 18:45:38,037-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45054, fd:12
+2020-11-16 18:45:38,038-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 18:45:38,038-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:12, media_type:video
+2020-11-16 18:46:41,741-ERROR-presenter_socket_server.py:142 socket 12 receive msg head null
+2020-11-16 18:46:41,741-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 18:46:41,741-INFO-colorization_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45054)>}
+2020-11-16 18:46:41,742-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 18:46:41,742-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 18:46:41,742-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 18:47:11,085-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45056, fd:12
+2020-11-16 18:47:11,085-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 18:47:11,085-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:12, media_type:video
+2020-11-16 18:47:28,153-ERROR-presenter_socket_server.py:142 socket 12 receive msg head null
+2020-11-16 18:47:28,153-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 18:47:28,153-INFO-colorization_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45056)>}
+2020-11-16 18:47:28,154-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 18:47:28,154-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 18:47:28,154-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
+2020-11-16 18:51:45,886-INFO-presenter_socket_server.py:255 create new connection:client-ip:192.168.1.2, client-port:45058, fd:12
+2020-11-16 18:51:45,887-INFO-channel_handler.py:215 create videothread-colorization-video...
+2020-11-16 18:51:45,887-INFO-channel_manager.py:127 create channel resource, channel_name:colorization-video, channel_fd:12, media_type:video
+2020-11-16 18:51:48,938-ERROR-presenter_socket_server.py:142 socket 12 receive msg head null
+2020-11-16 18:51:48,939-ERROR-presenter_socket_server.py:204 msg_total_len is None.
+2020-11-16 18:51:48,939-INFO-colorization_server.py:60 clean fd:12, conns:{12: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.223', 7008), raddr=('192.168.1.2', 45058)>}
+2020-11-16 18:51:48,940-INFO-channel_handler.py:124 videothread-colorization-video set _close_thread_switch True
+2020-11-16 18:51:48,940-INFO-channel_manager.py:139 clean channel: colorization-video's resource
+2020-11-16 18:51:48,941-INFO-channel_handler.py:226 Stop thread:videothread-colorization-video.
