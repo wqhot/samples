@@ -129,8 +129,8 @@ void GeneralImage::GetPathFiles(const string &path, vector<string> &file_vec) {
   
   if (IsDirectory(path)) {
 	struct dirent *dirent_ptr = nullptr;
-	DIR *dir = nullptr;
-    dir = opendir(path.c_str());
+	DIR *dir = opendir(path.c_str());
+    
     while ((dirent_ptr = readdir(dir)) != nullptr) {
       // skip . and ..
       if (dirent_ptr->d_name[0] == '.') {

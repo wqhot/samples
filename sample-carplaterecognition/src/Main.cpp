@@ -37,8 +37,8 @@ HIAI_StatusT CustomDataRecvInterface::RecvData
 // Init and create graph
 HIAI_StatusT HIAI_InitAndStartGraph()
 {
-    // Step1: Global System Initialization before using HIAI Engine
-    HIAI_Init(0);
+	// Step1: Global System Initialization before using HIAI Engine
+	HIAI_Init(0);
 
     // Step2: Create and Start the Graph
     HIAI_StatusT status = hiai::Graph::CreateGraph("./graph.config");

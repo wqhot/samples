@@ -103,8 +103,8 @@ HIAI_StatusT FacePostProcess::SendFeature(
   
   for (int i = 0; i < face_imgs.size(); i++) {
     // every face feature
-	facial_recognition::FaceFeature *feature = nullptr;
-    feature = frame_info.add_feature();
+	facial_recognition::FaceFeature *feature = frame_info.add_feature();
+    
 
     // box
     feature->mutable_box()->set_lt_x(face_imgs[i].rectangle.lt.x);
@@ -161,8 +161,8 @@ HIAI_StatusT FacePostProcess::ReplyFeature(
   
   for (int i = 0; i < face_imgs.size(); i++) {
     // every face feature
-	facial_recognition::FaceFeature *face_feature = nullptr;
-    face_feature = result.add_feature();
+	facial_recognition::FaceFeature *face_feature = result.add_feature();
+    
 
     // box
     face_feature->mutable_box()->set_lt_x(face_imgs[i].rectangle.lt.x);
